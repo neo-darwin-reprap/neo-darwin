@@ -43,9 +43,18 @@ The wizard will guide you through:
 
 ## Build Workflow
 
-### Option 1: Automated Setup (Recommended)
+### Quick Decision Guide
 
-**Best for:** First-time users, want everything set up automatically
+| Situation | What to Run |
+|-----------|--------------|
+| New user, no setup yet | `./setup.sh` (everything) |
+| Have config.py, want to build | `./build.sh build_all` |
+| Want to change config | `./configure.py` then `./build.sh build_all` |
+| Just updated repo, no config changes | `./build.sh build_all` |
+
+### Option 1: First-Time Setup (Recommended)
+
+**Best for:** New users, first time cloning the repo
 
 ```bash
 cd cad
@@ -58,17 +67,55 @@ cd cad
 3. Installs `uv` (optional, faster package manager)
 4. Creates virtual environment (`.venv/`)
 5. Installs dependencies (`build123d`, `numpy`)
-6. Runs interactive configuration wizard
+6. Runs interactive configuration wizard (creates `config.py`)
 7. Builds all parts
 
-### Option 2: Manual Setup
+**After this:** You have a working setup with `config.py` created.
+
+### Option 2: Just Build Parts
+
+**Best for:** Already have `config.py` from previous build
+
+```bash
+cd cad
+./build.sh build_all
+```
+
+**What happens:**
+1. Checks for and activates `.venv/` automatically
+2. Installs missing dependencies if needed
+3. Builds all parts using your existing `config.py`
+
+**Note:** If `config.py` doesn't exist, you'll get an error. Use `./configure.py` to create it.
+
+### Option 3: Change Configuration
+
+**Best for:** Want to modify printer settings
+
+```bash
+cd cad
+
+# Just run configuration wizard (backs up existing config)
+./configure.py
+
+# Then rebuild with new settings
+./build.sh build_all
+```
+
+**What happens:**
+1. Asks configuration questions interactively
+2. Backs up existing `config.py` to `config.py.backup`
+3. Creates new `config.py` with your changes
+4. `build.sh` will use the new config
+
+### Option 4: Manual Control
 
 **Best for:** Experienced users, want full control
 
 ```bash
 cd cad
 
-# Step 1: Create virtual environment
+# Step 1: Create virtual environment (if needed)
 python3 -m venv .venv
 
 # Step 2: Activate environment
@@ -77,35 +124,33 @@ source .venv/bin/activate
 # Windows (PowerShell):
 .venv\Scripts\Activate.ps1
 
-# Step 3: Install dependencies
+# Step 3: Install dependencies (if needed)
 pip install -r requirements.txt
 
-# Step 4: Configure your printer
+# Step 4: Configure your printer (or edit config.py directly)
 ./configure.py
 
 # Step 5: Build parts
 ./build.sh build_all
 ```
 
-### Option 3: Use Existing Environment
-
-**Best for:** Already have Python 3.9+ with packages installed
-
-```bash
-cd cad
-
-# Configure your printer
-./configure.py
-
-# Build parts
-./build.sh build_all
-```
-
 ## Configuration
+
+### When to Run Configuration Wizard
+
+**Run `./configure.py` when:**
+- First time setting up (creates new `config.py`)
+- Want to change printer settings
+- Switching hardware (different rods, hotend, etc.)
+
+**Don't need to run when:**
+- Just updated code from git
+- Have `config.py` already set up
+- Just want to rebuild parts
 
 ### Interactive Wizard
 
-Run the configuration wizard:
+Run configuration wizard:
 
 ```bash
 ./configure.py
@@ -117,6 +162,8 @@ The wizard will ask about:
 - **Extruder**: Wade extruder settings
 - **Hotend**: Type and mounting
 - **Electronics**: Mainboard, Z-probe, CANbus
+
+**Important:** This backs up your existing `config.py` to `config.py.backup`.
 
 ### Manual Configuration
 

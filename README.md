@@ -39,28 +39,37 @@ We build a **"Tractor with the Brain of a Racecar"** — using heavy, high-torqu
 
 ## 🚀 Getting Started
 
-Want to build Neo-Darwin parts?
+### Quick Start
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/neo-darwin-reprap/neo-darwin.git
-   cd neo-darwin
-   ```
+Clone repository and build parts:
 
-2. **Build parts**:
-   ```bash
-   cd cad
-   ./setup.sh
-   ```
+```bash
+git clone https://github.com/neo-darwin-reprap/neo-darwin.git
+cd neo-darwin/cad
+./setup.sh
+```
 
-3. **Learn more**:
-   - [BUILDING.md](BUILDING.md) - Complete build guide
-   - [cad/README.md](cad/README.md) - CAD documentation
+### Which Setup Should I Use?
 
-**Requirements:**
+| Situation | Command |
+|-----------|----------|
+| New user, first clone | `./setup.sh` (full setup) |
+| Have config.py, just build | `./build.sh build_all` |
+| Change configuration | `./configure.py` then `./build.sh build_all` |
+
+**See [BUILDING.md](BUILDING.md)** for complete guide and troubleshooting.
+
+### System Requirements
+
 - Python 3.9+
 - 4GB RAM (recommended)
 - See [BUILDING.md](BUILDING.md) for platform-specific setup
+
+### Learn More
+
+- [BUILDING.md](BUILDING.md) - Complete build guide
+- [cad/README.md](cad/README.md) - CAD documentation
+- [MANIFESTO.md](MANIFESTO.md) - Project philosophy and specs
 
 ## Status
 

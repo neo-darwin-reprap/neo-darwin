@@ -1,10 +1,21 @@
 # Neo-Darwin CAD Directory
 
-This directory contains all CAD-related files for the Neo-Darwin 3D printer project.
+This directory contains all CAD-related files for Neo-Darwin 3D printer project.
+
+## Quick Decision Guide
+
+| Situation | What to Run |
+|-----------|--------------|
+| New user, first clone | `./setup.sh` (full setup) |
+| Have config.py, just build | `./build.sh build_all` |
+| Want to change config | `./configure.py` then `./build.sh build_all` |
+| Just updated repo, no config changes | `./build.sh build_all` |
 
 ## Quick Start
 
-### Option 1: Full Wizard (Recommended for New Users)
+### Option 1: First-Time Setup (Recommended for New Users)
+
+**Best for:** New users, first time cloning the repo
 
 ```bash
 ./setup.sh
@@ -16,7 +27,7 @@ The setup wizard will:
 3. Optionally install uv (fast Python package manager)
 4. Set up Python environment
 5. Install required packages
-6. Run configuration wizard
+6. Run configuration wizard (creates `config.py`)
 7. Build all parts
 
 **Cross-platform support:**
@@ -29,7 +40,66 @@ The setup wizard will:
 - Script does NOT install Python automatically (~100-200MB)
 - Always offers web interface as alternative (coming soon)
 
-### Option 2: With uv (Faster Package Management, Optional)
+**After this:** You have `config.py` created and all parts built.
+
+### Option 2: Just Build Parts
+
+**Best for:** Already have `config.py` from previous build
+
+```bash
+./build.sh build_all
+```
+
+**What happens:**
+- Checks for `.venv` and activates it if needed
+- Installs dependencies if not found
+- Builds all parts using your existing `config.py`
+
+**Note:** If `config.py` doesn't exist, you'll get an error. Use `./configure.py` to create it.
+
+### Option 3: Change Configuration
+
+**Best for:** Want to modify printer settings
+
+```bash
+# Just run configuration wizard (backs up existing config)
+./configure.py
+
+# Then rebuild with new settings
+./build.sh build_all
+```
+
+**What happens:**
+- Asks configuration questions interactively
+- Backs up existing `config.py` to `config.py.backup`
+- Creates new `config.py` with your changes
+- `build.sh` will use the new config
+
+### Option 4: Manual Control
+
+**Best for:** Experienced users, want full control
+
+```bash
+# Create and activate virtual environment (if needed)
+python3 -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# Install dependencies (optional - build.sh will do this if missing)
+pip install -r requirements.txt
+
+# Run configuration wizard (or edit config.py directly)
+./configure.py
+
+# Build all parts
+./build.sh build_all
+```
+
+**Note:** The build script automatically:
+- Checks for `.venv` and activates it if needed
+- Installs dependencies if not found
+- Uses `uv` if available for faster installs
+
+### Option 5: Use uv (Faster Package Management, Optional)
 
 ```bash
 # Install uv (one-time setup, small download ~5MB)
@@ -42,28 +112,6 @@ curl -LsSf https://astral.sh/uv/install.sh | sh  # Linux/macOS
 
 uv is 10-100x faster than pip for package installs.
 Note: uv is just a package manager, it does NOT install Python.
-
-### Option 3: Self-Setup + Build
-
-```bash
-# Create and activate virtual environment
-python3 -m venv .venv
-source .venv/bin/activate  # Windows: .venv\Scripts\activate
-
-# Install dependencies (optional - build.sh will do this if missing)
-pip install -r requirements.txt
-
-# Run configuration wizard
-./configure.py
-
-# Build all parts
-./build.sh build_all
-```
-
-**Note:** The build script automatically:
-- Checks for `.venv` and activates it if needed
-- Installs dependencies if not found
-- Uses `uv` if available for faster installs
 
 The setup wizard will:
 1. Check Python installation
