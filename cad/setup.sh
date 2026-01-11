@@ -99,6 +99,11 @@ print_python_install_instructions() {
     esac
 
     echo ""
+    echo ""
+    echo "Note: This script does NOT install Python automatically."
+    echo "      Python is a large download (~100-200MB) and should be installed"
+    echo "      via your system package manager or official installer."
+    echo ""
     echo "Alternatively, you can use our web interface to generate STLs:"
     echo "  https://neo-darwin.reprap.org (coming soon)"
     exit 1
@@ -144,9 +149,11 @@ check_uv() {
     fi
 }
 
-install_uv() {
-    if ask_yes_no "Install uv for faster package management?"; then
-        print_header "Installing uv"
+ install_uv() {
+    if ask_yes_no "Install uv for faster package management? (Optional)"; then
+        print_header "Installing uv (fast package manager)"
+        print_warning "Note: uv is a small tool (~5MB) for faster package installs."
+        print_warning "      It does NOT install Python itself."
 
         case "$(detect_os)" in
             "Linux"|"macOS")

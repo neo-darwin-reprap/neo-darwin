@@ -26,12 +26,13 @@ The setup wizard will:
 
 **Graceful failure:**
 - If Python is not found, gives platform-specific installation instructions
+- Script does NOT install Python automatically (~100-200MB)
 - Always offers web interface as alternative (coming soon)
 
-### Option 2: With uv (Faster Package Management)
+### Option 2: With uv (Faster Package Management, Optional)
 
 ```bash
-# Install uv (one-time setup)
+# Install uv (one-time setup, small download ~5MB)
 curl -LsSf https://astral.sh/uv/install.sh | sh  # Linux/macOS
 # or visit https://astral.sh/uv for Windows
 
@@ -39,7 +40,8 @@ curl -LsSf https://astral.sh/uv/install.sh | sh  # Linux/macOS
 ./setup.sh
 ```
 
-uv is 10-100x faster than pip and can install Python itself.
+uv is 10-100x faster than pip for package installs.
+Note: uv is just a package manager, it does NOT install Python.
 
 ### Option 3: Self-Setup + Build
 
