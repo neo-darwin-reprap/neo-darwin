@@ -11,6 +11,54 @@ This directory contains all CAD-related files for the Neo-Darwin 3D printer proj
 ```
 
 The setup wizard will:
+1. Detect your operating system (Linux/macOS/Windows)
+2. Check for Python 3.9+ installation
+3. Optionally install uv (fast Python package manager)
+4. Set up Python environment
+5. Install required packages
+6. Run configuration wizard
+7. Build all parts
+
+**Cross-platform support:**
+- macOS: Works with Homebrew Python or official installer
+- Linux: Works with system Python or distribution packages
+- Windows: Works via Git Bash, WSL, or PowerShell
+
+**Graceful failure:**
+- If Python is not found, gives platform-specific installation instructions
+- Always offers web interface as alternative (coming soon)
+
+### Option 2: With uv (Faster Package Management)
+
+```bash
+# Install uv (one-time setup)
+curl -LsSf https://astral.sh/uv/install.sh | sh  # Linux/macOS
+# or visit https://astral.sh/uv for Windows
+
+# Run setup (will automatically use uv)
+./setup.sh
+```
+
+uv is 10-100x faster than pip and can install Python itself.
+
+### Option 3: Self-Setup + Build
+
+```bash
+# Create and activate virtual environment
+python3 -m venv .venv
+source .venv/bin/activate  # Windows: .venv\Scripts\activate
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Run configuration wizard
+./configure.py
+
+# Build all parts
+./build.sh build_all
+```
+
+The setup wizard will:
 1. Check Python installation
 2. Create a virtual environment
 3. Install required packages
