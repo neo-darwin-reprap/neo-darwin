@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# Neo-Darwin Master Build Script
+# Neo-Darwin Build Script
 # Build CAD parts for the Neo-Darwin project
 
 set -e  # Exit on error
@@ -25,7 +25,7 @@ PARTS=(
 
 # Help function
 show_help() {
-    echo "Neo-Darwin Master Build Script"
+    echo "Neo-Darwin Build Script"
     echo ""
     echo "Usage: $0 [command] [args...]"
     echo ""
@@ -34,6 +34,7 @@ show_help() {
     echo "  build_all              Build all parts"
     echo "  list                    List all available parts"
     echo "  clean                   Delete all STLs"
+    echo "  help                    Show this help"
     echo ""
     echo "Parts available:"
     for part in "${PARTS[@]}"; do
@@ -163,7 +164,12 @@ case "${1:-help}" in
     clean)
         clean_all
         ;;
-    help|*)
+    help|--help|-h)
         show_help
+        ;;
+    *)
+        echo -e "${RED}Unknown command: $1${NC}"
+        show_help
+        exit 1
         ;;
 esac
