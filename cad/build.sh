@@ -17,7 +17,7 @@ CAD_DIR="parts"
 STL_DIR="stl"
 VENV_DIR=".venv"
 PYPROJECT_FILE="pyproject.toml"
-PARTS_LIST_SCRIPT="parts/list.py"
+PARTS_LIST_SCRIPT="include/list.py"
 
 # Testing mode (use only corner_motorized.py for initial testing)
 TEST_MODE="${TEST_MODE:-false}"
@@ -73,27 +73,26 @@ load_parts_list() {
     # In test mode, only use corner_motorized.py
     if [ "$TEST_MODE" = "true" ]; then
         PARTS=(
-            "corner_front_left:corner_motorized:front_left"
-            "corner_front_right:corner_motorized:front_right"
+            "corner_front_left:corner_front_left:"
+            "corner_front_right:corner_front_left:"
         )
-        echo -e "${YELLOW}Test mode: Using only corner_motorized.py${NC}"
+        echo -e "${YELLOW}Test mode: Using test part list${NC}"
         return
     fi
 
     # Try dynamic discovery
     if [ -f "$PARTS_LIST_SCRIPT" ]; then
-        # Parse output from parts/list.py
+        # Parse output from include/list.py in build format
         while IFS= read -r part_spec; do
             [[ "$part_spec" =~ ^[A-Za-z_].*: ]] && PARTS+=("$part_spec")
-        done < <($PYTHON_CMD "$PARTS_LIST_SCRIPT" 2>/dev/null)
+        done < <($PYTHON_CMD "$PARTS_LIST_SCRIPT" --build-format 2>/dev/null)
     fi
 
     # If dynamic list is empty, use hardcoded fallback
     if [ ${#PARTS[@]} -eq 0 ]; then
         echo -e "${YELLOW}No parts found in parts/, using fallback list${NC}"
         PARTS=(
-            "corner_front_left:corner_motorized:front_left"
-            "corner_front_right:corner_motorized:front_right"
+            "corner_front_left:corner_front_left:"
         )
     fi
 }
@@ -117,6 +116,19 @@ check_venv() {
 
     # No venv found
     return 1
+}
+
+# Setup environment (venv + dependencies)
+setup_environment() {
+    # Try to activate existing venv
+    if ! check_venv; then
+        echo -e "${YELLOW}No virtual environment found${NC}"
+        echo -e "${YELLOW}Run ./setup.sh to create one${NC}"
+        exit 1
+    fi
+
+    # Ensure dependencies are installed
+    ensure_dependencies
 }
 
 # Install dependencies if needed

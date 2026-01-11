@@ -5,8 +5,9 @@ Uses shared motorized corner component from include/corner_components.py
 """
 
 import sys
+import os
 
-sys.path.insert(0, "..")
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
 from include.corner_components import make_motorized_corner
 

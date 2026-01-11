@@ -19,11 +19,15 @@ def get_parts():
         print("Error: parts/ directory not found")
         return []
 
-    for py_file in parts_dir.glob("*.py"):
+    # Find all Python files in parts/ and its subdirectories
+    for py_file in parts_dir.rglob("*.py"):
+        # Skip __pycache__ and __init__.py
+        if "__pycache__" in str(py_file) or py_file.name == "__init__.py":
+            continue
         name = py_file.stem
         parts.append(name)
 
-    return sorted(parts)
+    return sorted(set(parts))
 
 
 def main():
@@ -59,5 +63,15 @@ def main():
     print("  Example:      ./build.sh build corner_front_left corner_front_right")
 
 
+def get_parts_for_build():
+    """Get parts in format: name:file:args for build.sh"""
+    parts = get_parts()
+    for part in parts:
+        print(f"{part}:{part}:")
+
+
 if __name__ == "__main__":
-    main()
+    if len(sys.argv) > 1 and sys.argv[1] == "--build-format":
+        get_parts_for_build()
+    else:
+        main()

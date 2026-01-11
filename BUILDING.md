@@ -32,12 +32,12 @@ The wizard will guide you through:
 - **Windows**: Via Git Bash, WSL, or PowerShell
 
 ### Software
-- **Python 3.14+**: Required for running build123d scripts
+- **Python 3.10-3.13**: Required for running build123d scripts
   - [macOS](https://www.python.org/downloads/) - Download installer
   - [Linux](https://docs.python.org/3/installing/) - Use system packages
   - [Windows](https://www.python.org/downloads/) - Check "Add to PATH"
 
-**Note:** Python 3.14+ is recommended for build123d 0.9.x compatibility
+**Note:** Python 3.10-3.13 is required for build123d 0.9.x compatibility. Python 3.14 is not yet supported.
 
 ### Hardware
 - ~500MB free disk space (for venv + dependencies)
@@ -203,14 +203,17 @@ The build script automatically:
 ./build.sh build corner_front_left
 ```
 
+The build system automatically discovers all Python files in `parts/` subdirectories.
+
 ### List Available Parts
 
 ```bash
 ./build.sh list
 ```
 
-This will show all available parts, grouped by category:
+This runs `include/list.py` to dynamically discover all parts, grouped by category:
 - Frame corners, extruder parts, bed components, etc.
+- No hardcoded lists - just add new Python files to `parts/`
 
 ### Advanced: Test Mode
 
@@ -285,11 +288,28 @@ pip install -r requirements.txt
 
 ## Understanding the CAD System
 
+### Architecture: Engine + Parts
+
+Neo-Darwin's CAD system follows a **library + application** pattern:
+
+**`include/` - The Engine:**
+- Contains all reusable build123d components
+- Shared functions for motors, rods, mounts, clamps, etc.
+- Single source of truth for geometric logic
+- When you fix a bug here, it's fixed everywhere
+
+**`parts/` - The Applications:**
+- Lightweight scripts that import and configure components
+- Each part is a specific configuration of shared components
+- Easy to create new parts by reusing existing logic
+- Organized by type (corner/, extruder/, bed/, etc.)
+
 ### Parametric Design
 
 Neo-Darwin uses **build123d**, a modern Python CAD library:
 - **Code-based design**: All parts defined in Python scripts
 - **Single source of truth**: `config.py` controls all dimensions
+- **Composable components**: Import from `include/`, configure, export
 - **Easy customization**: Change config, rebuild all parts automatically
 
 ### Why Not Just Download STLs?
@@ -298,6 +318,11 @@ Neo-Darwin uses **build123d**, a modern Python CAD library:
 - Want larger build volume? Change `BUILD_VOLUME` in config
 - Using salvaged 8mm rods instead of 10mm? Change `SMOOTH_ROD_DIA`
 - Different hotend diameter? Update `GROOVEMOUNT_DIA`
+
+**Code reuse**:
+- All corners share the same motorized corner logic from `include/corner_components.py`
+- Fix a motor mount bug once, all corners benefit
+- Add new features to shared components, all parts automatically get them
 
 **One command rebuilds everything**:
 ```bash
@@ -311,16 +336,24 @@ No manually editing STL files or dealing with version mismatches!
 
 ```
 cad/
-├── parts/              # Python CAD scripts
-│   └── corner_motorized.py
-├── stl/               # Generated STL files (output)
-├── config.py           # Your configuration (gitignored)
-├── config.py.example   # Reference configuration
-├── pyproject.toml    # Python dependencies (modern standard)
-├── setup.sh          # Automated setup wizard
-├── configure.py       # Interactive configuration
-└── build.sh          # Part builder
+├── include/              # Shared CAD components (project engine)
+│   ├── corner_components.py   # Reusable motorized corner logic
+│   └── list.py                # Dynamic part discovery
+├── parts/                # Part definitions (use include/ components)
+│   └── corner_front_left.py   # Individual part files
+├── stl/                  # Generated STL files (output)
+├── config.py             # Your configuration (gitignored)
+├── config.py.example     # Reference configuration
+├── pyproject.toml        # Python dependencies (modern standard)
+├── setup.sh              # Automated setup wizard
+├── configure.py          # Interactive configuration
+└── build.sh              # Part builder
 ```
+
+**Key Design Principle:**
+- **`include/`**: Contains all reusable CAD logic and build123d functions
+- **`parts/`**: Lightweight scripts that import from `include/` and configure parts
+- This separation maximizes code reuse and makes the codebase more maintainable
 
 ## Next Steps
 

@@ -41,6 +41,8 @@ We build a **"Tractor with the Brain of a Racecar"** — using heavy, high-torqu
 
 ### Quick Start
 
+**Website:** [neodarwin.org](https://neodarwin.org)
+
 Clone repository and build parts:
 
 ```bash
