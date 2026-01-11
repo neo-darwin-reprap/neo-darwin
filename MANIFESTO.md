@@ -54,12 +54,12 @@ Neo-Darwin is designed to operate within a wide envelope. Not all configurations
 
 These choices determine your tier, budget, and experience level. See the BOM section for detailed cost breakdowns.
 
-### **The Lineage of the Tractor**
+### **The Lineage**
 
 * **[RepRap Darwin (2007)](https://reprap.org/wiki/Darwin):** The origin. The first practical self-replicating 3D printer, using a box frame and Cartesian XY motion. We carry its name forward.
-* **[Prusa i3 Rework (2014)](https://www.thingiverse.com/thing:119616):** The source of our Geared Extruder heritage. It proved that "Tractor" torque is the best defense against extrusion inconsistency.
-* **[RepRap Mendel Revisited (2023)](https://www.thingiverse.com/thing:6783269):** A modern nod to the M12 skeleton. It shares our philosophy that high-mass iron is a feature, not a bug.
-* **[The 100 (2025)](https://github.com/MSzturc/the100)/[The Rook](https://github.com/Kanrog/Rook):** Our box-frame cousins who proved that Klipper software is the "Racecar Brain" required to make DIY frames truly fast and accurate.
+* **[Prusa i3 Rework (2013)](https://www.thingiverse.com/thing:119616):** The source of our Geared Extruder heritage. It proved that high-torque gearing is the best defense against extrusion inconsistency.
+* **[RepRap Mendel Revisited (2024)](https://www.thingiverse.com/thing:6783269):** A modern nod to the M12 skeleton. It shares our philosophy that high-mass iron is a feature, not a bug.
+* **[The 100 (2023)](https://github.com/MSzturc/the100)/[The Rook (2023)](https://github.com/Kanrog/Rook):** Our box-frame cousins who proved that Klipper software is the intelligence required to make DIY frames truly fast and accurate.
 
 
 ## 🛠️ The "Tractor" Hardware Stack

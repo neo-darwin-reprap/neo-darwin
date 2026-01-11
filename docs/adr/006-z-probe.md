@@ -152,10 +152,38 @@ Klipper config: [bltouch] section
 ### Bed Compatibility
 ```
 BLTouch:         All bed types ✓
-PINDA v2:        Metal beds only (aluminum, magnetic PEI) ✓
+                 - Aluminum heated bed ✓
+                 - Aluminum + glass ✓
+                 - Aluminum + PEI sheet ✓
+                 - Aluminum + ceramic ✓
+                 - Non-heated surfaces ✓
+
+PINDA v2:        Metal beds only ✓
+                 - Aluminum heated bed ✓
+                 - Aluminum + magnetic PEI ✓ (metal particles in sheet)
+                 - Aluminum + glass ✗ (cannot see through glass)
+                 - Aluminum + non-magnetic PEI ✗ (cannot detect through PEI)
+                 - Non-metal beds ✗ (no metal to detect)
+
 SuperPINDA:      Metal beds only (better range) ✓
+                 - Same as PINDA but with longer range and better stability
+
 Probeless:       All bed types (manual) ✓
+                 - Manual paper method
+                 - Works with any bed surface
 ```
+
+**Key PINDA Limitation:**
+PINDA is an inductive sensor that detects metal surfaces. It works:
+- Through magnetic PEI (has metal particles) ✓
+- Directly on aluminum ✓
+- BUT cannot work through glass or non-magnetic PEI sheets
+
+Common 3D printer bed stacks:
+- Aluminum + Glass: PINDA cannot work (must use BLTouch)
+- Aluminum + Magnetic PEI: Both work
+- Aluminum + Non-magnetic PEI: Must use BLTouch
+- Unheated (wood, etc.): Must use BLTouch
 
 ### Calibration
 1. **Z-Tilt Initial**: Use BLTouch for automated calibration
