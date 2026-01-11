@@ -137,7 +137,25 @@ More parts will be added as the project progresses.
 
 ## Configuration
 
-Edit `config.py` directly or run `./configure.py` for an interactive wizard.
+Three ways to configure:
+
+1. **Interactive wizard** (recommended for new users):
+   ```bash
+   ./configure.py
+   ```
+   - Asks questions step by step
+   - Backs up existing config to `config.py.backup`
+
+2. **Manual edit**:
+   - Edit `config.py` directly
+   - Reference `config.py.example` for all available options
+
+3. **Example file**:
+   - `config.py.example` shows full configuration structure
+   - Copy to `config.py` and customize
+
+**Important:** `config.py` is ignored by git (keep your settings private).
+Use `config.py.example` as reference for all available settings.
 
 Key configuration parameters:
 - `BUILD_VOLUME` - X, Y, Z dimensions

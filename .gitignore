@@ -1,2 +1,8 @@
 .DS_Store
 docs/AI-Conversations/
+
+# CAD generated files
+cad/config.py
+cad/config.py.backup
+cad/.venv/
+cad/venv/
