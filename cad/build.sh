@@ -15,6 +15,8 @@ NC='\033[0m' # No Color
 # Config
 CAD_DIR="parts"
 STL_DIR="stl"
+VENV_DIR=".venv"
+REQUIREMENTS_FILE="requirements.txt"
 
 # Parts to build (each part: name:file:args)
 # Format: "display_name:python_file:cli_args"
@@ -29,6 +31,9 @@ show_help() {
     echo ""
     echo "Usage: $0 [command] [args...]"
     echo ""
+    echo "Setup:"
+    echo "  First time? Run: ./setup.sh"
+    echo ""
     echo "Commands:"
     echo "  build [PARTS...]    Build specified parts"
     echo "  build_all              Build all parts"
@@ -36,11 +41,54 @@ show_help() {
     echo "  clean                   Delete all STLs"
     echo "  help                    Show this help"
     echo ""
+    echo "The script automatically:"
+    echo "  - Checks for and activates .venv"
+    echo "  - Installs dependencies if missing"
+    echo ""
     echo "Parts available:"
     for part in "${PARTS[@]}"; do
         name="${part%%:*}"
         echo "  $name"
     done
+}
+
+# Check and activate venv
+check_venv() {
+    # Check if already in venv
+    if [ -n "$VIRTUAL_ENV" ]; then
+        echo -e "${GREEN}Virtual environment already active${NC}"
+        PYTHON_CMD="python"
+        return 0
+    fi
+
+    # Check if venv exists
+    if [ -f "$VENV_DIR/bin/activate" ]; then
+        source "$VENV_DIR/bin/activate"
+        echo -e "${GREEN}Activated virtual environment${NC}"
+        PYTHON_CMD="python"
+        return 0
+    fi
+
+    # No venv found
+    return 1
+}
+
+# Install dependencies if needed
+ensure_dependencies() {
+    if ! python -c "import build123d" 2>/dev/null; then
+        echo -e "${YELLOW}Dependencies not found, installing...${NC}"
+
+        # Try uv first if available
+        if command -v uv &> /dev/null; then
+            uv pip install -q -r "$REQUIREMENTS_FILE"
+        else
+            pip install -q -r "$REQUIREMENTS_FILE"
+        fi
+
+        echo -e "${GREEN}Dependencies installed${NC}"
+    else
+        echo -e "${GREEN}Dependencies already installed${NC}"
+    fi
 }
 
 # List all parts
@@ -72,7 +120,7 @@ build_part() {
     cd "$CAD_DIR" || return 1
 
     # Run Python script with arguments
-    python "${python_file}.py" $cli_args
+    $PYTHON_CMD "${python_file}.py" $cli_args
     local exit_code=$?
 
     # Check if STL was created
@@ -145,10 +193,27 @@ clean_all() {
 # Create STL directory if not exists
 mkdir -p "$STL_DIR"
 
+# Check environment before building
+setup_environment() {
+    echo -e "${BLUE}Checking environment...${NC}"
+
+    if ! check_venv; then
+        echo -e "${YELLOW}No virtual environment found${NC}"
+        echo -e "${YELLOW}Run ./setup.sh first, or manually set up:${NC}"
+        echo "  python3 -m venv $VENV_DIR"
+        echo "  source $VENV_DIR/bin/activate"
+        echo "  pip install -r $REQUIREMENTS_FILE"
+        exit 1
+    fi
+
+    ensure_dependencies
+}
+
 # Main execution
 case "${1:-help}" in
     build)
         shift
+        setup_environment
         if [ $# -eq 0 ]; then
             build_all
         else
@@ -156,6 +221,7 @@ case "${1:-help}" in
         fi
         ;;
     build_all)
+        setup_environment
         build_all
         ;;
     list)

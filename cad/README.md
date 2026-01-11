@@ -50,7 +50,7 @@ Note: uv is just a package manager, it does NOT install Python.
 python3 -m venv .venv
 source .venv/bin/activate  # Windows: .venv\Scripts\activate
 
-# Install dependencies
+# Install dependencies (optional - build.sh will do this if missing)
 pip install -r requirements.txt
 
 # Run configuration wizard
@@ -59,6 +59,11 @@ pip install -r requirements.txt
 # Build all parts
 ./build.sh build_all
 ```
+
+**Note:** The build script automatically:
+- Checks for `.venv` and activates it if needed
+- Installs dependencies if not found
+- Uses `uv` if available for faster installs
 
 The setup wizard will:
 1. Check Python installation
