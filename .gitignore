@@ -6,3 +6,5 @@ cad/config.py
 cad/config.py.backup
 cad/.venv/
 cad/venv/
+cad/__pycache__/
+cad/parts/__pycache__/
