@@ -294,9 +294,40 @@ SPIDER_INTERLOCK = True
 
 ---
 
-## Questions to Answer Before Starting
+## Questions to Answer Before Starting ✅ ANSWERED
 
-1. **Corner diagonal support**: Add optional holes to all corners?
-2. **Design workflow**: System-first (Option B) or sequential (Option A)?
-3. **config.py expansion**: Start with frame parameters, add others as needed?
-4. **Print order**: Design in system but can print in any order?
+1. ~~**Corner diagonal support**: Add optional holes to all corners?~~ → **NO - M12 is stiff enough, optional diagonals not needed for baseline**
+2. ~~**Design workflow**: System-first (Option B) or sequential (Option A)?~~ → **System-first (Option B) adopted**
+3. ~~**config.py expansion**: Start with frame parameters, add others as needed?~~ → **Yes, start with frame**
+4. ~~**Print order**: Design in system but can print in any order?~~ → **Yes, design system, print any order**
+
+## Z-System Geometry Decisions ✅ ADOPTED
+
+Based on Voron research and user feedback:
+
+1. **Z-motor placement**: Integrated into corner brackets (not separate Z-pucks)
+   - 3 corners have Z-mount, 1 corner is standard
+   - Parts: 4 total vs 11 (corners + separate Z-pucks)
+
+2. **Triangle pattern**: Symmetric Front L + Front R + Back Center
+   - Better stability, even weight distribution
+   - Less bed sag/warp than asymmetric pattern
+
+3. **Frame height**: Reduced from 330mm to 300mm
+   - M12 is very stiff, extra height not needed for rigidity
+   - Z-travel: 280mm → 260mm (still sufficient)
+   - Savings: ~$5 on rods, lighter frame, less vibration
+
+4. **Leadscrew path**: Inside frame (Voron-like)
+   - Motors face inward on integrated corner mounts
+   - Leadscrews go UP through frame interior
+   - Spider bed support designed with 40mm clearance
+
+5. **Z-Tilt leveling**:
+   - BLTouch calibrates bed level (NOT endstop)
+   - Bed moves up/down via motors, Z-travel in Klipper config
+   - Max-Z: Physical calibration once, Bed level: Periodic Z_TILT_ADJUST
+
+Documents:
+- Z-TILT-EXPLAINED.md: Full Z-Tilt how it works
+- Z-PUCK-CLARIFICATIONS.md: Design decisions and recommendations
