@@ -41,6 +41,57 @@ In 2026, you can buy a 3D-printing "appliance" that is fast but fragile, or you 
 * **The Parametric Anchor:** If it can be measured, it can be parameterized. Every permutation in this document—8mm vs 10mm rods, belted vs triple-Z—is handled by the same codebase.
 * **Documentation:** Prusa-kit-level assembly instructions—clear, visual, and step-by-step. We can't plug in the looms for you, but we can make sure you know exactly where they go.
 
+### 📐 The Neo-Darwin Square: Speed, Quality, Cost, and Effort
+
+In engineering, we often talk about the **"Iron Triangle"** (Pick two: Fast, Cheap, or Good). But for 3D printing—and specifically for the **Neo-Darwin**—a triangle is too simple. The project actually balances a **Square of Constraints**.
+
+To build a machine for under $300 AUD that performs like a modern industrial tool, you have to understand how these four corners pull against each other.
+
+In the "Tractor" philosophy, we don't just "pick two"; we strategically sacrifice one to maximize the others.
+
+#### **1. Cost (The $300 AUD Hard Ceiling)**
+
+This is our primary constraint. To keep costs low, we sacrifice "Convenience." Instead of buying a $150 pre-assembled Voron StealthBurner, we spend time building a **Wade Extruder** from $20 of vitamins. We trade money for **Effort**.
+
+#### **2. Speed (The "Racecar" Mirage)**
+
+This is where most modern printers fail the triangle. Chasing 600mm/s requires expensive linear rails and lightweight carbon fiber—both of which blow the budget.
+
+* **The Wisdom:** We "settle" for **70–120mm/s**. In the 3D printing world, 100mm/s with perfect quality is faster than 300mm/s with a 50% failure rate.
+
+#### **3. Quality (The Non-Negotiable)**
+
+Thanks to **Klipper**, quality is no longer tied to the price of the hardware.
+
+* **Input Shaping** cancels out the vibrations of our heavy M12 frame.
+* **Pressure Advance** manages the flow of our geared Wade extruder.
+* **The Result:** We achieve high-end quality on a "junk" budget by using software intelligence to solve analog hardware problems.
+
+#### **4. Reliability / Effort (The "Tractor" Soul)**
+
+This is the fourth corner. A machine can be cheap and high-quality, but usually, that means it's a "tinker-trap" (like a stock Ender 3).
+
+* **The Neo-Darwin approach:** We use **Overbuilt Hardware** (M12 rods, Geared Wade, E3D V6). It takes more effort to *build* (Effort), but once it’s running, it requires almost no *maintenance* (Reliability).
+
+---
+
+### 🏛️ The "Battle-Tested" Wisdom: Why the Triangle Shifts
+
+If you look at the last 20 years, the "Golden Ratio" of these trade-offs has shifted:
+
+* **2007 (Darwin Era):** High Cost / Low Speed / Low Quality / Maximum Effort. (Everything was a struggle).
+* **2014 (i3 Era):** Medium Cost / Medium Speed / Medium Quality / Medium Effort. (The birth of the "reliable enough" hobbyist).
+* **2026 (Neo-Darwin Era):** **Ultra-Low Cost / Medium Speed / High Quality / High Initial Effort.**
+
+### 💎 The Distilled "Pillars of Truth"
+
+If you were to sum up the wisdom of those 20 years into the Neo-Darwin "Standard," it would look like this:
+
+1. **Mass is a Filter:** A heavy machine is a quiet machine. Mass filters out the "noise" of cheap motors.
+2. **Gearing is Sovereignty:** Direct drive is good, but **Geared Direct Drive** (Wade/BMG) is king. It turns a cheap motor into a powerful one.
+3. **Software is the Great Equalizer:** Don't spend $200 on rails if $0 of code (Klipper) can fix the vibration.
+4. **The "Good Enough" Zenith:** Chasing the last 5% of speed costs 500% more money. The Neo-Darwin lives at the "Zenith"—where performance is high, but the cost is still accessible to anyone with a local hardware store.
+5. **The Bed is the Anchor; the Plinth is the Bedrock:** The frame serves the bed, not the other way around. Whether grounded by M12 iron or a laminated plinth, we prioritize a quiet, immovable foundation. Mass is a filter that removes motor noise, and software is the intelligence that cleans up what remains.
 
 ## 🧭 Before You Build: The 5 Key Decisions
 
@@ -75,6 +126,14 @@ These choices determine your tier, budget, and experience level. See the BOM sec
     * **The "Tractor" Path:** Use a single motor with a synced closed-loop belt for simplified mechanical alignment (requires manual leveling once).
 * *Neo-Tip:* Pot your bed thermistor with **High-Temp Red RTV Silicone** during assembly for a permanent, "set-and-forget" thermal handshake.
 * **The Expansion (Optional): [ERCF v2 Multi-Color](https://github.com/EtteGit/EnragedRabbitProject).** The Neo-Darwin is designed to host the Enraged Rabbit Carrot Feeder. Because of our high-torque Wade and toolhead microswitch sensor, we achieve surgical color-swap reliability that proprietary appliances can't match.
+* **Z-Max Physical Stop:** A bottom-mounted microswitch is required for all "Moving Bed" builds to prevent impact damage during emergency stops or power losses.
+
+| Feature | **Neo-Darwin** | Why it fits the Ethos |
+| --- | --- | --- |
+| **Z-Stop (Top)** | **BLTouch (Virtual)** | Surgical precision at the nozzle. |
+| **Z-Stop (Bottom)** | **Physical Switch** | **Iron Safety.** Prevents bed-drop from back-driving screws. |
+| **Donor Choice** | **"The Junk"** | Rescue the broken, but respect the working elders (MK2). |
+
 
 ### ⚙️ Extruder Archaeology
 
@@ -107,6 +166,13 @@ If you aren't buying a new **MKS SKIPR**, the Neo-Darwin is designed to breathe 
 * **Anycubic Trigorilla:** Found in the i3 Mega and Kossel series.
 * **The "Puck" Mounts:** Standardized mounting plates (Pucks) are available for all these boards to snap directly onto the M12 frame.
 
+#### **🛡️ The "Don't Break a Working Friend" Rule**
+
+Before you tear down a donor, assess its mechanical soul.
+
+* **The "Race to the Bottom" Rebuild:** If you have an **Anet A8, Ender 3, or Tevo Tarantula**, tear it down. These machines were built with cost-cutting as the primary goal. Their V-slot rollers and acrylic/thin-aluminum frames are exactly what the Neo-Darwin’s M12 iron skeleton is designed to replace.
+* **The MK2 Exception:** If you have a functional, square **Prusa MK2/S**, consider keeping it as a "Second Chair" printer. The MK2 was the zenith of the original threaded-rod era; its print quality remains industry-standard even in 2026 if well-maintained. Don't destroy a reliable workhorse to build a slightly better one; use the Neo-Darwin project to rescue a machine that is actually broken.
+* **The "Grab it" Threshold:** If you find a functional **MK3 for under $300 AUD**, grab it, and use that instead of building Neo-Darwin. That is the point where the hardware value aligns with the effort.  If it is broken, however; the cost of individual replacement parts will quickly exceed the budget of a fresh Neo-Darwin build.
 
 ### ⚙️ The Modular "Puck" & "Spider" Concept
 
@@ -649,7 +715,10 @@ While these builds often exceed the scavenger budget, they provide the technical
 * **Moving Parts:** Keep fingers and loose clothing away from the gantry and leadscrews during operation to avoid injury.
 * **Emergency Stop:** Familiarize yourself with the Klipper `M112` emergency stop command and ensure the power plug is within easy reach.
 * **Ventilation:** Always operate the printer in a well-ventilated area to dissipate fumes and ultrafine particles.
-
+* **Z-Max Safety Switch (The "Bed-Drop" Brake):** Unlike most modern printers where the toolhead moves up, the Neo-Darwin is a **moving-bed** machine where the bed moves *down* to increase Z-height.
+* **The Risk:** In the event of a power failure or a driver "timeout," gravity can cause a heavy, heated bed to back-drive the lead screws and crash into the bottom frame.
+* **The Solution:** We mandate a physical **mechanical microswitch at Z-Max** (the very bottom of the M12 frame). This acts as a physical hardware interrupter that prevents the bed from over-travelling and damaging the frame or electronics Puck.
+* **Handshake:** In Klipper, this is configured as a `[gcode_button z_max]` to safely stop all movement if the bed falls too far.
 ---
 
 ### ⚖️ License: GNU GPL v3
