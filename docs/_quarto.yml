@@ -1,0 +1,66 @@
+# Neo-Darwin Documentation
+# Quarto project configuration for config-driven documentation
+
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Neo-Darwin"
+  description: "A 2026 RepRap Reference Specification"
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "Philosophy"
+        href: philosophy.qmd
+      - text: "Reference Spec"
+        href: reference-spec.qmd
+      - text: "Build Guides"
+        menu:
+          - text: "Tier Overview"
+            href: guides/index.qmd
+          - text: "---"
+          - text: "Tier 3: Reference Spec"
+            href: guides/tier-3.qmd
+          - text: "Tier 2: Dual Donor"
+            href: guides/tier-2.qmd
+          - text: "Tier 1: Single Donor"
+            href: guides/tier-1.qmd
+      - text: "ADRs"
+        href: adr/index.qmd
+    right:
+      - icon: github
+        href: https://github.com/neo-darwin-reprap/neo-darwin
+
+  sidebar:
+    - title: "Build Guides"
+      style: "docked"
+      contents:
+        - guides/index.qmd
+        - section: "Tier Guides"
+          contents:
+            - guides/tier-3.qmd
+            - guides/tier-2.qmd
+            - guides/tier-1.qmd
+        - section: "Klipper Hosts"
+          contents:
+            - guides/klipper/skipr-integrated.qmd
+            - guides/klipper/rpi-3b-host.qmd
+            - guides/klipper/zero-2w-host.qmd
+            - guides/klipper/laptop-host.qmd
+
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    toc-depth: 3
+    code-fold: true
+
+# Variables from config.py - populated by scripts/export_config.py
+# Run: python scripts/export_config.py > docs/_variables.yml
+# Then reference as {{< var ROD_TYPE >}}
+
+execute:
+  freeze: auto

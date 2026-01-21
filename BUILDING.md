@@ -1,6 +1,13 @@
-# 🛠️ Building Neo-Darwin Parts
+# Building Neo-Darwin
 
-This guide explains how to generate STL files from the parametric CAD files.
+This guide covers the three build systems:
+1. **CAD/STL Generation** - Parametric parts from build123d
+2. **Engineering Analysis** - Assess your configuration before building
+3. **Documentation** - Config-driven docs with Quarto
+
+## Part 1: Building STL Parts
+
+This section explains how to generate STL files from the parametric CAD files.
 
 ## Quick Start
 
@@ -355,14 +362,114 @@ cad/
 - **`parts/`**: Lightweight scripts that import from `include/` and configure parts
 - This separation maximizes code reuse and makes the codebase more maintainable
 
+---
+
+## Engineering Analysis Tool
+
+Before building, assess your configuration with the analysis tool.
+
+### Quick Analysis
+
+```bash
+python scripts/analyze.py --quick
+```
+
+This runs a quick check with reference spec defaults (235mm bed, M10 rods, Pitan).
+
+### Interactive Analysis
+
+```bash
+python scripts/analyze.py
+```
+
+The interactive mode lets you:
+- Choose your bed size (or enter custom dimensions)
+- Select rod diameter (M8, M10, M12)
+- Pick extruder type (Pitan, Wade, MK8, etc.)
+
+It calculates:
+- **Frame dimensions** needed for your bed
+- **Rod sag** under toolhead load
+- **Acceleration limits** for quality printing
+- **Recommended Klipper settings**
+
+### Example Output
+
+```
+Configuration:
+  Bed: 235x235mm, Build height: 250mm
+  Smooth rods: M10, Extruder: PITAN (280g)
+
+Results:
+  Frame size: 350x345x370mm
+  Rod deflection: 0.0150mm (excellent)
+  Max accel: 4578 mm/s²
+  Velocity: 100-150 mm/s
+```
+
+---
+
+## Documentation System (Quarto)
+
+The documentation uses Quarto for config-driven generation.
+
+### Setup Quarto
+
+1. Install Quarto from [quarto.org](https://quarto.org/docs/get-started/)
+2. Export config variables:
+
+```bash
+python scripts/export_config.py > docs/_variables.yml
+```
+
+### Build Documentation
+
+```bash
+cd docs
+quarto render
+```
+
+This generates the website in `docs/_site/`.
+
+### Preview Documentation
+
+```bash
+cd docs
+quarto preview
+```
+
+Opens a live-reload preview in your browser.
+
+### Config-Driven Content
+
+Documentation uses variables from `config.py`:
+- Frame dimensions update automatically
+- Extruder references match your config
+- Tier-specific content based on settings
+
+---
+
+## Three Build Systems Summary
+
+| System | Command | Output |
+|--------|---------|--------|
+| **CAD/STL** | `./build.sh build_all` | `cad/stl/*.stl` |
+| **Analysis** | `python scripts/analyze.py` | Terminal output |
+| **Documentation** | `quarto render` | `docs/_site/` |
+
+All three systems read from `cad/config.py` for consistency.
+
+---
+
 ## Next Steps
 
 After building parts:
 
-1. **Review STLs**: Open in slicer (Cura, PrusaSlicer, etc.)
-2. **Prepare for Printing**: Check orientation, supports, infill
-3. **Gather Hardware**: See [MANIFESTO.md](../MANIFESTO.md) for BOM
-4. **Assembly Documentation**: Coming soon
+1. **Run Analysis**: `python scripts/analyze.py` to verify your configuration
+2. **Review STLs**: Open in slicer (Cura, PrusaSlicer, etc.)
+3. **Prepare for Printing**: Check orientation, supports, infill
+4. **Gather Hardware**: See [REFERENCE-SPEC.md](REFERENCE-SPEC.md) for BOM
+5. **Build Guides**: See [docs/guides/](docs/guides/) for tier-specific instructions
 
 ## Contributing
 
