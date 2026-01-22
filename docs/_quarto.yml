@@ -22,8 +22,8 @@ website:
             href: guides/frame-assembly.qmd
       - text: "Reference"
         menu:
-          - text: "Klipper Config"
-            href: reference/klipper-config.qmd
+          - text: "Parts List"
+            href: reference/MASTER_PARTS_LIST.md
       - text: "ADRs"
         href: adr/index.qmd
     right:
@@ -38,9 +38,7 @@ website:
         - section: "Assembly"
           contents:
             - guides/frame-assembly.qmd
-        - section: "Reference"
-          contents:
-            - reference/klipper-config.qmd
+            - guides/klipper-config.qmd
 
 format:
   html:

@@ -6,9 +6,9 @@
 
 ---
 
-## 🚜 The Tractor is Coming
+## The Tractor is Coming
 
-Neo-Darwin is a reimagining of the 2007 RepRap Darwin — a high-mass, fully parametric 3D printer built from M12 threaded rod, salvaged components, and open-source intelligence.
+Neo-Darwin is a reimagining of the 2007 RepRap Darwin — a high-mass, fully parametric 3D printer built from M10 threaded rod, salvaged components, and open-source intelligence.
 
 **Expected Release:** Q2/Q3 2026
 
@@ -21,10 +21,76 @@ We build a **"Tractor with the Brain of a Racecar"** — using heavy, high-torqu
 | Feature | Target |
 |---------|--------|
 | **Price** | < $300 AUD |
-| **Build Volume** | 250–300mm³ |
-| **Accuracy** | ±0.1mm (Tier 3+) |
+| **Build Volume** | 235×235×250mm |
+| **Accuracy** | ±0.1mm |
 | **Speed** | 70–120mm/s |
 | **Control** | 100% Local, No Cloud |
+
+---
+
+## Quick Start
+
+### Option 1: Configuration Wizard (Recommended)
+
+```bash
+git clone https://github.com/neo-darwin-reprap/neo-darwin.git
+cd neo-darwin
+
+# Run the wizard - it asks what parts you have
+python scripts/wizard.py
+```
+
+The wizard:
+1. Asks about your scavenged parts (motors, boards, bed)
+2. Auto-detects your build tier (1-3)
+3. Generates `config.py`
+4. Runs engineering analysis
+
+### Option 2: Quick Analysis
+
+```bash
+# See what the reference spec looks like
+python scripts/analyze.py --quick
+
+# Explore trade-offs (what if M8 rods? what if 200x200 bed?)
+python scripts/whatif.py --compare-rods
+python scripts/whatif.py --compare-beds
+```
+
+### Option 3: Build STL Parts
+
+```bash
+cd cad
+./setup.sh        # First time: creates venv, installs deps, configures
+./build.sh build_all   # Build all STL files
+```
+
+See [BUILDING.md](BUILDING.md) for complete guide.
+
+---
+
+## Build Tiers
+
+| Tier | Name | Description | Cost |
+|------|------|-------------|------|
+| 1 | Single Donor | One printer, belt-driven Z | ~$80 AUD |
+| 2 | Dual Donor | Two printers, Triple-Z | ~$150 AUD |
+| **3** | **Reference Spec** | MKS SKIPR, Triple-Z, integrated | ~$270 AUD |
+
+All tiers use the same extruder (Pitan), same motion system, same Klipper tuning. The wizard helps you determine which tier your parts support.
+
+---
+
+## Documentation
+
+| Document | Description |
+|----------|-------------|
+| [MANIFESTO.md](MANIFESTO.md) | Quick-start overview |
+| [PHILOSOPHY.md](PHILOSOPHY.md) | The "Tractor" philosophy |
+| [REFERENCE-SPEC.md](REFERENCE-SPEC.md) | Hardware specification |
+| [BUILDING.md](BUILDING.md) | Complete build guide |
+| [scripts/README.md](scripts/README.md) | Build system documentation |
+| [docs/adr/](docs/adr/) | Architecture Decision Records |
 
 ---
 
@@ -32,55 +98,20 @@ We build a **"Tractor with the Brain of a Racecar"** — using heavy, high-torqu
 
 * **[RepRap Darwin (2007)](https://reprap.org/wiki/Darwin):** The origin. We carry its name forward.
 * **[Prusa i3 Rework (2013)](https://www.thingiverse.com/thing:119616):** The source of our geared extruder heritage.
-* **[RepRap Mendel Revisited (2024)](https://www.thingiverse.com/thing:6783269):** A modern nod to the M12 skeleton.
+* **[RepRap Mendel Revisited (2024)](https://www.thingiverse.com/thing:6783269):** A modern nod to the threaded rod skeleton.
 * **[The 100](https://github.com/MSzturc/the100) / [The Rook](https://github.com/Kanrog/Rook) (2023):** Proof that Klipper makes DIY frames competitive.
 
 ---
-
-## 🚀 Getting Started
-
-### Quick Start
-
-**Website:** [neodarwin.org](https://neodarwin.org)
-
-Clone repository and build parts:
-
-```bash
-git clone https://github.com/neo-darwin-reprap/neo-darwin.git
-cd neo-darwin/cad
-./setup.sh
-```
-
-### Which Setup Should I Use?
-
-| Situation | Command |
-|-----------|----------|
-| New user, first clone | `./setup.sh` (full setup) |
-| Have config.py, just build | `./build.sh build_all` |
-| Change configuration | `./configure.py` then `./build.sh build_all` |
-
-**See [BUILDING.md](BUILDING.md)** for complete guide and troubleshooting.
-
-### System Requirements
-
-- Python 3.9+
-- 4GB RAM (recommended)
-- See [BUILDING.md](BUILDING.md) for platform-specific setup
-
-### Learn More
-
-- [BUILDING.md](BUILDING.md) - Complete build guide
-- [cad/README.md](cad/README.md) - CAD documentation
-- [MANIFESTO.md](MANIFESTO.md) - Project philosophy and specs
 
 ## Status
 
 | Component | Status |
 |-----------|--------|
-| Manifesto | ✅ Complete |
+| Manifesto & Philosophy | ✅ Complete |
+| Build System (wizard, analysis, what-if) | ✅ Complete |
 | build123d Parametric Parts | 🔧 In Development |
 | Klipper Configurations | 🔧 In Development |
-| Assembly Documentation | ⏳ Planned |
+| Assembly Documentation | 🔧 In Development |
 | Reference Build | ⏳ Planned |
 
 ---
