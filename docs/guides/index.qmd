@@ -1,0 +1,57 @@
+---
+title: "Build Guides"
+---
+
+# Neo-Darwin Build Guides
+
+Step-by-step assembly instructions for your Tier {{< var tier >}} build.
+
+## Your Configuration
+
+| Parameter | Value |
+|-----------|-------|
+| Tier | {{< var tier >}} ({{< var tier_name >}}) |
+| Bed | {{< var bed_x >}}×{{< var bed_y >}}mm |
+| Smooth Rods | M{{< var smooth_rod_dia >}} |
+| Z System | {{< var z_type_desc >}} |
+| Board | {{< var primary_board >}} |
+
+## Assembly Sequence
+
+### Phase 1: Frame
+
+1. [Cut List](frame-cut-list.qmd) - Rod lengths for your bed size
+2. [Frame Assembly](frame-assembly.qmd) - Building the M10 skeleton
+3. [Squaring](frame-squaring.qmd) - Ensuring perpendicularity
+
+### Phase 2: Motion System
+
+4. [X Gantry](x-gantry.qmd) - X-axis assembly
+5. [Y Axis](y-axis.qmd) - Y carriage and bed mounting
+6. [Z System](z-system.qmd) - {{< var z_type_desc >}}
+
+### Phase 3: Toolhead
+
+7. [Extruder](extruder-assembly.qmd) - {{< var extruder_type >}} assembly
+8. [Hotend](hotend-mounting.qmd) - Hotend installation
+9. [Wiring](toolhead-wiring.qmd) - Toolhead electrical
+
+### Phase 4: Electronics
+
+10. [Board Setup](board-setup.qmd) - {{< var primary_board >}} installation
+11. [Wiring](main-wiring.qmd) - Power and signal wiring
+12. [Klipper](klipper-setup.qmd) - Firmware configuration
+
+### Phase 5: Calibration
+
+13. [First Power](first-power.qmd) - Initial checkout
+14. [Motion Test](motion-test.qmd) - Axis verification
+15. [Calibration](calibration.qmd) - PID, Z-offset, flow
+
+## Tier-Specific Notes
+
+{{< include _tier-notes.qmd >}}
+
+---
+
+*These guides are generated from your configuration. Different tiers will show different instructions.*

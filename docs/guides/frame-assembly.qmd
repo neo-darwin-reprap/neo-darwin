@@ -1,0 +1,140 @@
+---
+title: "Frame Assembly"
+---
+
+# Frame Assembly
+
+Building the M10 threaded rod skeleton for your {{< var bed_x >}}×{{< var bed_y >}}mm bed.
+
+## Overview
+
+The Neo-Darwin frame uses M10 threaded rods as the primary structural element. This approach offers:
+
+- **Low cost**: Hardware store materials
+- **Easy sourcing**: Available worldwide
+- **Adjustability**: Fine-tune dimensions with nuts
+- **Rigidity**: M10 provides 3× the stiffness of M8
+
+## Materials Required
+
+### Threaded Rods (M10)
+
+Based on your bed size ({{< var bed_x >}}×{{< var bed_y >}}mm):
+
+| Axis | Quantity | Length | Notes |
+|------|----------|--------|-------|
+| X | 4 | {{< var frame_x >}}mm | Front/back horizontals |
+| Y | 4 | {{< var frame_y >}}mm | Left/right horizontals |
+| Z | 4 | {{< var frame_z >}}mm | Vertical uprights |
+
+::: {.callout-tip}
+## Cut List
+If frame dimensions show 0, run `python scripts/analyze.py` to calculate them.
+:::
+
+### Hardware
+
+| Item | Quantity | Notes |
+|------|----------|-------|
+| M10 nuts | 96 | 8 per joint × 12 joints |
+| M10 washers | 48 | 4 per corner × 12 |
+| Printed corners | 8 | See STL list below |
+
+### Smooth Rods (M{{< var smooth_rod_dia >}})
+
+| Axis | Quantity | Length | Notes |
+|------|----------|--------|-------|
+| X gantry | 2 | ~{{< var x_span >}}mm | Check CAD output |
+| Y axis | 2 | ~{{< var frame_y >}}mm | Check CAD output |
+| Z axis | 2-4 | ~{{< var frame_z >}}mm | 2 for belt-Z, 4 for triple-Z |
+
+## Printed Parts
+
+Build the corner pieces before starting assembly:
+
+```bash
+cd cad
+./build.sh build corner_front_left
+./build.sh build corner_front_right
+./build.sh build corner_back_left
+./build.sh build corner_back_right
+# ... and 4 more for bottom corners
+```
+
+Or build all at once:
+
+```bash
+./build.sh build_all
+```
+
+## Assembly Steps
+
+### Step 1: Prepare Rods
+
+1. Cut M10 threaded rods to length (see table above)
+2. Deburr cut ends with file
+3. Clean threads with wire brush
+4. Test-fit nuts on all rods
+
+::: {.callout-warning}
+## Galvanized vs Zinc
+Galvanized rods have thicker coating and more variation. Use `LUMPY_FACTOR = 0.5` or higher in config.py.
+:::
+
+### Step 2: Bottom Frame
+
+1. Lay out 4 bottom corners
+2. Insert X rods ({{< var frame_x >}}mm) through front/back
+3. Insert Y rods ({{< var frame_y >}}mm) through left/right
+4. Hand-tighten all nuts
+
+```
+    Y rods
+    ←———→
+  [C]═══════[C]  ↑
+   ║         ║   │ X rods
+   ║         ║   │
+  [C]═══════[C]  ↓
+
+  C = Corner piece
+```
+
+### Step 3: Add Verticals
+
+1. Thread Z rods ({{< var frame_z >}}mm) through bottom corners
+2. Attach top corners
+3. Hand-tighten
+
+### Step 4: Square the Frame
+
+Critical step! An out-of-square frame causes:
+- Layer shifting
+- Binding on Z
+- Poor print quality
+
+See [Frame Squaring](frame-squaring.qmd) for detailed procedure.
+
+## Verification
+
+Before proceeding, verify:
+
+- [ ] All 12 rods installed
+- [ ] All corners seated properly
+- [ ] Frame is roughly square (within 2mm diagonal)
+- [ ] No binding when moving corners
+- [ ] Nuts are finger-tight (not final torqued)
+
+## Next Steps
+
+1. [Frame Squaring](frame-squaring.qmd) - Get it perfect
+2. [X Gantry](x-gantry.qmd) - Install motion system
+
+---
+
+::: {.callout-note}
+## Configuration-Specific
+This guide uses dimensions from your config.py:
+- Bed: {{< var bed_x >}}×{{< var bed_y >}}mm
+- Smooth rods: M{{< var smooth_rod_dia >}}
+- Z type: {{< var z_type_desc >}}
+:::

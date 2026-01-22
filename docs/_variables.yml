@@ -1,0 +1,24 @@
+# Auto-generated from cad/config.py
+# Run: python scripts/export_config.py > docs/_variables.yml
+
+bed_x: 235
+bed_y: 235
+build_z: 250
+smooth_rod_dia: 10.0
+m10_nominal: 10.0
+lumpy_factor: 0.5
+extruder_type: "PITAN"
+extruder_mass: 280
+primary_board: "MKS_SKIPR"
+total_drivers: 6
+tier: 3
+z_config: "triple"
+has_canbus: true
+frame_x: 0
+frame_y: 0
+frame_z: 0
+x_span: 0
+hotend_type: "E3D_V6_CLONE"
+groovemount_dia: 16.0
+tier_name: "Reference Spec"
+z_type_desc: "Triple Independent Z"

@@ -1,0 +1,63 @@
+---
+title: "Neo-Darwin Documentation"
+---
+
+# Neo-Darwin: A 2026 RepRap Reference Specification
+
+**High-Mass, Low-Cost, Total Control.**
+
+> *"A Tractor with the Brain of a Racecar"*
+
+## Your Build Configuration
+
+::: {.callout-note}
+## Current Configuration
+- **Tier**: {{< var tier >}} ({{< var tier_name >}})
+- **Bed Size**: {{< var bed_x >}}×{{< var bed_y >}}mm
+- **Build Height**: {{< var build_z >}}mm
+- **Smooth Rods**: M{{< var smooth_rod_dia >}}
+- **Extruder**: {{< var extruder_type >}}
+- **Board**: {{< var primary_board >}}
+- **Z Configuration**: {{< var z_type_desc >}}
+:::
+
+## Quick Links
+
+| Document | Description |
+|----------|-------------|
+| [Build Guide](guides/index.qmd) | Step-by-step assembly instructions |
+| [Parts List](reference/parts-list.qmd) | Complete BOM for your configuration |
+| [Klipper Config](reference/klipper-config.qmd) | Printer configuration files |
+| [ADRs](adr/index.qmd) | Architecture Decision Records |
+
+## The Neo-Darwin Philosophy
+
+Neo-Darwin is not designed to compete with consumer printers. It's designed to teach you everything about 3D printers by building one from scratch.
+
+**Key Principles:**
+
+1. **Scavenge First** - Donor printers provide motors, beds, and boards
+2. **Print Your Printer** - Most structural parts are 3D printed
+3. **Understand Everything** - No black boxes, no magic firmware
+4. **Quality Over Speed** - 70-120mm/s produces excellent prints
+
+## Build Tiers
+
+| Tier | Name | Description |
+|------|------|-------------|
+| 0 | Klipper Only | Just upgrade firmware, no build |
+| 1 | Single Donor | One printer, belt-driven Z |
+| 2 | Dual Donor | Two printers, Triple-Z |
+| **3** | **Reference Spec** | MKS SKIPR, Triple-Z, integrated |
+| 4 | Buy Everything | (Not recommended) |
+
+## Getting Started
+
+1. **Run the Wizard**: `python scripts/wizard.py`
+2. **Review Analysis**: `python scripts/analyze.py`
+3. **Build STLs**: `cd cad && ./build.sh build_all`
+4. **Read the Guide**: Start with [Frame Assembly](guides/frame-assembly.qmd)
+
+---
+
+*This documentation was generated from your `config.py`. Run `python scripts/export_config.py` to update variables.*

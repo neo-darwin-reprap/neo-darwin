@@ -8,25 +8,22 @@ project:
 website:
   title: "Neo-Darwin"
   description: "A 2026 RepRap Reference Specification"
+
   navbar:
     left:
       - text: "Home"
         href: index.qmd
-      - text: "Philosophy"
-        href: philosophy.qmd
-      - text: "Reference Spec"
-        href: reference-spec.qmd
       - text: "Build Guides"
         menu:
-          - text: "Tier Overview"
+          - text: "Getting Started"
             href: guides/index.qmd
           - text: "---"
-          - text: "Tier 3: Reference Spec"
-            href: guides/tier-3.qmd
-          - text: "Tier 2: Dual Donor"
-            href: guides/tier-2.qmd
-          - text: "Tier 1: Single Donor"
-            href: guides/tier-1.qmd
+          - text: "Frame Assembly"
+            href: guides/frame-assembly.qmd
+      - text: "Reference"
+        menu:
+          - text: "Klipper Config"
+            href: reference/klipper-config.qmd
       - text: "ADRs"
         href: adr/index.qmd
     right:
@@ -38,29 +35,27 @@ website:
       style: "docked"
       contents:
         - guides/index.qmd
-        - section: "Tier Guides"
+        - section: "Assembly"
           contents:
-            - guides/tier-3.qmd
-            - guides/tier-2.qmd
-            - guides/tier-1.qmd
-        - section: "Klipper Hosts"
+            - guides/frame-assembly.qmd
+        - section: "Reference"
           contents:
-            - guides/klipper/skipr-integrated.qmd
-            - guides/klipper/rpi-3b-host.qmd
-            - guides/klipper/zero-2w-host.qmd
-            - guides/klipper/laptop-host.qmd
+            - reference/klipper-config.qmd
 
 format:
   html:
     theme: cosmo
-    css: styles.css
     toc: true
     toc-depth: 3
     code-fold: true
 
-# Variables from config.py - populated by scripts/export_config.py
-# Run: python scripts/export_config.py > docs/_variables.yml
-# Then reference as {{< var ROD_TYPE >}}
+# Variables from config.py
+# Populated by: python scripts/export_config.py > docs/_variables.yml
+# Referenced in .qmd as {{< var name >}}
+
+# Load variables file if it exists
+metadata-files:
+  - _variables.yml
 
 execute:
   freeze: auto

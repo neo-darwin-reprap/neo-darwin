@@ -1,0 +1,45 @@
+::: {.callout-note}
+## Tier {{< var tier >}}: {{< var tier_name >}}
+
+**Your build includes:**
+
+- **Z Configuration**: {{< var z_type_desc >}}
+- **Control Board**: {{< var primary_board >}} ({{< var total_drivers >}} drivers)
+- **Extruder**: {{< var extruder_type >}} ({{< var extruder_mass >}}g)
+
+:::
+
+<!-- Tier-specific guidance -->
+
+::: {.content-visible when-meta="tier: 1"}
+### Tier 1 Notes
+
+Your single-donor build uses belt-driven Z. This means:
+
+- One Z motor drives both Z rods via belt
+- Simpler wiring (only 4 stepper drivers needed)
+- Manual bed leveling required (no auto-tram)
+- Good starting point for learning
+:::
+
+::: {.content-visible when-meta="tier: 2"}
+### Tier 2 Notes
+
+Your dual-donor build uses Triple-Z. This means:
+
+- Three independent Z motors for auto bed leveling
+- Multi-MCU setup (two boards working together)
+- Klipper's Z_TILT_ADJUST handles bed tramming
+- More complex, but superior leveling
+:::
+
+::: {.content-visible when-meta="tier: 3"}
+### Tier 3 Notes (Reference Spec)
+
+Your reference spec build uses MKS SKIPR with integrated host. This means:
+
+- No separate Raspberry Pi needed
+- 6 stepper drivers in one board
+- CAN bus ready for future expansion
+- Triple-Z with Klipper auto-leveling
+:::
