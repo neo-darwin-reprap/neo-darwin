@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin requires **6 stepper drivers** (X, Y, Extruder, and 3xZ for triple-Z kinematic leveling). In 2026, the 3D printing electronics ecosystem offers three distinct approaches:
+The Neo-Darwin requires **7 stepper drivers** (X, Y1, Y2, E, Z1, Z2, Z3) for the dual-Y gantry and Triple-Z kinematic leveling. The heavy XY gantry (dual 8mm rods, see ADR-021) benefits from dual Y motors driving from both sides. In 2026, the 3D printing electronics ecosystem offers three distinct approaches:
 
 1. **Salvaged Legacy Boards**: 4-driver boards from donor printers (Ender 3, Anet A8, i3 Mega)
 2. **Modular Modern Boards**: 5-8 driver boards requiring separate host (FYSETC Spider, BTT SKR 3)
@@ -28,22 +28,30 @@ We adopt a **three-tier architecture** with the **MKS SKIPR** as the Tier 3 Refe
 - **Trade-off**: No automated Z-tilt, belt-driven Z synchronization
 - **Best For**: Emergency builds, absolute minimum cost
 
-### Tier 2: Multi-MCU Scavenger (Dual Board Triple-Z)
+### Tier 2: Multi-MCU Scavenger (Dual Board Triple-Z) ★ Recommended Scavenger Path
 **Hardware**: Two salvaged 4-driver boards + external host
-- **Configuration**:
-  - Board A: X, Y, Extruder
-  - Board B: 3xZ motors (even with a dead driver slot)
-- **Connection**: Both boards via USB to single Klipper host
-- **Host**: Pi Zero 2W, Pi 3B, or laptop
-- **Z-Leveling**: Automated Klipper Z-tilt (all Z-motors on Board B)
-- **Cost**: ~$205 AUD (includes Pi)
-- **Trade-off**: Higher wiring complexity, dual firmware flashing
-- **Best For**: Repurposing "broken" hardware for premium features
 
-### Tier 3: Reference Spec (MKS SKIPR) ★
+This is the **recommended path for dual-donor builds**. Two donor printers provide 8 stepper drivers total—more than enough for Neo-Darwin's 7 motors.
+
+- **Configuration**:
+  - Board A: X, Y1, Z1, E (4 drivers)
+  - Board B: Y2, Z2, Z3, spare (4 drivers)
+- **Connection**: Both boards via USB to single Klipper host
+- **Host**: Old laptop (free), Pi Zero 2W ($25), or Pi 3B ($50)
+- **Z-Leveling**: Automated Klipper Z-tilt
+- **Cost**: ~$100-150 AUD (2× donors @ $50 + host)
+- **Trade-off**: Higher wiring complexity, dual firmware flashing
+- **Best For**: Maximum scavengeability, lowest total cost
+
+**Why dual Y motors (Y1, Y2)?**
+The XY gantry with dual 8mm rods (ADR-021) is heavier than single-rod designs. Driving from both sides eliminates racking forces and improves motion quality. Most donor printers have 4-5 motors, so two donors provide 8-10 motors—plenty for the 7 required.
+
+**Single Y motor option**: If using a lighter gantry or limited motors, a single Y motor works but may exhibit slight racking at high accelerations. This reduces driver requirement to 6, allowing a single 6-driver board (MKS SKIPR) or leaving a spare on Tier 2 dual-board setup.
+
+### Tier 3: Reference Spec (MKS SKIPR)
 **Hardware**: MKS SKIPR all-in-one board
 - **Integrated SOC**: Rockchip RK3328 (equivalent to Pi 3) built-in
-- **Driver Capacity**: 7 driver slots (6 required + 1 spare for ERCF)
+- **Driver Capacity**: 7 driver slots (7 required, or 6 + 1 spare if single Y motor)
 - **Storage**: 8GB/16GB eMMC onboard
 - **CAN Bus**: Native port for toolhead modules (MKS THR36/42)
 - **Z-Leveling**: Automated Klipper Z-tilt on single MCU
@@ -96,33 +104,104 @@ Klipper excels at controlling multiple MCUs as a single machine:
 
 **Setup**:
 ```
-Host (Pi) --USB--> Board A (X, Y, E)
-    |
-    +---USB--> Board B (3xZ)
+Host (Pi/Laptop) --USB--> Board A (X, Y1, Z1, E)
+                    |
+                    +---USB--> Board B (Y2, Z2, Z3)
 ```
+
+**Driver Assignment**:
+| Board | Driver 1 | Driver 2 | Driver 3 | Driver 4 |
+|-------|----------|----------|----------|----------|
+| A | X | Y1 | Z1 | E |
+| B | Y2 | Z2 | Z3 | (spare) |
 
 **printer.cfg Example**:
 ```ini
-[mcu board_a]
+[mcu]  # Board A is default MCU
 serial: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
 
 [mcu board_b]
 serial: /dev/serial/by-id/usb-Klipper_stm32f103xe-if00
 
+# X-axis on Board A
 [stepper_x]
-step_pin: board_a:PA2
-...
+step_pin: PA2
+dir_pin: PA3
+enable_pin: !PA1
 
+# Dual Y motors - one on each board
+[stepper_y]
+step_pin: PB6
+dir_pin: PB7
+enable_pin: !PB5
+
+[stepper_y1]
+step_pin: board_b:PA2
+dir_pin: board_b:PA3
+enable_pin: !board_b:PA1
+
+# Triple-Z across both boards
 [stepper_z]
-step_pin: board_b:PC3
-...
+step_pin: PC0
+dir_pin: PC1
+enable_pin: !PC2
+
+[stepper_z1]
+step_pin: board_b:PB6
+dir_pin: board_b:PB7
+enable_pin: !board_b:PB5
+
+[stepper_z2]
+step_pin: board_b:PC0
+dir_pin: board_b:PC1
+enable_pin: !board_b:PC2
 ```
 
 **Constraints**:
-- Keep all axes moving together on same MCU (Z-tilt on Board B)
+- Y1/Y2 should be configured as a single axis with `[stepper_y1]` mirroring `[stepper_y]`
+- Z-tilt works across MCUs (Klipper handles timing)
 - Use non-blocking (MTT) USB hubs for 4+ MCUs
 - Each board requires separate firmware flash
 - Identify unique serial IDs in `/dev/serial/by-id/`
+
+## Second-Hand Market Economics (2026)
+
+### Donor Printer Pricing
+
+The second-hand market for entry-level 3D printers is expected to bottom out around **$50 AUD** per unit by end of 2026. Key factors:
+
+- **Market saturation**: Millions of Ender 3, Anet A8, and i3 clones sold 2017-2024
+- **New competition**: Sub-$200 printers (Ender 3 V3, Bambu A1 Mini) make older stock undesirable
+- **Perception shift**: Sellers increasingly recognize true market value
+- **Patience pays**: Avoid $150+ listings; wait for motivated sellers or post "wanted" ads
+
+**Recommended donor sources:**
+- Facebook Marketplace "broken 3D printer" listings
+- Gumtree/Craigslist lot sales
+- Makerspace clearouts
+- University/school surplus
+
+### Real-World Parts Pricing (AliExpress, 2026)
+
+For V-slot donor builds (Ender 3) requiring purchased rods:
+
+| Item | Quantity | Cost (AUD) | Source |
+|------|----------|------------|--------|
+| Stainless steel 8mm rods | 8× 400mm | $43 | AliExpress |
+| IGUS RJ4JP-01-08 bushings | 22× | $30 | AliExpress |
+| **Total motion system** | | **$73** | |
+
+This validates the ADR-022 estimate of $70-90 for rod + bushing replacement when donors lack smooth rods.
+
+### Cost Comparison by Path
+
+| Build Path | Donor Cost | Motion Gap | Electronics | Total |
+|------------|------------|------------|-------------|-------|
+| 2× Anet A8 (rod-bearing) | $100 | $0 | $0 (Tier 2) | **$100** |
+| 2× Ender 3 (V-slot) | $100 | $73 | $0 (Tier 2) | **$173** |
+| 2× Ender 3 + MKS SKIPR | $100 | $73 | $85 | **$258** |
+
+Add ~$100 for frame materials (M10 rod, MDF, hardware) to get total build cost.
 
 ## Consequences
 
@@ -163,29 +242,29 @@ step_pin: board_b:PC3
 - **Z-Leveling**: Manual (no Z-tilt)
 - **Warning**: No future upgrade path to triple-Z without replacing belt system
 
-### Tier 2: Multi-MCU Scavenger (Dual Board)
+### Tier 2: Multi-MCU Scavenger (Dual Board) ★ Recommended
 - **Parts needed**:
-  - 2x Salvaged 4-driver boards
-  - 1x Host (Pi Zero 2W or Pi 3B)
-  - 2x USB cables (host to boards)
-  - 3x Z-motors (triple-Z)
-- **Cost implication**: Low (~$50-205 AUD depending on Pi)
-- **Donor compatibility**: Any 4-driver boards
+  - 2× Salvaged 4-driver boards (8 drivers total, need 7)
+  - 1× Host (laptop free, Pi Zero 2W $25, or Pi 3B $50)
+  - 2× USB cables (host to boards)
+  - 7× Motors (X, Y1, Y2, Z1, Z2, Z3, E)
+- **Cost implication**: Lowest (~$100-175 AUD for donors + host)
+- **Donor compatibility**: Any 4-driver boards (Creality, Anet, etc.)
 - **Z-Leveling**: Automated (Klipper Z-tilt)
-- **Complexity**: High (dual firmware, wiring)
+- **Complexity**: Medium (dual firmware, but well-documented)
 
 ### Tier 3: Reference Spec (MKS SKIPR)
 - **Parts needed**:
-  - 1x MKS SKIPR board
-  - 6x TMC2209 drivers (sometimes included in bundle)
-  - 3x Z-motors (triple-Z)
-  - 1x SD card (for OS, eMMC optional)
-  - 1x USB cable (only for firmware flash)
-  - 0x External host (integrated)
-- **Cost implication**: Low (~$85-100 AUD)
-- **Donor compatibility**: None (new board required)
+  - 1× MKS SKIPR board (7 driver slots)
+  - 7× TMC2209 drivers (sometimes included in bundle)
+  - 7× Motors (X, Y1, Y2, Z1, Z2, Z3, E)
+  - 1× SD card (for OS, eMMC optional)
+  - 1× USB cable (only for firmware flash)
+  - 0× External host (integrated)
+- **Cost implication**: Low (~$85-100 AUD for board)
+- **Donor compatibility**: Motors from donors, board purchased new
 - **Z-Leveling**: Automated (Klipper Z-tilt)
-- **Complexity**: Low (single board)
+- **Complexity**: Low (single board, single firmware)
 
 ### Tier 3 Alternative: BTT Manta M8P
 - **Parts needed**:
@@ -270,10 +349,12 @@ ls -l /dev/serial/by-id/
 - **Backup**: Keep config backups, especially for multi-MCU setups
 
 ## References
+- **ADR-021**: Dual-Rod Motion System (defines dual-Y gantry requirement)
+- **ADR-022**: Linear Bearing Selection (rod material for V-slot donor builds)
+- **ADR-005**: Triple-Z Kinematic Leveling
+- **ADR-013**: TMC driver and endstop architecture
 - **docs/reference/ai-conversations/mainboard.md**: Complete mainboard discussion
 - **docs/reference/ai-conversations/mcu-drivers-endstops.md**: Driver and endstop strategy
-- **docs/adr/013-drivers-endstops.md**: TMC driver and endstop architecture
-- **docs/adr/005-triple-z.md**: Triple-Z kinematic leveling
 - MKS SKIPR Documentation: [Makerbase Official](https://github.com/makerbase-mks/MKS-SKIPR)
 - Klipper Multi-MCU: [Klipper Documentation](https://www.klipper3d.org/Multi_MCU_sample.html)
 
