@@ -21,7 +21,7 @@ We build a **"Tractor with the Brain of a Racecar"** — using heavy, high-torqu
 | Feature | Target |
 |---------|--------|
 | **Price** | < $300 AUD |
-| **Build Volume** | 235×235×250mm |
+| **Build Volume** | 220×220×220mm |
 | **Accuracy** | ±0.1mm |
 | **Speed** | 70–120mm/s |
 | **Control** | 100% Local, No Cloud |
@@ -73,11 +73,11 @@ See [BUILDING.md](BUILDING.md) for complete guide.
 
 | Tier | Name | Description | Cost |
 |------|------|-------------|------|
-| 1 | Single Donor | One printer, belt-driven Z | ~$80 AUD |
-| 2 | Dual Donor | Two printers, Triple-Z | ~$150 AUD |
-| **3** | **Reference Spec** | MKS SKIPR, Triple-Z, integrated | ~$270 AUD |
+| 1 | Single Donor | One printer, belt-driven Z, no auto-level | ~$80 AUD |
+| **2** | **Dual Donor** | Two printers, Triple-Z, dual-MCU Klipper | **~$200 AUD** |
+| 3 | Reference Spec | MKS SKIPR, Triple-Z, integrated host | ~$300 AUD |
 
-All tiers use the same extruder (Pitan), same motion system, same Klipper tuning. The wizard helps you determine which tier your parts support.
+**Tier 2 is the recommended scavenger path.** Two donor printers provide 8 stepper drivers (need 7), eliminating the need for new electronics. All tiers use the same Pitan extruder, dual-rod motion system, and Klipper tuning.
 
 ---
 
@@ -86,20 +86,25 @@ All tiers use the same extruder (Pitan), same motion system, same Klipper tuning
 | Document | Description |
 |----------|-------------|
 | [MANIFESTO.md](MANIFESTO.md) | Quick-start overview |
-| [PHILOSOPHY.md](PHILOSOPHY.md) | The "Tractor" philosophy |
+| [PHILOSOPHY.md](PHILOSOPHY.md) | The "Tractor" philosophy and heritage |
 | [REFERENCE-SPEC.md](REFERENCE-SPEC.md) | Hardware specification |
 | [BUILDING.md](BUILDING.md) | Complete build guide |
 | [scripts/README.md](scripts/README.md) | Build system documentation |
 | [docs/adr/](docs/adr/) | Architecture Decision Records |
+| [docs/reference/donor-printer-guide.md](docs/reference/donor-printer-guide.md) | Which printers to scavenge |
 
 ---
 
 ## The Lineage
 
-* **[RepRap Darwin (2007)](https://reprap.org/wiki/Darwin):** The origin. We carry its name forward.
-* **[Prusa i3 Rework (2013)](https://www.thingiverse.com/thing:119616):** The source of our geared extruder heritage.
-* **[RepRap Mendel Revisited (2024)](https://www.thingiverse.com/thing:6783269):** A modern nod to the threaded rod skeleton.
-* **[The 100](https://github.com/MSzturc/the100) / [The Rook](https://github.com/Kanrog/Rook) (2023):** Proof that Klipper makes DIY frames competitive.
+We stand on the shoulders of giants:
+
+* **[RepRap Darwin (2007)](https://reprap.org/wiki/Darwin):** Box-frame threaded-rod origin. We carry its name forward.
+* **[RepRap Mendel (2009)](https://reprap.org/wiki/Mendel):** The "plough" X-carriage sled design.
+* **[Prusa i3 Rework (2013)](https://www.thingiverse.com/thing:119616):** Greg's Wade geared extruder—ancestor of our Pitan.
+* **[Voron Legacy](https://vorondesign.com/voron_legacy):** Dual 8mm rods with vertical stacking for X-Y gantry.
+* **[Voron Trident](https://vorondesign.com/voron_trident):** Three-pillar Z-drop bed with Triple-Z leveling.
+* **[The 100](https://github.com/MSzturc/the100) / [The Rook](https://github.com/Kanrog/Rook):** Klipper-first philosophy on DIY frames.
 
 ---
 
