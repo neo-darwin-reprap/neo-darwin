@@ -2,7 +2,7 @@ To resolve the confusion around frame scaling and bed sizes, we need to balance 
 
 ### 1. The Bed Size vs. Frame Paradox
 
-In the Neo-Darwin, the **Heated Bed** is the "Parametric Anchor." Everything else expands from its dimensions.
+In the Amalgam, the **Heated Bed** is the "Parametric Anchor." Everything else expands from its dimensions.
 
 * **Thermal Consistency:** You are correct—larger beds (e.g., 350mm+) often suffer from significant thermal droop at the edges unless they use expensive AC-powered silicone heaters. The **MK52 (254 x 264mm)** is considered a "sweet spot" because it provides a generous build area while maintaining high thermal uniformity across the entire sheet.
 * **The "Smaller Bed" Problem:** If a donor provides a smaller bed (like a 120mm bed from a Monoprice Mini), building a large M12 frame around it is inefficient.
@@ -37,7 +37,7 @@ Integrating Z-motor mounts into the corner brackets is a great way to reduce par
 | **Motor Mounts** | **Floating Pucks** (flexible) | **Integrated Corners** (rigid) |
 | **Philosophy** | "Build to the Bed" | "Build to the Spec" |
 
-> **"In the Neo-Darwin, we recommend the MK52 as the standard of truth. If your salvage is smaller, build the frame to fit a future MK52, and let the software handle the empty space in the meantime."**
+> **"In the Amalgam, we recommend the MK52 as the standard of truth. If your salvage is smaller, build the frame to fit a future MK52, and let the software handle the empty space in the meantime."**
 
 **Would you like me to draft a "Bed-to-Frame" calculator section for the documentation that helps users find their rod-cut lengths based on their donor bed?**
 
@@ -59,7 +59,7 @@ For users wanting to go beyond the MK52, moving them to a "Manual" or "Template"
 
 * **Parametric Sovereignty:** Since you are using **build123d**, the "Mad-Tinker" can simply change a few variables in their own copy of your scripts.
 * **Stability Warning:** Your documentation should state that beyond the 300mm cube, the **"Tractor"** becomes an experimental platform. Issues like rod-wobble and gantry-flex become non-linear problems that the standard assembly guide cannot account for.
-* **Support Ceiling:** You can explicitly state that the **Neo-Darwin Reference Support** only extends to the standard build volume.
+* **Support Ceiling:** You can explicitly state that the **Amalgam Reference Support** only extends to the standard build volume.
 
 ### 3. Solving the Corner-Motor Conflict
 

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Neo-Darwin Master Build Script
+Amalgam Master Build Script
 
 Orchestrates all build systems:
 1. Configuration (config.py generation)
@@ -16,7 +16,7 @@ Usage:
     python scripts/build.py --analyze          # Run analysis only
     python scripts/build.py --all              # Build everything (non-interactive)
 
-The build system follows Neo-Darwin's principle of single source of truth:
+The build system follows Amalgam's principle of single source of truth:
 config.py drives STL generation, documentation, and analysis.
 """
 
@@ -138,7 +138,7 @@ def build_docs(verbose: bool = True):
 def build_all(interactive: bool = True):
     """Build everything: config, analysis, STLs, docs."""
 
-    print_header("Neo-Darwin Complete Build")
+    print_header("Amalgam Complete Build")
 
     # Step 1: Configuration
     print_step(1, "Configuration")
@@ -202,7 +202,7 @@ def build_all(interactive: bool = True):
 def main():
     """Main entry point."""
     parser = argparse.ArgumentParser(
-        description="Neo-Darwin Master Build Script",
+        description="Amalgam Master Build Script",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

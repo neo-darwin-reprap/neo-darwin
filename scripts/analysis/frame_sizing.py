@@ -1,5 +1,5 @@
 """
-Frame Sizing Calculator for Neo-Darwin
+Frame Sizing Calculator for Amalgam
 
 Calculates required frame dimensions based on bed size and
 component clearances. Helps builders understand the relationship

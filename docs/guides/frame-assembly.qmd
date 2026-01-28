@@ -8,7 +8,7 @@ Building the M10 threaded rod skeleton for your {{< var bed_x >}}×{{< var bed_y
 
 ## Overview
 
-The Neo-Darwin frame uses M10 threaded rods as the primary structural element. This approach offers:
+The Amalgam frame uses M10 threaded rods as the primary structural element. This approach offers:
 
 - **Low cost**: Hardware store materials
 - **Easy sourcing**: Available worldwide

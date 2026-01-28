@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-Part Selector for Neo-Darwin Build System
+Part Selector for Amalgam Build System
 Lists available parts dynamically from parts/ directory
 """
 

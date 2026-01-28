@@ -16,7 +16,7 @@ Accepted
 - Adequate rigidity for 220mm build volume at 330mm span (see ADR-024)
 - Single-rod-per-axis simplicity
 
-**ADR-020** proposed a "Dual-8 Scavenger" variant after analyzing the Voron Legacy, which achieves acceptable performance with 8mm rods at 200mm build volume. The key insight was that **dual rods sharing load halve deflection**, potentially enabling 8mm rods at Neo-Darwin's larger build volume.
+**ADR-020** proposed a "Dual-8 Scavenger" variant after analyzing the Voron Legacy, which achieves acceptable performance with 8mm rods at 200mm build volume. The key insight was that **dual rods sharing load halve deflection**, potentially enabling 8mm rods at Amalgam's larger build volume.
 
 ### The Physics Discovery
 
@@ -38,7 +38,7 @@ While dual 8mm has ~82% the stiffness of single 10mm, the load sharing more than
 
 ### The Scavengeability Argument
 
-Neo-Darwin already requires **two donor printers** for triple-Z (ADR-005):
+Amalgam already requires **two donor printers** for triple-Z (ADR-005):
 - 6-7 NEMA17 motors needed (X, Y×2, Z×3, extruder)
 - Most donor printers have 4-5 motors
 - Two donors are the practical minimum
@@ -53,7 +53,7 @@ Given two donors are required anyway:
 
 ## Decision
 
-We adopt **Dual 8mm Smooth Rods with Vertical Stacking** as the Neo-Darwin reference specification for XY motion.
+We adopt **Dual 8mm Smooth Rods with Vertical Stacking** as the Amalgam reference specification for XY motion.
 
 ### Reference Configuration
 

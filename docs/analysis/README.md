@@ -1,6 +1,6 @@
 # Engineering Analysis
 
-This folder contains engineering calculations and analysis that inform Neo-Darwin design decisions.
+This folder contains engineering calculations and analysis that inform Amalgam design decisions.
 
 These documents provide the mathematical foundation for understanding trade-offs in the design.
 

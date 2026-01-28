@@ -1,4 +1,4 @@
-Based on the latest documentation and our recent discussions, the mainboard options for the Neo-Darwin are categorized into three distinct "Motion Paths." These paths allow you to choose between maximum salvage, modular expansion, or integrated modern reliability.
+Based on the latest documentation and our recent discussions, the mainboard options for the Amalgam are categorized into three distinct "Motion Paths." These paths allow you to choose between maximum salvage, modular expansion, or integrated modern reliability.
 
 ### 1. The "Pure Scavenger" (Belt-Drive Z)
 

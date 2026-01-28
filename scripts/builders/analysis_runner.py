@@ -1,5 +1,5 @@
 """
-Analysis Runner for Neo-Darwin
+Analysis Runner for Amalgam
 
 Runs engineering analysis and generates reports.
 Wraps the analysis/ modules for programmatic use.

@@ -1,4 +1,4 @@
-# Neo-Darwin Documentation & Build System Plan
+# Amalgam Documentation & Build System Plan
 
 **Status**: In Progress - ADR Updates Complete
 **Date**: 2026-01-21
@@ -24,7 +24,7 @@ The following decisions were confirmed:
 - [x] ADR README: Updated with new index
 - [x] Fixed typo: `traxctor_06` → `tractor_06`
 
-This document captures the proposed documentation reorganization, tiered build system, and engineering analysis tools for the Neo-Darwin project.
+This document captures the proposed documentation reorganization, tiered build system, and engineering analysis tools for the Amalgam project.
 
 ---
 
@@ -56,7 +56,7 @@ This document captures the proposed documentation reorganization, tiered build s
 docs/
 ├── README.md                      # Documentation index/navigation
 ├── guides/                        # NEW: User-facing guides (tiered)
-│   ├── tier-0-klipper-only.md    # Flash Klipper, no Neo-Darwin build
+│   ├── tier-0-klipper-only.md    # Flash Klipper, no Amalgam build
 │   ├── tier-1-single-donor.md    # 1 donor + buy 1 motor
 │   ├── tier-2-dual-donor.md      # 2 donors, multi-MCU
 │   ├── tier-3-reference-spec.md  # MKS SKIPR, CAN bus, single PSU
@@ -119,7 +119,7 @@ The current MANIFESTO.md tries to be:
 |--------------|---------|
 | **MANIFESTO.md** | Philosophy only - "Why we build tractors" (~10KB) |
 | **REFERENCE-SPEC.md** | The "blessed" configuration (Pitan, M10, Triple-Z, etc.) |
-| **PHILOSOPHY.md** | Deep engineering philosophy (Neo-Darwin Square, 20 years wisdom) |
+| **PHILOSOPHY.md** | Deep engineering philosophy (Amalgam Square, 20 years wisdom) |
 | **docs/guides/README.md** | How to choose your tier |
 
 ---
@@ -284,7 +284,7 @@ A CLI/TUI tool that takes user configuration and analyzes build feasibility:
 ```bash
 $ ./analyze.py --bed 235x235 --rods M8 --span 400
 
-Neo-Darwin Engineering Analysis
+Amalgam Engineering Analysis
 ================================
 
 Configuration:
@@ -356,7 +356,7 @@ The analysis tool would read:
 ### Proposed Coverage
 
 ```markdown
-# Building Neo-Darwin
+# Building Amalgam
 
 This guide covers three build systems:
 

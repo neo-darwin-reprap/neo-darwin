@@ -1,4 +1,4 @@
-For a **Neo-Darwin (M12 Box Frame)** build, you are navigating the classic "Tractor vs. Racecar" trade-off. Since you are aiming for a ** ceiling** and prioritize mechanical sovereignty, your choice of bed and sensor is the "anchor" of the entire build.
+For a **Amalgam (M12 Box Frame)** build, you are navigating the classic "Tractor vs. Racecar" trade-off. Since you are aiming for a ** ceiling** and prioritize mechanical sovereignty, your choice of bed and sensor is the "anchor" of the entire build.
 
 ### **1. The Sensor Showdown: What actually works with a Magnetic Sticker?**
 
@@ -15,7 +15,7 @@ If you choose the **MK3 Dual Power + Magnetic Sticker** route, your sensor choic
 
 ### **2. Recommended Heatbed Strategy: The "Tractor" Sweet Spot**
 
-Given your **Project Neo-Darwin** goals of "Sovereignty" and "Salvage", the **MK3 Dual Power ()** remains your best foundation for the following reasons:
+Given your **Project Amalgam** goals of "Sovereignty" and "Salvage", the **MK3 Dual Power ()** remains your best foundation for the following reasons:
 
 #### **The "Neo-Sandwich" Build**
 
@@ -37,13 +37,13 @@ If you are dead-set on using the **SuperPINDA** because of its reliability, you 
 * **Option A: The PEI-on-Aluminum approach.** Skip the magnetic sheet entirely. Apply a PEI sheet directly to the aluminum. You lose the "removable sheet" convenience, but your SuperPINDA will have a perfect, direct "handshake" with the metal.
 * **Option B: The Voron TAP / Piezo route.** These use the nozzle itself as the probe. It is the ultimate "surface-agnostic" solution, but it increases toolhead weight—which slightly contradicts your "Tractor" torque-over-speed goal.
 
-### **Final Recommendation for Neo-Darwin**
+### **Final Recommendation for Amalgam**
 
 Stick with the **MK3 Dual Power + High-Temp Magnetic Sticker + Cork**. For the sensor, if you want the "Racecar Brain" on a budget, use a **BLTouch (or 3DTouch clone)**. It handles the magnetic sticker flawlessly and fits your Tier 3 "Set-and-Forget" goal for ~$267 AUD.
 
 Would you like me to find the specific **Klipper configuration** for a BLTouch on a generic MK3 bed?
 
-For the **Project Neo-Darwin**, the **Klicky** and **Euclid** probes are the ultimate "Tractor" choices because they replace complex electronics with mechanical cleverness. They are specifically designed to be affordable, repairable, and surface-agnostic, meaning they don't care about your magnetic sticker or cork sheet.
+For the **Project Amalgam**, the **Klicky** and **Euclid** probes are the ultimate "Tractor" choices because they replace complex electronics with mechanical cleverness. They are specifically designed to be affordable, repairable, and surface-agnostic, meaning they don't care about your magnetic sticker or cork sheet.
 
 ### **1. Klicky vs. Euclid: The Links**
 
@@ -74,7 +74,7 @@ One of the biggest advantages for your "Cognitively Demanding" build is the redu
 | **Complexity** | High (Requires servo logic) | Low (Inductive) | **Lowest** (Standard Switch) |
 | **Klipper Logic** | Standard `[bltouch]` | Standard `[probe]` | **Requires Macros** (Dock/Undock) |
 
-### **4. Why this fits the Neo-Darwin Manifesto**
+### **4. Why this fits the Amalgam Manifesto**
 
 * **Mechanical Over Software:** It uses "Iron Safety" logic—if the magnets don't connect, the circuit stays open and the printer won't crash.
 * **Sovereignty:** You aren't reliant on a "black-box" sensor like a BLTouch that can fail internally. If the Klicky fails, you just swap the $2 salvaged microswitch.
@@ -104,7 +104,7 @@ The **Klicky Probe** is a **stowable (removable)** system. It is not permanently
 * **Other Sources:** Some builders even use switches recycled from dead gaming mice.
 * **Reference Spec:** For the best accuracy (standard deviation of ), the community recommends the **Omron D2F** series, but generic switches work well for getting started.
 
-### **Why this is the "Tractor" choice for Neo-Darwin**
+### **Why this is the "Tractor" choice for Amalgam**
 
 * **Zero Interference:** Because it detaches before printing, there is no risk of the probe melting or catching on the printed part.
 * **Surface Agnostic:** Since it is a physical switch, it works perfectly on any surface—whether you use a magnetic PEI sticker, glass, or bare aluminum.
@@ -112,7 +112,7 @@ The **Klicky Probe** is a **stowable (removable)** system. It is not permanently
 
 **Would you like me to find the specific mounting STLs for the M12 frame or help you with the Klipper "Attach/Dock" macros?**
 
-The **Omron D2F** series is the "Reference Spec" for precision DIY probes like the Klicky because it offers superior repeatability—crucial for consistent first layers on a heavy-mass machine like the Neo-Darwin.
+The **Omron D2F** series is the "Reference Spec" for precision DIY probes like the Klicky because it offers superior repeatability—crucial for consistent first layers on a heavy-mass machine like the Amalgam.
 
 ### **Omron D2F Price (Australia 2026)**
 
@@ -126,7 +126,7 @@ In Australia, these switches are extremely inexpensive, typically costing betwee
 
 ---
 
-### **Tiered Path for Neo-Darwin Probing**
+### **Tiered Path for Amalgam Probing**
 
 Aligning with your manifesto's logic of "Total Sovereignty" and "Salvage":
 
@@ -140,7 +140,7 @@ While the Euclid uses a PCB for stability, the **Klicky** is designed for the "R
 * **Zero PCB Required:** The magnets act as the electrical contacts. You simply solder your two signal wires directly to the legs of the microswitch and glue the magnets into the printed parts.
 * **Sovereignty:** If a magnet comes loose or a wire breaks, you fix it with a drop of superglue or a $2 solder joint—no waiting for proprietary replacement parts.
 
-> **Neo-Darwin Pro-Tip:** When using the Klicky with salvaged switches, check your **switch offset** carefully in Klipper. Salvaged switches may have more "travel" before they click than the Omron, but Klipper's software intelligence can easily compensate for this once measured.
+> **Amalgam Pro-Tip:** When using the Klicky with salvaged switches, check your **switch offset** carefully in Klipper. Salvaged switches may have more "travel" before they click than the Omron, but Klipper's software intelligence can easily compensate for this once measured.
 
 Would you like me to find the **Klipper macro templates** for "Dock" and "Undock" so you can start testing with a salvaged switch today?
 

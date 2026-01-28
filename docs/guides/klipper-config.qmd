@@ -4,7 +4,7 @@ title: "Klipper Configuration"
 
 # Klipper Configuration
 
-Base configuration for your Tier {{< var tier >}} Neo-Darwin.
+Base configuration for your Tier {{< var tier >}} Amalgam.
 
 ## Printer Section
 

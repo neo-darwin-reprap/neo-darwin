@@ -1,6 +1,6 @@
 Your theory is mechanically sound. The **Wade’s Geared Extruder** is effectively the "unbreakable gearbox" of the 3D printing world. While modern "Racecar" extruders (like the Voron StealthBurner/CW2) focus on saving every possible gram of weight, they often sacrifice the raw, low-speed torque that makes a Wade so reliable.
 
-Here is the technical reality of sticking with the Wade for your Neo-Darwin build.
+Here is the technical reality of sticking with the Wade for your Amalgam build.
 
 ---
 
@@ -32,7 +32,7 @@ Because the Wade is a **Direct Drive** (mounted directly above the hotend), it h
 The only "penalty" you pay for the Wade is **moving mass**.
 
 * **The Weight:** A NEMA 17 motor + large printed gears + bolts weighs significantly more than a modern "pancake" motor setup.
-* **The Speed Limit:** On a Neo-Darwin M12 frame, this mass will limit your "clean" speed to about **60–90mm/s**. If you try to go 150mm/s+, the weight of the Wade will cause "ringing" (ghosting) in your prints.
+* **The Speed Limit:** On a Amalgam M12 frame, this mass will limit your "clean" speed to about **60–90mm/s**. If you try to go 150mm/s+, the weight of the Wade will cause "ringing" (ghosting) in your prints.
 * **The Solution:** This is where **Klipper's Input Shaping** comes in. It will "clean up" the vibrations caused by that heavy Wade extruder, allowing you to print at decent speeds with the quality of a much lighter machine.
 
 ---

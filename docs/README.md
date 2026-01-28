@@ -1,6 +1,6 @@
-# Neo-Darwin Documentation
+# Amalgam Documentation
 
-This directory contains all project documentation for Neo-Darwin.
+This directory contains all project documentation for Amalgam.
 
 ## Documentation Structure
 

@@ -1,4 +1,4 @@
-This is a great idea. Filming the teardown isn't just for the "cool factor"—it’s a vital part of the **Neo-Darwin documentation**. In 2026, a high-speed "Reverse Assembly" video is often more intuitive than a 50-page PDF for showing where the "vitamins" are hidden in donor machines.
+This is a great idea. Filming the teardown isn't just for the "cool factor"—it’s a vital part of the **Amalgam documentation**. In 2026, a high-speed "Reverse Assembly" video is often more intuitive than a 50-page PDF for showing where the "vitamins" are hidden in donor machines.
 
 Since you mentioned you usually just take photos and stitch them, here is a professional **"Restomod" workflow** to turn those snapshots into a high-quality assembly guide.
 
@@ -8,7 +8,7 @@ Instead of a standard video, use a **Stop-Motion/Time-Lapse** approach. It’s e
 
 * **The Setup:** Use a tripod or a "helping hand" to keep your phone/camera in the *exact same spot*.
 * **The "Click" Rule:** Take a photo every time you remove a "module" (e.g., the whole X-carriage, then the motor, then the nozzle).
-* **The Reverse Flex:** When you edit, play the teardown **in reverse**. It becomes an "instant assembly" video for the Neo-Darwin manual.
+* **The Reverse Flex:** When you edit, play the teardown **in reverse**. It becomes an "instant assembly" video for the Amalgam manual.
 
 ### 2. Organizing "The Vitamins" for the Camera
 
@@ -71,7 +71,7 @@ Before you turn a screw, document that these "appliances" were functional.
 
 ### **Phase 4: The "Tractor" Rise (Staged Assembly)**
 
-Now, perform the "Reverse Assembly" by laying out the parts in reverse order of the **Neo-Darwin Manifesto**.
+Now, perform the "Reverse Assembly" by laying out the parts in reverse order of the **Amalgam Manifesto**.
 
 * [ ] **The Skeleton:** M12 rods meeting the printed **Corner Pucks**.
 * [ ] **The Triple-Z Foundation:** The three **Floating Z-Pucks** sliding onto the M12 frame.
@@ -89,8 +89,8 @@ Now, perform the "Reverse Assembly" by laying out the parts in reverse order of 
 ### **Video Montage Idea: "The Sovereignty Loop"**
 
 1. **Start:** High-speed teardown of the Anycubic (5 seconds).
-2. **Middle:** High-speed assembly of the Neo-Darwin "Tractor" (15 seconds).
-3. **End:** The Neo-Darwin printing a **Generation 2** gear that looks significantly cleaner than the one it started with.
+2. **Middle:** High-speed assembly of the Amalgam "Tractor" (15 seconds).
+3. **End:** The Amalgam printing a **Generation 2** gear that looks significantly cleaner than the one it started with.
 4. **Final Frame:** The "Tractor Manifesto" text: *“A RepRap that cannot print its own heart is just an appliance.”*
 
 **Would you like me to draft the specific Klipper "Multi-MCU" config snippet so you can have it ready for the voice-over in your video?**

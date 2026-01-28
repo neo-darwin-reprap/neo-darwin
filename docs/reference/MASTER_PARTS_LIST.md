@@ -1,4 +1,4 @@
-# 📋 Master Parts List (MPL) - Neo-Darwin M12 Box Frame
+# 📋 Master Parts List (MPL) - Amalgam M12 Box Frame
 
 **Project Context:**
 - **Frame Type:** M12 Box Frame

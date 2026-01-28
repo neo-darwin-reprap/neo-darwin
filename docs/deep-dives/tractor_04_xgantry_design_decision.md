@@ -1,8 +1,8 @@
-# Neo-Darwin: X-Gantry Design Decision
+# Amalgam: X-Gantry Design Decision
 
 ## Engineering Decision Record
 
-**Project:** Neo-Darwin 3D Printer  
+**Project:** Amalgam 3D Printer  
 **Component:** X-Axis Gantry System  
 **Decision:** Parallel-Rail Sled ("The Plough")  
 **Status:** Accepted  
@@ -11,7 +11,7 @@
 
 ## Executive Summary
 
-After evaluating multiple X-gantry architectures including Cross-Rod (Eustathios/HercuLien), CoreXY variants, and the classic Cartesian sled, we selected the **Parallel-Rail Sled design** ("The Plough") for Neo-Darwin.
+After evaluating multiple X-gantry architectures including Cross-Rod (Eustathios/HercuLien), CoreXY variants, and the classic Cartesian sled, we selected the **Parallel-Rail Sled design** ("The Plough") for Amalgam.
 
 **Key Drivers:**
 - Simplicity over speed
@@ -24,9 +24,9 @@ After evaluating multiple X-gantry architectures including Cross-Rod (Eustathios
 
 ## Design Context
 
-### Neo-Darwin Philosophy
+### Amalgam Philosophy
 
-Neo-Darwin is designed as:
+Amalgam is designed as:
 - A "Tractor with a Racecar Brain" (heavy frame, smart software)
 - A scavenger/junkstrap build using donor printers
 - Quality-focused rather than speed-focused
@@ -159,7 +159,7 @@ Two horizontal M10 smooth rods spaced 50-80mm apart. A sled carriage rides on li
 - Lower theoretical maximum speed than CoreXY
 - X-motor rides on gantry (adds moving mass)
 
-**Verdict:** Accepted—best fit for Neo-Darwin philosophy.
+**Verdict:** Accepted—best fit for Amalgam philosophy.
 
 ---
 
@@ -203,7 +203,7 @@ Klipper's Input Shaping can compensate for the higher moving mass:
 
 ### Quality Over Speed Philosophy
 
-Neo-Darwin prioritizes:
+Amalgam prioritizes:
 1. Print quality (layer consistency, surface finish)
 2. Reliability (prints complete successfully)
 3. Repairability (fix it yourself)
@@ -239,7 +239,7 @@ Mendel i2 (2012)
     └── Still threaded rod construction
          │
          ▼
-Neo-Darwin (2025)
+Amalgam (2025)
     │
     ├── M10 threaded rod frame (upgraded)
     ├── M10 smooth rod rails (upgraded)
@@ -266,7 +266,7 @@ Eustathios / HercuLien (2014+)
     └── Rod-based CoreXY variants
 ```
 
-Neo-Darwin should remain true to its Darwin ancestry.
+Amalgam should remain true to its Darwin ancestry.
 
 ---
 
@@ -407,7 +407,7 @@ But the fundamental geometry—**sled on parallel rails**—scales well and does
 
 ## Conclusion
 
-The Parallel-Rail Sled ("The Plough") is the correct choice for Neo-Darwin because:
+The Parallel-Rail Sled ("The Plough") is the correct choice for Amalgam because:
 
 1. **It's simple** — One motor, one belt, two rods. Anyone can understand it.
 
@@ -423,7 +423,7 @@ The Parallel-Rail Sled ("The Plough") is the correct choice for Neo-Darwin becau
 
 7. **It's a Tractor** — Heavy, reliable, fixable with a wrench.
 
-**Neo-Darwin should feel like a machine tool, not a race car.**
+**Amalgam should feel like a machine tool, not a race car.**
 
 ---
 

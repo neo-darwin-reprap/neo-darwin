@@ -18,7 +18,7 @@ ADR-021 establishes dual 8mm smooth rods as the reference motion system. This AD
 
 Two donor Prusa-style printers typically provide:
 - 24× LM8UU bearings (12 per printer)
-- Neo-Darwin Dual-8 requires 16 bearings
+- Amalgam Dual-8 requires 16 bearings
 - **Surplus of 8 bearings** available for spares or selection
 
 ### Rod Material Requirements
@@ -304,7 +304,7 @@ DIY polymer sleeve bearings with split-clamp adjustment:
 - Requires careful tuning (too tight = binding, too loose = play)
 - Will wear over time
 - Needs periodic relubrication (PTFE grease, not oil)
-- Unproven at Neo-Darwin's 360mm spans
+- Unproven at Amalgam's 360mm spans
 
 **Best candidate axis:** Z (slowest, lowest risk)
 

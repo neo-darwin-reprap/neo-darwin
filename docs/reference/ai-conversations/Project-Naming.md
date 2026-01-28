@@ -9,7 +9,7 @@ March 2027 is a perfect target date. While the RepRap concept was conceived in 2
 Your choice of "Neo" is a fitting metaphor for the current state of the market. In early 2026, the industry is increasingly dominated by a "closed-source matrix" where manufacturers like Bambu Lab provide a seamless but cloud-tethered, proprietary experience.
 
 * **The Rebirth:** Just as the character Neo "wakes up" to realize the reality of his world, your project represents a "rebirth" of technological sovereignty. You are choosing to bypass the "blue pill" of integrated consumer appliances in favor of the "red pill"—the hard work of understanding and building the machine yourself.
-* **Modernizing the Legacy:** In biological terms, "Neo-Darwinism" refers to the synthesis of natural selection with modern genetics. Similarly, your project synthesizes the original mechanical selection of the RepRap Darwin with modern "genetics": 32-bit MCU control (Octopus Pro), high-speed Klipper firmware, and parametric `build123d` design.
+* **Modernizing the Legacy:** In biological terms, "Amalgamism" refers to the synthesis of natural selection with modern genetics. Similarly, your project synthesizes the original mechanical selection of the RepRap Darwin with modern "genetics": 32-bit MCU control (Octopus Pro), high-speed Klipper firmware, and parametric `build123d` design.
 
 
 

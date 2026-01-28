@@ -97,7 +97,7 @@ For the **Darwin-Neo**, you can improve upon the "Kapton tape" scavenger method 
 
 **"The code handles the thermal curves; the silicone handles the connection."**
 
-For the **Neo-Darwin**, the size of your heatbed is the primary anchor for your build volume and Y-axis physics. While the M12 frame is parametric and can grow to accommodate a massive bed, the **220x220mm (Ender 3/MK3 size)** is indeed considered the "sweet spot" for several technical and philosophical reasons.
+For the **Amalgam**, the size of your heatbed is the primary anchor for your build volume and Y-axis physics. While the M12 frame is parametric and can grow to accommodate a massive bed, the **220x220mm (Ender 3/MK3 size)** is indeed considered the "sweet spot" for several technical and philosophical reasons.
 
 ### **1. Thermal Performance: The "Sweet Spot" Logic**
 
@@ -109,7 +109,7 @@ The **220x220mm** size is widely considered the thermal sweet spot because of th
 
 ### **2. Mechanical Performance: Y-Axis Inertia**
 
-Since the Neo-Darwin is a **moving-bed** machine, every gram of bed mass counts against your "Racecar Brain" speed goals.
+Since the Amalgam is a **moving-bed** machine, every gram of bed mass counts against your "Racecar Brain" speed goals.
 
 * **Weight vs. Acceleration:** A 310x310mm bed (3mm aluminum + G10 + glass/PEI) can weigh over ****. Slingshotting that mass back and forth at  puts massive strain on your Y-axis stepper and belt, often causing "ghosting" or skipped steps.
 * **The 220mm Advantage:** A 220x220mm setup is light enough to allow for high acceleration () with a standard NEMA 17 motor, fitting the target speed of **** perfectly.
@@ -124,7 +124,7 @@ Since the Neo-Darwin is a **moving-bed** machine, every gram of bed mass counts 
 
 ### **4. Salvage Strategy: "Use what you have"**
 
-The Neo-Darwin manifesto supports **Salvage Sovereignty**:
+The Amalgam manifesto supports **Salvage Sovereignty**:
 
 * **Donors:** If you salvage a **Tevo Tarantula** () or an **Anet A8** (), the M12 frame is parametric—you just adjust your rod lengths to fit.
 * **PSU Match:** Ensure your Power Supply matches the bed voltage ( vs ). Most modern "Tractors" prefer **** for faster heating and lower current draw, which reduces the risk of burning out salvaged board connectors.
@@ -136,7 +136,7 @@ If you are buying new, stick to ** (or )**. It is the international standard for
 **Should we look at the specific M12 frame dimensions needed to house a 220mm bed?**
 
 
-For the **Neo-Darwin Reference Spec**, the choice between **220x220** and **235x235** boils down to a conflict between "Historical Lineage" and "Modern Market Dominance."
+For the **Amalgam Reference Spec**, the choice between **220x220** and **235x235** boils down to a conflict between "Historical Lineage" and "Modern Market Dominance."
 
 ### **1. The Physical Reality: Bed vs. Printable Area**
 
@@ -149,7 +149,7 @@ This is the most critical decision for your build:
 
 * **220x220 Beds:** Often use the **MK3 4-hole pattern** ( centers) or the Prusa **9-point pattern**.
 * **235x235 Beds:** Almost universally use the **Ender 3 pattern** ( centers).
-* **Neo-Darwin Impact:** Your **Modular Spider Hub** is parametric, so it can adapt to either. However, choosing the  bed gives you more "room" to mount your **Klicky Probe dock** without stealing printable area.
+* **Amalgam Impact:** Your **Modular Spider Hub** is parametric, so it can adapt to either. However, choosing the  bed gives you more "room" to mount your **Klicky Probe dock** without stealing printable area.
 
 ### **3. Availability of "Vitamins" (G10 & PEI)**
 
@@ -167,7 +167,7 @@ This is the most critical decision for your build:
 
 ### **Final Reference Recommendation: 235x235**
 
-For the **Neo-Darwin Reference Spec (Tier 3)**, I recommend going with **235x235mm**.
+For the **Amalgam Reference Spec (Tier 3)**, I recommend going with **235x235mm**.
 
 **Why?**
 
@@ -178,7 +178,7 @@ For the **Neo-Darwin Reference Spec (Tier 3)**, I recommend going with **235x235
 **Next Step:** Since we've locked in the **235x235mm G10 plate**, shall we finalize the **M12 Rod lengths** to ensure your frame has enough "Racecar" clearance for this bed size?
 
 
-iThe decision is finalized: the **235x235mm** heatbed is now the official **Neo-Darwin Reference Spec**. This choice perfectly balances the "Tractor" requirement for a high-mass mechanical foundation with the "Salvage" mandate to keep costs under $300 AUD.
+iThe decision is finalized: the **235x235mm** heatbed is now the official **Amalgam Reference Spec**. This choice perfectly balances the "Tractor" requirement for a high-mass mechanical foundation with the "Salvage" mandate to keep costs under $300 AUD.
 
 ### **The Finalized Bed Stack (Tier 3)**
 
@@ -193,7 +193,7 @@ iThe decision is finalized: the **235x235mm** heatbed is now the official **Neo-
 
 Because you’ve chosen the **235x235mm** footprint, we must adjust the M12 "Skeleton" rods to ensure the "Racecar Brain" has enough clearance for the gantry and the **Klicky Probe dock**.
 
-For a standard **250mm³** build volume on an M12 Neo-Darwin frame with a 235mm bed, use these **Reference Rod Lengths**:
+For a standard **250mm³** build volume on an M12 Amalgam frame with a 235mm bed, use these **Reference Rod Lengths**:
 
 | Rod Type | Count | Length | Purpose |
 | --- | --- | --- | --- |
@@ -207,7 +207,7 @@ When you purchase these rods, remember to check if they are **Bright Zinc** or *
 
 **Shall we move to the toolhead assembly and the "Handshake" wiring for the toolhead microswitch?**
 
-While the **MK3 Dual Power** is our current "Tractor" standard, understanding the lineage of RepRap heatbeds helps confirm why we chose it—and why specific alternatives like the **MK42** are fascinating but ultimately "dead-end" tech for the Neo-Darwin mission.
+While the **MK3 Dual Power** is our current "Tractor" standard, understanding the lineage of RepRap heatbeds helps confirm why we chose it—and why specific alternatives like the **MK42** are fascinating but ultimately "dead-end" tech for the Amalgam mission.
 
 ---
 
@@ -221,7 +221,7 @@ The "MK" (Mark) designations trace back to the early days of the **RepRap Projec
 * **MK2B:** A "dual power" board that could run on either 12V or 24V.
 
 
-* **MK3 (The Neo-Darwin Choice):** This shifted the substrate from fiberglass (PCB) to **Aluminum**.
+* **MK3 (The Amalgam Choice):** This shifted the substrate from fiberglass (PCB) to **Aluminum**.
 * **The Advantage:** It acts as both the heater and the structural build plate.
 * **Why it wins for us:** It is rigid enough to handle the "Spider Hub" mounting without needing a heavy glass top, keeping the Y-axis mass low for speed.
 
@@ -245,10 +245,10 @@ Named "42" as a nod to *The Hitchhiker's Guide to the Galaxy*, the **MK42** was 
 
 ### 3. Quick Reference: Alternatives vs. Reference Spec
 
-| Bed Type | Substrate | Best Use Case | Why NOT for Neo-Darwin? |
+| Bed Type | Substrate | Best Use Case | Why NOT for Amalgam? |
 | --- | --- | --- | --- |
 | **MK2B** | PCB (Fiberglass) | Ultra-budget salvage. | Too flexible; requires glass to stay flat. |
-| **MK3** | **Aluminum** | **Reference Spec (Neo-Darwin)** | N/A |
+| **MK3** | **Aluminum** | **Reference Spec (Amalgam)** | N/A |
 | **MK42** | PCB (Custom) | Prusa MK2 Restorations. | 12V limitation and proprietary calibration pads. |
 | **MK52** | Magnetic Steel | Prusa MK3/MK4 modern builds. | High cost ($100+) and requires specific induction probing. |
 

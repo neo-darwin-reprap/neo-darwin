@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin supports various bed sizes (from salvaged donor beds to MK52 250mm²). Traditional integrated Z-motor mounts (built into corner brackets) create a "parametric paradox":
+The Amalgam supports various bed sizes (from salvaged donor beds to MK52 250mm²). Traditional integrated Z-motor mounts (built into corner brackets) create a "parametric paradox":
 
 1. **Frame Lock-in**: Motor position determines bed width
 2. **No Adjustment**: Small manufacturing tolerances (bent rods, "lumpy" prints) cause permanent Z-misalignment

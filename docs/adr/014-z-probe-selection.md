@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin requires a Z-probe for homing and bed-leveling. The choice depends heavily on the bed surface material:
+The Amalgam requires a Z-probe for homing and bed-leveling. The choice depends heavily on the bed surface material:
 
 **Two Probe Technologies**:
 1. **BLTouch**: Physical Hall Effect probe with moving pin that touches bed

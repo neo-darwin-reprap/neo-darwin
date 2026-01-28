@@ -9,20 +9,20 @@ Superseded by [ADR-021: Dual-Rod Motion System](021-dual-rod-motion-system.md)
 Proposed
 
 ## Context
-The reference Neo-Darwin specification uses M10 smooth rods for XY motion (ADR-003). While M10 provides excellent stiffness at 370mm spans, M10 smooth rods are difficult to scavenge:
+The reference Amalgam specification uses M10 smooth rods for XY motion (ADR-003). While M10 provides excellent stiffness at 370mm spans, M10 smooth rods are difficult to scavenge:
 
 - Photocopiers sometimes have M10/10mm shafts, but storing/disposing of the rest is problematic
 - Most donor 3D printers (Prusa clones, Anet A8, Creality) use 8mm smooth rods
 - Buying new M10 smooth rods costs $60-80 AUD, pushing builds toward $300+
 
-Analysis shows that single 8mm rods cannot achieve acceptable deflection at Neo-Darwin's target 370mm X-span:
+Analysis shows that single 8mm rods cannot achieve acceptable deflection at Amalgam's target 370mm X-span:
 
 | Configuration | Deflection @ 370mm | Verdict |
 |---------------|-------------------|---------|
 | Single 8mm, 280g toolhead | 0.072mm | Excessive |
 | Single 10mm, 280g toolhead | 0.030mm | Acceptable |
 
-However, the Voron Legacy achieves acceptable performance with 8mm rods by using a smaller build volume (~200mm). This raised the question: **Can Neo-Darwin maintain 235mm build volume with 8mm rods?**
+However, the Voron Legacy achieves acceptable performance with 8mm rods by using a smaller build volume (~200mm). This raised the question: **Can Amalgam maintain 235mm build volume with 8mm rods?**
 
 ### The Dual-Rod Insight
 

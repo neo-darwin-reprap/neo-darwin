@@ -29,7 +29,7 @@ A 3D printer must move the nozzle relative to the print surface in three axes. T
 - Common in: Voron Switchwire, converted Enders
 - Characteristic: Hybrid approach, complex belt paths
 
-### Neo-Darwin Constraints
+### Amalgam Constraints
 
 - **Triple-Z kinematic leveling** (ADR-005) - requires independent Z control
 - **M10 threaded rod frame** (ADR-001) - heavy, rigid, not optimized for gantry climbing
@@ -148,7 +148,7 @@ Heavy beds can "back-drive" unpowered leadscrews and crash down. Mitigations:
 4. **Software**: Klipper can park bed at safe height before shutdown
 5. **Mechanical stop**: Optional hard stop at bottom of Z travel
 
-For Neo-Darwin's 235×235mm bed (~500-800g with glass), the friction of 3 TR8×2 leadscrews is sufficient to prevent unpowered drop.
+For Amalgam's 235×235mm bed (~500-800g with glass), the friction of 3 TR8×2 leadscrews is sufficient to prevent unpowered drop.
 
 ## Architectural Integration
 

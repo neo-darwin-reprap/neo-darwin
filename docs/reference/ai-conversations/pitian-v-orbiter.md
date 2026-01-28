@@ -1,4 +1,4 @@
-Absolutely — comparing **Orbiter (specifically 1.5)** to **Pitan** is a perfect next step in your scavenger-friendly extruder journey. These two are *very different* designs with different strengths, weaknesses, and DIY friendliness. Below is a clear, practical comparison you can use to decide which one fits your Neo-Darwin *Reference Build* and *Scavenger Path* best.
+Absolutely — comparing **Orbiter (specifically 1.5)** to **Pitan** is a perfect next step in your scavenger-friendly extruder journey. These two are *very different* designs with different strengths, weaknesses, and DIY friendliness. Below is a clear, practical comparison you can use to decide which one fits your Amalgam *Reference Build* and *Scavenger Path* best.
 
 ---
 
@@ -144,7 +144,7 @@ Usually only challenging bits are bearings; but replacements are cheap if needed
 
 ## 🧩 5. Weight & Motion System Impact
 
-Both extruders are **light enough** for your Neo-Darwin with M8 or M10:
+Both extruders are **light enough** for your Amalgam with M8 or M10:
 
 | Extruder + Motor     | Approx Weight |
 | -------------------- | ------------- |
@@ -266,7 +266,7 @@ You can include **both as acceptable extruders** in your spec:
 
 ✔ A parts list for either design you can source locally/scavenged?
 ✔ Printable STL recommendations and slicing tips?
-✔ How to mount in your Neo-Darwin carriage?
+✔ How to mount in your Amalgam carriage?
 ✔ A comparative assembly guide?
 
 Just tell me which direction you want to go!
@@ -465,7 +465,7 @@ Those give *orders of magnitude* more improvement than switching between Pitan a
 
 If you want, next we can:
 
-* Write a **justification paragraph** for your Neo-Darwin spec
+* Write a **justification paragraph** for your Amalgam spec
 * Define **extruder tiers** (Reference / Scavenger / Legacy)
 * Or sanity-check hotend pairings that best match each extruder
 

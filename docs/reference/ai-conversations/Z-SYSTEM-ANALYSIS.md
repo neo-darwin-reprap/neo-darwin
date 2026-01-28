@@ -58,14 +58,14 @@ Top Frame + Gantry (Z=max, FIXED)
 
 ---
 
-## Neo-Darwin Frame Differences
+## Amalgam Frame Differences
 
 **Voron:**
 - Frame = Aluminum extrusions (2020, 2040)
 - Motors bolt directly to extrusion holes
 - Leadscrew path through open frame interior
 
-**Neo-Darwin:**
+**Amalgam:**
 - Frame = M12 threaded rods (solid bars)
 - No mounting holes on rods
 - Need Z-pucks to slide over M12 rods
@@ -73,7 +73,7 @@ Top Frame + Gantry (Z=max, FIXED)
 
 ---
 
-## Proposed Neo-Darwin Z-System Layout
+## Proposed Amalgam Z-System Layout
 
 ### Option A: Corners + Back Center (Recommended)
 

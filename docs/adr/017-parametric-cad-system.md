@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin requires a parametric CAD system that supports:
+The Amalgam requires a parametric CAD system that supports:
 - **Customizable Dimensions**: Variable build volumes, rod lengths, bed sizes
 - **Code-First Approach**: Version control, diff-friendly, scriptable
 - **Precision Geometry**: NURBS/BREP for accurate manufacturing

@@ -214,7 +214,7 @@ The X-Ends are the "sliders" that carry the X-axis rods while moving along the Y
 2. Clamp M10 smooth rods for X-axis (carry the Plough's rails)
 3. Provide mounting point for Y-axis belt attachment
 
-**Note:** The X-Ends have **nothing to do with the Z-axis**. In Neo-Darwin's Z-drop design, the Z-axis (bed platform) is a completely separate system with its own rods and lead screws.
+**Note:** The X-Ends have **nothing to do with the Z-axis**. In Amalgam's Z-drop design, the Z-axis (bed platform) is a completely separate system with its own rods and lead screws.
 
 ### Design for 60mm Horizontal Spacing
 

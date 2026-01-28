@@ -1,4 +1,4 @@
-To truly achieve the "Red Pill" philosophy of your **Neo-Darwin** manifesto, your builders need to know that the most precise parts of the machine—the linear rods—don't have to be bought. They can be harvested from the "skeletons" of 20th-century office tech.
+To truly achieve the "Red Pill" philosophy of your **Amalgam** manifesto, your builders need to know that the most precise parts of the machine—the linear rods—don't have to be bought. They can be harvested from the "skeletons" of 20th-century office tech.
 
 Here is a draft for the **"Scavenger’s Guide to Free Iron"** section of your manifesto.
 
@@ -6,7 +6,7 @@ Here is a draft for the **"Scavenger’s Guide to Free Iron"** section of your m
 
 ## 🛠️ The Scavenger’s Guide to Free Iron
 
-In the Neo-Darwinian worldview, a junked office machine is not waste; it is a **high-precision organ donor**. While you can buy 10mm rods, scavenging them provides superior industrial-grade steel for $0.
+In the Amalgamian worldview, a junked office machine is not waste; it is a **high-precision organ donor**. While you can buy 10mm rods, scavenging them provides superior industrial-grade steel for $0.
 
 ### 1. The "Golden" Donor: Large Office Photocopiers
 

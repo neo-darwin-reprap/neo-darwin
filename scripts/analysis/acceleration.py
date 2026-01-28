@@ -1,5 +1,5 @@
 """
-Acceleration Limits Calculator for Neo-Darwin
+Acceleration Limits Calculator for Amalgam
 
 Calculates maximum safe acceleration based on toolhead mass
 and frame/rod stiffness. Helps builders understand the
@@ -109,7 +109,7 @@ def calculate_max_acceleration(
     # Recommended is 70% of max for safety margin
     recommended_accel = effective_max * 0.7
 
-    # Velocity recommendations based on Neo-Darwin philosophy
+    # Velocity recommendations based on Amalgam philosophy
     # Target 70-120mm/s for quality, can push higher if system allows
     if recommended_accel >= 3000:
         recommended_velocity = 100
@@ -137,8 +137,8 @@ def calculate_max_acceleration(
     if max_accel_quality > 5000:
         notes.append("Good acceleration headroom for quality printing")
 
-    # Neo-Darwin specific guidance
-    notes.append(f"Neo-Darwin target: 70-120mm/s at {int(recommended_accel)} mm/s²")
+    # Amalgam specific guidance
+    notes.append(f"Amalgam target: 70-120mm/s at {int(recommended_accel)} mm/s²")
 
     return AccelerationResult(
         toolhead_mass=toolhead_mass,

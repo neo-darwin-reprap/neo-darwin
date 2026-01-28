@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Neo-Darwin What-If Analysis
+Amalgam What-If Analysis
 
 Explore trade-offs interactively before committing to a configuration.
 Load your current config, tweak parameters, see the impact.
@@ -481,7 +481,7 @@ def get_number(prompt: str, default: float = None) -> float:
 def run_interactive():
     """Run interactive what-if exploration."""
 
-    print_header("Neo-Darwin What-If Analysis")
+    print_header("Amalgam What-If Analysis")
     print("\nExplore trade-offs before committing to a configuration.")
 
     current = load_current_config()
@@ -560,7 +560,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Neo-Darwin What-If Analysis",
+        description="Amalgam What-If Analysis",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

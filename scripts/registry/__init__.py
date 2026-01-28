@@ -1,8 +1,8 @@
 """
-Neo-Darwin Component Registry
+Amalgam Component Registry
 
 Defines available components, their properties, and compatibility rules.
-This is the single source of truth for what hardware Neo-Darwin supports.
+This is the single source of truth for what hardware Amalgam supports.
 
 Architecture:
 - Each component type (boards, extruders, etc.) has its own module

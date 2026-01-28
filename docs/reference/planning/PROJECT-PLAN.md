@@ -1,4 +1,4 @@
-# Neo-Darwin Project Plan
+# Amalgam Project Plan
 
 ## Phase 0: Inventory What You Have
 - [x] List all parts from your Ender 3 donor

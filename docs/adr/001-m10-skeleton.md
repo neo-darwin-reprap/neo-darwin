@@ -4,7 +4,7 @@
 Accepted (Updated: M12 → M10)
 
 ## Context
-The Neo-Darwin requires a rigid frame that maintains dimensional accuracy over years of operation. In 2026, there are multiple frame options available:
+The Amalgam requires a rigid frame that maintains dimensional accuracy over years of operation. In 2026, there are multiple frame options available:
 - Aluminum extrusions (2020, 2040)
 - V-slot profiles
 - M8/M10/M10 threaded rods (RepRap heritage)
@@ -16,7 +16,7 @@ Modern "appliance" printers often use aluminum extrusions for lightweight frames
 The original ADR specified M10 threaded rods, prioritizing maximum rigidity. After deeper analysis documented in `docs/decisions/tractor_01_frame_and_assembly.md`, we reconsidered this choice.
 
 ## Decision
-We choose **M10 threaded rods** as the reference specification for the Neo-Darwin frame skeleton.
+We choose **M10 threaded rods** as the reference specification for the Amalgam frame skeleton.
 
 ### Why M10 Over M12?
 

@@ -1,4 +1,4 @@
-Filming the "JunkStrap" bootstrapping process is a fantastic way to document the "Ship of Theseus" ethos of Project Neo-Darwin. It proves your core mission: that software intelligence and a rigid iron skeleton can transform e-waste into a high-precision tool.
+Filming the "JunkStrap" bootstrapping process is a fantastic way to document the "Ship of Theseus" ethos of Project Amalgam. It proves your core mission: that software intelligence and a rigid iron skeleton can transform e-waste into a high-precision tool.
 
 ### The "Genetic" Bootstrapping Strategy
 
@@ -6,18 +6,18 @@ Since you aren't sure of the donor's dimensional accuracy, follow this "Generati
 
 #### **Generation 0: The "Salvage" Printer (Anycubic/Makerfarm/Cocoon)**
 
-Before tearing them down, use these machines to print the **Functional Minimum** for the Neo-Darwin.
+Before tearing them down, use these machines to print the **Functional Minimum** for the Amalgam.
 
 * **Prioritize "Clamping" Parts:** Print the Corner Pucks, Motor Mounts, and Rod Clamps first. These parts use the M12 rods for their dimensional authority, meaning the frame's squareness comes from the iron, not the plastic.
 * **Calibrate for Success:** Even on a "junker," perform a quick **E-step calibration** and print a **20mm calibration cube**. This ensures your parts aren't so under-sized that they won't fit the M12 rods or so over-sized that the holes are too small for your 608 bearings.
 * **The "Lumpy Factor":** If the prints are rough, increase the `lumpy_factor` in your build123d scripts. This adds extra clearance to the printed parts so they can still slide onto the M12 rods even if the donor's accuracy is poor.
 
-#### **Generation 1: The "Early" Neo-Darwin (The Tractor Reborn)**
+#### **Generation 1: The "Early" Amalgam (The Tractor Reborn)**
 
-Once the Neo-Darwin is assembled with the donor's parts, it is already a superior machine because of its **M12 mass** and **Klipper brains**.
+Once the Amalgam is assembled with the donor's parts, it is already a superior machine because of its **M12 mass** and **Klipper brains**.
 
 * **The Software Handshake:** Use Klipper's **Input Shaping** (via the ADXL345) to immediately cancel out any vibrations caused by the "Gen 0" printed parts.
-* **The First Mission:** Your very first prints on the Neo-Darwin should be **Generation 2** replacements for its own precision-critical parts: the **Greg's Wade Gears** and the **X-axis carriage**.
+* **The First Mission:** Your very first prints on the Amalgam should be **Generation 2** replacements for its own precision-critical parts: the **Greg's Wade Gears** and the **X-axis carriage**.
 
 #### **Generation 2: The "Immortal Factory" (Final Reference Spec)**
 
@@ -31,12 +31,12 @@ Now, replace the "Gen 0" donor parts with these new, high-precision prints.
 For the documentation, focus on these "Story Beats":
 
 1. **The Extraction:** Film yourself removing the "Industrial Vitamins" (motors and lead screws) from the Anycubic or Cocoon.
-2. **The Hybrid Moment:** Show the Neo-Darwin frame being held together by "ugly" parts from the old printer.
-3. **The Transcendence:** A side-by-side photo of a part printed on the Anycubic vs. the same part printed on the Neo-Darwin. This is the visual proof that the "Tractor" with a "Racecar's Brain" actually works.
+2. **The Hybrid Moment:** Show the Amalgam frame being held together by "ugly" parts from the old printer.
+3. **The Transcendence:** A side-by-side photo of a part printed on the Anycubic vs. the same part printed on the Amalgam. This is the visual proof that the "Tractor" with a "Racecar's Brain" actually works.
 
 **Which donor are you planning to use for the "Gen 0" prints—the Anycubic i3 Mega or the Cocoon?** The Anycubic's metal frame might give you a slightly better "head start" on accuracy for those first critical parts.
 
-iUsing the Anycubic i3 Mega as the "Gen 0" printer for your Neo-Darwin build is a great tactical choice, specifically because its **Trigorilla board** (the stock MCU) uses **removable stepper drivers**. Even with a flaky Z-endstop port, Klipper's **Multi-MCU** capability turns that "broken" board into a valuable asset.
+iUsing the Anycubic i3 Mega as the "Gen 0" printer for your Amalgam build is a great tactical choice, specifically because its **Trigorilla board** (the stock MCU) uses **removable stepper drivers**. Even with a flaky Z-endstop port, Klipper's **Multi-MCU** capability turns that "broken" board into a valuable asset.
 
 ### 1. Solving the "Dead Endstop" via Multi-MCU
 
@@ -51,7 +51,7 @@ You mentioned needing endstops because the boards don't have TMC drivers. You ar
 
 * **Stock Drivers:** The stock Anycubic i3 Mega usually ships with **A4988** or **TMC2100/2208 clones** running in "Standalone" (legacy) mode.
 * **No Sensorless Homing:** Because these drivers are in standalone mode and not connected via UART, they **cannot do sensorless homing**.
-* **Physical Endstops Required:** You will absolutely need to salvage the physical endstop switches from the Anycubic and Ender to get the Neo-Darwin homing correctly.
+* **Physical Endstops Required:** You will absolutely need to salvage the physical endstop switches from the Anycubic and Ender to get the Amalgam homing correctly.
 
 ### 3. MCU Build Strategy for "The Tractor"
 
@@ -65,7 +65,7 @@ For your "one-off" documentation build, you can distribute the load across the t
 
 ### 4. Generation 0 Quality Check
 
-Before you tear down the Anycubic to build the Neo-Darwin, check the **VREF** (voltage) on those removable drivers.
+Before you tear down the Anycubic to build the Amalgam, check the **VREF** (voltage) on those removable drivers.
 
 * Since you'll be printing the "Tractor" parts on the Anycubic first, ensuring the drivers aren't overheating or under-powering the motors will prevent layer shifts in your **Corner Pucks** and **Wade Gears**.
 * **Tip:** If you have any spare **TMC2209s**, you can drop them into the Trigorilla board for a much quieter "Gen 0" printing experience, provided you flip the motor connectors or adjust the firmware.

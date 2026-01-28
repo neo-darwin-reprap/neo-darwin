@@ -42,7 +42,7 @@ Suggested wording (conceptual, not literal):
 
 > **Extruder Principle**
 >
-> The Neo-Darwin reference extruder must:
+> The Amalgam reference extruder must:
 >
 > * Be printable using common materials
 > * Use scavengable or commodity hardware
@@ -61,7 +61,7 @@ Somewhere near where motion system / gantry assumptions are discussed:
 
 > **Reference Extruder**
 >
-> The Neo-Darwin reference extruder is the **Pitan (Printed Titan-style) Extruder**.
+> The Amalgam reference extruder is the **Pitan (Printed Titan-style) Extruder**.
 >
 > It represents the best balance of:
 >

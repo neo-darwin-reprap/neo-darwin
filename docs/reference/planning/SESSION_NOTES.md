@@ -1,4 +1,4 @@
-# Session Notes - Neo-Darwin CAD Project
+# Session Notes - Amalgam CAD Project
 
 **Date:** January 12, 2026
 **Session Focus:** Architecture cleanup, build system improvements, standard corner implementation
@@ -171,7 +171,7 @@
 ## Project Structure (Current)
 
 ```
-neo-darwin/
+amalgam/
 ├── cad/
 │   ├── include/                    # Shared CAD components (engine)
 │   │   ├── corner_components.py    # Standard corner function

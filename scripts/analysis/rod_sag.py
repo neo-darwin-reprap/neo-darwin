@@ -1,5 +1,5 @@
 """
-Rod Sag Analysis for Neo-Darwin
+Rod Sag Analysis for Amalgam
 
 Calculates smooth rod deflection under toolhead load using beam theory.
 This helps builders assess whether their rod diameter is sufficient

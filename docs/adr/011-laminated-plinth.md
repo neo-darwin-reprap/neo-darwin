@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin is a heavy machine:
+The Amalgam is a heavy machine:
 - M12 iron skeleton: ~15kg
 - 3x Z-motors + geared extruder: ~3kg
 - Total build weight: ~18-20kg

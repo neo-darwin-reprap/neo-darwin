@@ -123,7 +123,7 @@ Amalgam supports three frame/motion configurations based on donor type:
 ## File Structure
 
 ```
-amalgam/                  # (currently neo-darwin/, rename pending)
+amalgam/                  # (currently amalgam/, rename pending)
 ├── MANIFESTO.md          # Quick overview
 ├── PHILOSOPHY.md         # "Tractor" philosophy, heritage
 ├── REFERENCE-SPEC.md     # Hardware specification

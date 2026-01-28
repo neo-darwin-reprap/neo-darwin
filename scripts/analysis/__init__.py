@@ -1,8 +1,8 @@
 """
-Neo-Darwin Engineering Analysis Tools
+Amalgam Engineering Analysis Tools
 
 This package provides engineering calculations for assessing
-Neo-Darwin build configurations before construction.
+Amalgam build configurations before construction.
 """
 
 from .rod_sag import calculate_rod_sag, RodSagResult

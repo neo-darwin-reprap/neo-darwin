@@ -1,5 +1,5 @@
 """
-Neo-Darwin Front-Left Corner with Integrated Z1 Motor
+Amalgam Front-Left Corner with Integrated Z1 Motor
 
 Uses shared motorized corner component from include/corner_components.py
 """

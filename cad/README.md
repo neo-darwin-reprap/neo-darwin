@@ -1,6 +1,6 @@
-# Neo-Darwin CAD Directory
+# Amalgam CAD Directory
 
-This directory contains all CAD-related files for Neo-Darwin 3D printer project.
+This directory contains all CAD-related files for Amalgam 3D printer project.
 
 ## Quick Decision Guide
 

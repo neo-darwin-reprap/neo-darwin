@@ -1,4 +1,4 @@
-# Neo-Darwin Manifesto Updates (Consolidated)
+# Amalgam Manifesto Updates (Consolidated)
 
 This document contains all updated sections based on frame analysis and extruder selection discussions. Sections are marked with suggested destination files.
 
@@ -12,7 +12,7 @@ This document contains all updated sections based on frame analysis and extruder
 
 To prove that **software intelligence can overcome analog hardware limitations**, using scavenged parts, printed components, and open-source firmware.
 
-Neo-Darwin is a **Tractor with the Brain of a Racecar**: heavy, reliable, battle-tested hardware given precision through Klipper's advanced motion control.
+Amalgam is a **Tractor with the Brain of a Racecar**: heavy, reliable, battle-tested hardware given precision through Klipper's advanced motion control.
 
 ## Core Principles
 
@@ -49,14 +49,14 @@ The printer should be understandable as a machine. Designs should expose how for
 
 This supports learning, debugging, and modification—core RepRap values.
 
-## What Neo-Darwin Is
+## What Amalgam Is
 
 - A high-mass, low-cost, fully parametric 3D printer
 - Built from M10 threaded rod frame and scavenged/commodity components
 - Controlled by Klipper for precision beyond what the hardware "should" achieve
 - Targeting: **<$300 AUD, 220×220×280mm build volume, MK3-class quality**
 
-## What Neo-Darwin Is Not
+## What Amalgam Is Not
 
 - A speed demon (50-80mm/s, not 200mm/s)
 - A plug-and-play appliance (you will learn how it works)
@@ -67,7 +67,7 @@ This supports learning, debugging, and modification—core RepRap values.
 
 > *If you want a printer, buy one. If you want to understand a printer, build this.*
 
-Old tractors were cast iron and weighed tons. Modern tractors are lighter, more efficient, same work output. Neo-Darwin is a modern tractor—lighter than its ancestors, but still built for reliability over speed, understanding over convenience.
+Old tractors were cast iron and weighed tons. Modern tractors are lighter, more efficient, same work output. Amalgam is a modern tractor—lighter than its ancestors, but still built for reliability over speed, understanding over convenience.
 
 ---
 
@@ -239,7 +239,7 @@ These are valid alternatives for experienced builders but excluded from referenc
 | ProtXtruder | Requires purchased gear kit |
 | Wristwatch | Niche mechanical complexity |
 
-**These do not materially improve print quality** for Neo-Darwin's target use case. They may appeal to builders interested in mechanical experimentation.
+**These do not materially improve print quality** for Amalgam's target use case. They may appeal to builders interested in mechanical experimentation.
 
 ---
 
@@ -273,7 +273,7 @@ The E3D V6 form factor (including quality clones) is the reference hotend.
 
 CHT-style nozzles increase melt surface area, enabling higher volumetric flow. However:
 
-**Neo-Darwin targets 50-80mm/s.** At these speeds:
+**Amalgam targets 50-80mm/s.** At these speeds:
 - Stock V6 delivers ~8-10 mm³/s (sufficient)
 - CHT enables ~15-20 mm³/s (not needed)
 
@@ -348,7 +348,7 @@ Single scavenged mainboard plus Raspberry Pi or old laptop running Klipper.
 
 ### Single-Drive vs Dual-Drive
 
-The Neo-Darwin reference design adopts a **single-drive** extruder topology. This decision is based on mechanical behaviour, tolerance to variation, and long-term stability across scavenged components.
+The Amalgam reference design adopts a **single-drive** extruder topology. This decision is based on mechanical behaviour, tolerance to variation, and long-term stability across scavenged components.
 
 ### Single-Drive Characteristics
 
@@ -382,7 +382,7 @@ Dual-drive extruders use two opposing driven gears that must mesh correctly and 
 
 Dual-drive extruders primarily increase pushing force and filament grip robustness—valuable for very soft filaments or extreme flow rates.
 
-For Neo-Darwin's target materials (PLA, PETG, light TPU) and speeds (50-80mm/s), single-drive provides equivalent print quality with:
+For Amalgam's target materials (PLA, PETG, light TPU) and speeds (50-80mm/s), single-drive provides equivalent print quality with:
 - Fewer failure modes
 - Greater tolerance to part variation
 - Lower mechanical complexity
@@ -464,7 +464,7 @@ CoreXY offers efficient belt paths and theoretically higher speeds. However:
 
 **Part variation tolerance:** Scavenged pulleys and belts with slight dimensional variation can introduce systematic errors.
 
-**Neo-Darwin's position:** At 50-80mm/s, fixed-gantry Cartesian achieves equivalent print quality with:
+**Amalgam's position:** At 50-80mm/s, fixed-gantry Cartesian achieves equivalent print quality with:
 - Simpler belt paths
 - Independent axis debugging
 - Greater tolerance for part variation
@@ -489,7 +489,7 @@ Linear rails offer high stiffness and compactness but:
 - Fail gradually and visibly
 - Easy to clean, replace, and realign
 
-For Neo-Darwin's spans and loads, smooth rods provide sufficient stiffness without additional sourcing or maintenance burden.
+For Amalgam's spans and loads, smooth rods provide sufficient stiffness without additional sourcing or maintenance burden.
 
 Linear rails are supported as an Optional upgrade but not required for reference builds.
 
@@ -516,7 +516,7 @@ Example (0.2mm layer, 0.44mm width):
   8 mm³/s ÷ (0.2 × 0.44) = ~91 mm/s max
 ```
 
-Neo-Darwin targets 50-80mm/s—comfortably within stock V6 capacity.
+Amalgam targets 50-80mm/s—comfortably within stock V6 capacity.
 
 ### CHT Benefit Analysis
 
@@ -527,7 +527,7 @@ CHT nozzles approximately double flow capacity:
 | Stock 0.4mm | ~8-10 mm³/s | ~90-110 mm/s |
 | CHT 0.4mm | ~15-20 mm³/s | ~170-220 mm/s |
 
-**Conclusion:** CHT enables speeds Neo-Darwin doesn't target. The added complexity (tuning, clone variation) isn't justified for the reference use case.
+**Conclusion:** CHT enables speeds Amalgam doesn't target. The added complexity (tuning, clone variation) isn't justified for the reference use case.
 
 ---
 
@@ -670,7 +670,7 @@ This rule exists to prevent:
 
 CoreXY is an efficient and capable motion system, but it introduces additional belt paths, alignment sensitivity, and tuning complexity. These factors increase the build and debugging burden, particularly when using scavenged or mixed-quality components.
 
-Neo-Darwin prioritises:
+Amalgam prioritises:
 - Mechanical clarity
 - Ease of diagnosis
 - Tolerance of part variation
@@ -696,7 +696,7 @@ Smooth rods and linear bearings:
 - Fail gradually and visibly
 - Are easier to clean, replace, and realign
 
-For the spans and loads used in Neo-Darwin, smooth rods provide sufficient stiffness without introducing additional sourcing or maintenance burden.
+For the spans and loads used in Amalgam, smooth rods provide sufficient stiffness without introducing additional sourcing or maintenance burden.
 
 Linear rails are supported as Optional upgrades but not required for reference builds.
 
@@ -712,7 +712,7 @@ However, they introduce gear mesh dependencies:
 - Printed gears introduce torque ripple
 - Failure modes are subtle and hard to diagnose
 
-For PLA, PETG, and moderate TPU at Neo-Darwin's target speeds, single-drive (Pitan) provides equivalent print quality with:
+For PLA, PETG, and moderate TPU at Amalgam's target speeds, single-drive (Pitan) provides equivalent print quality with:
 - Fewer failure modes
 - Greater tolerance for scavenged/printed parts
 - Easier firmware compensation
@@ -740,7 +740,7 @@ The Pitan inherits Wade's spirit (geared, printable, scavengeable) while respect
 
 CHT-style nozzles increase volumetric flow capacity, enabling faster printing. However:
 
-Neo-Darwin targets **50-80mm/s**. At these speeds:
+Amalgam targets **50-80mm/s**. At these speeds:
 - Stock V6 delivers ~8-10 mm³/s (sufficient)
 - CHT enables ~15-20 mm³/s (not needed)
 

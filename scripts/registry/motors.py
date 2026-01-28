@@ -1,5 +1,5 @@
 """
-Motor Registry for Neo-Darwin
+Motor Registry for Amalgam
 
 Defines motor types and counts needed for each tier.
 Motors are typically scavenged from donor printers, so this registry
@@ -96,7 +96,7 @@ MOTORS = {
         notes=[
             "Most common stepper in donor printers",
             "Good balance of torque and size",
-            "Works for all Neo-Darwin axes",
+            "Works for all Amalgam axes",
         ],
         warnings=[],
     ),

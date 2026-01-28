@@ -4,7 +4,7 @@
 
 ## 1. Purpose & Scope
 
-This report consolidates the ongoing design discussion around **rod sag**, **moving mass**, and **extruder selection** in the Neo-Darwin printer concept. The goal is to:
+This report consolidates the ongoing design discussion around **rod sag**, **moving mass**, and **extruder selection** in the Amalgam printer concept. The goal is to:
 
 * Quantify and contextualise **rod deflection (sag)** under realistic toolhead loads
 * Use **Pitan + NEMA17** as a **baseline extruder mass and torque reference**
@@ -488,7 +488,7 @@ Worst case occurs when:
 
 ---
 
-## 8. Implications for Neo-Darwin
+## 8. Implications for Amalgam
 
 * Designing for **moderate acceleration (5–8k mm/s²)** is mechanically honest
 * 8 mm rods force either:
@@ -709,6 +709,6 @@ Designing around **Pitan + NEMA17** ensures the printer remains:
 
 ## 10. Conclusion
 
-Rod sag is not an academic concern — it directly impacts print consistency, dimensional accuracy, and long-term reliability. By anchoring the analysis around a **realistic extruder mass**, the Neo-Darwin design avoids fragile assumptions and remains adaptable.
+Rod sag is not an academic concern — it directly impacts print consistency, dimensional accuracy, and long-term reliability. By anchoring the analysis around a **realistic extruder mass**, the Amalgam design avoids fragile assumptions and remains adaptable.
 
 If the rods are stiff enough for **Pitan + NEMA17**, they are stiff enough for almost anything else you’ll reasonably bolt on.

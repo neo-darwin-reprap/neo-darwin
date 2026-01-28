@@ -1,6 +1,6 @@
-# Neo-Darwin Extruder Options
+# Amalgam Extruder Options
 
-A comprehensive analysis of lightweight, low-cost extruder options for the Neo-Darwin 3D printer project, following the "Tractor with the Brain of a Racecar" philosophy.
+A comprehensive analysis of lightweight, low-cost extruder options for the Amalgam 3D printer project, following the "Tractor with the Brain of a Racecar" philosophy.
 
 ## Executive Summary
 
@@ -16,9 +16,9 @@ For a RepRap project prioritising accessibility, scavengeability, and low cost, 
 
 ---
 
-## Context: Neo-Darwin Tier 2 Upgrade Path
+## Context: Amalgam Tier 2 Upgrade Path
 
-In the Neo-Darwin build philosophy, builders scavenge motors from donor printers:
+In the Amalgam build philosophy, builders scavenge motors from donor printers:
 
 **Tier 1:** Scavenge X, Y, Z, E motors from donor printer (e.g., Ender 3)
 
@@ -247,7 +247,7 @@ Both Sherpa Mini and ProtoXtruder require a **round NEMA 14 pancake motor** with
 
 ## Cost Comparison
 
-### Scenario: Tier 2 Neo-Darwin Build
+### Scenario: Tier 2 Amalgam Build
 
 | Component | Sherpa Mini | ProtoXtruder |
 |-----------|-------------|--------------|
@@ -282,7 +282,7 @@ With BMG gears being so common, builders can easily maintain a small spares kit.
 
 ### Primary: Sherpa Mini ✅
 
-The Sherpa Mini is recommended as the **official Neo-Darwin extruder** for these reasons:
+The Sherpa Mini is recommended as the **official Amalgam extruder** for these reasons:
 
 1. **BMG gear ubiquity** - Cheapest and most available gears
 2. **Community support** - Massive ecosystem of help and resources
@@ -350,5 +350,5 @@ stealthchop_threshold: 0
 
 ---
 
-*Document prepared for the Neo-Darwin Project*  
+*Document prepared for the Amalgam Project*  
 *"A Tractor with the Brain of a Racecar"*

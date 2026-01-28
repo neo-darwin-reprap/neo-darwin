@@ -43,7 +43,7 @@ Moving the electronics to the base means your wires have to travel further. This
 
 **Since you're using Triple Z motors, would you like me to explain how to wire them?** (You can either wire them in series to one driver or use a board with enough independent drivers to auto-level the bed).
 
-Establishing your intent: You are refining the **Electronics & PSU mounting strategy** for the Neo-Darwin. You want to compare mounting directly to the **Laminated MDF Plinth** (Reference Spec) versus a **printed standalone frame** (Modular Puck) that sits inside the bottom square, especially regarding vibration isolation and the role of rubber pads.
+Establishing your intent: You are refining the **Electronics & PSU mounting strategy** for the Amalgam. You want to compare mounting directly to the **Laminated MDF Plinth** (Reference Spec) versus a **printed standalone frame** (Modular Puck) that sits inside the bottom square, especially regarding vibration isolation and the role of rubber pads.
 
 ### 1. Mounting to the Baseboard vs. Printed Frame
 
@@ -85,7 +85,7 @@ You asked if bolting the frame *through* the rubber pads into the MDF is better 
 Is building a separate frame for electronics and placing it inside the base square "even better" than mounting to the board?
 
 * **Engineering Verdict:** It is **better for serviceability**, but **worse for vibration.**
-* **The Hybrid Approach:** The best "Neo-Darwin" solution is to mount the electronics to a **Printed "Puck"** first, and then **screw that Puck into the MDF baseboard**.
+* **The Hybrid Approach:** The best "Amalgam" solution is to mount the electronics to a **Printed "Puck"** first, and then **screw that Puck into the MDF baseboard**.
 * This gives you the best of both worlds: you get the industrial damping of the MDF and the modular "Puck" system that allows for easy hardware swaps if you upgrade your mainboard later.
 
 

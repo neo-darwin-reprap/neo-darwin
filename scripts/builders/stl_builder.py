@@ -1,5 +1,5 @@
 """
-STL Builder for Neo-Darwin
+STL Builder for Amalgam
 
 Orchestrates CAD/STL generation using the existing cad/build.sh system.
 Provides Python interface to the build system.

@@ -1,12 +1,12 @@
-# Neo-Darwin: Extruder Selection & Decision Record
+# Amalgam: Extruder Selection & Decision Record
 
 ## Executive Summary
 
-After extensive evaluation of weight, cost, scavengability, mechanical performance, drive architecture, and Klipper compatibility, the **Pitan Extruder** has been selected as the Neo-Darwin reference specification.
+After extensive evaluation of weight, cost, scavengability, mechanical performance, drive architecture, and Klipper compatibility, the **Pitan Extruder** has been selected as the Amalgam reference specification.
 
 **Key Decision: Single-Drive Architecture**
 
-Neo-Darwin uses single-drive extruders exclusively. Dual-drive designs (BMG, Sherpa, Orbiter, LGX) introduce gear mesh artifacts that affect print quality consistency — a hidden factor in why Bambu Lab printers achieve exceptional results with their single-drive design.
+Amalgam uses single-drive extruders exclusively. Dual-drive designs (BMG, Sherpa, Orbiter, LGX) introduce gear mesh artifacts that affect print quality consistency — a hidden factor in why Bambu Lab printers achieve exceptional results with their single-drive design.
 
 ### Extruders Evaluated
 
@@ -38,7 +38,7 @@ Neo-Darwin uses single-drive extruders exclusively. Dual-drive designs (BMG, She
 
 ### Why This Matters for "The Tractor"
 
-The Neo-Darwin project follows the "Tractor with the Brain of a Racecar" philosophy:
+The Amalgam project follows the "Tractor with the Brain of a Racecar" philosophy:
 
 1. **Quality over Speed** — Not chasing 300mm/s; targeting reliable 80-120mm/s
 2. **Scavenger-Friendly** — Parts from donor printers, hardware stores, and minimal purchases
@@ -58,7 +58,7 @@ This insight shaped our entire evaluation process.
 
 ### Single-Drive vs Dual-Drive: A Critical Decision
 
-Early in our evaluation, we made a key architectural decision: **Neo-Darwin will use a single-drive extruder**.
+Early in our evaluation, we made a key architectural decision: **Amalgam will use a single-drive extruder**.
 
 **What's the difference?**
 
@@ -67,7 +67,7 @@ Early in our evaluation, we made a key architectural decision: **Neo-Darwin will
 | **Single-drive** | One drive gear + one idler bearing | Pitan, Wade, MK8, E3D Titan |
 | **Dual-drive** | Two meshing drive gears, both grip filament | BMG, Sherpa Mini, Orbiter, LGX Lite |
 
-**Why single-drive for Neo-Darwin?**
+**Why single-drive for Amalgam?**
 
 Dual-drive extruders have a hidden quality issue: **gear meshing artifacts**. When two drive gears mesh, microscopic variations in tooth engagement create periodic pressure fluctuations on the filament. This manifests as subtle but measurable extrusion inconsistencies.
 
@@ -83,7 +83,7 @@ Dual-drive extruders have a hidden quality issue: **gear meshing artifacts**. Wh
 | Mechanical complexity | ✅ Simpler | ⚠️ More parts |
 | Failure modes | ✅ Fewer | ⚠️ Gear wear, alignment |
 
-For Neo-Darwin's quality-focused philosophy at 80-120mm/s, the single-drive advantages outweigh the dual-drive TPU benefits. We're building a Tractor for consistent quality, not a race car for exotic filaments.
+For Amalgam's quality-focused philosophy at 80-120mm/s, the single-drive advantages outweigh the dual-drive TPU benefits. We're building a Tractor for consistent quality, not a race car for exotic filaments.
 
 **This decision shaped our entire evaluation.** Several excellent extruders (Sherpa Mini, Orbiter, LGX Lite) were evaluated but ultimately not selected as reference spec due to their dual-drive architecture.
 
@@ -230,7 +230,7 @@ Developed by Annex Engineering, the Sherpa Mini is the de facto standard for lig
 Rod sag calculations (250mm span):
 - M8 rods + Sherpa (NEMA14): ~0.015mm sag (excellent)
 
-The Sherpa Mini is mechanically excellent. Its rejection for Neo-Darwin is purely architectural — the dual-drive design conflicts with our quality philosophy.
+The Sherpa Mini is mechanically excellent. Its rejection for Amalgam is purely architectural — the dual-drive design conflicts with our quality philosophy.
 
 **Verdict:** Excellent extruder for builders who prioritize TPU capability and lightweight toolheads over absolute extrusion consistency. Not selected due to dual-drive architecture and non-scavengeable motor.
 
@@ -314,7 +314,7 @@ The Orbiter is a high-performance planetary geared extruder designed by Róbert 
 
 The Orbiter's 7.5:1 ratio provides exceptional torque from a small motor, enabling high acceleration extrusion. However, the planetary gear system is still dual-drive — two gears grip the filament, introducing mesh artifacts.
 
-**Verdict:** Excellent high-performance extruder, but the specific motor requirement, cost, and dual-drive architecture exclude it from Neo-Darwin consideration. The clone gears available on AliExpress (~$10) are a quality gamble.
+**Verdict:** Excellent high-performance extruder, but the specific motor requirement, cost, and dual-drive architecture exclude it from Amalgam consideration. The clone gears available on AliExpress (~$10) are a quality gamble.
 
 **Status: ❌ Not Recommended (dual-drive, specific motor, cost)**
 
@@ -406,7 +406,7 @@ Rod sag calculations:
 - M8 @ 280mm span + Pitan/NEMA17: ~0.034mm sag (acceptable)
 - M10 @ 280mm span + Pitan/NEMA17: ~0.014mm sag (excellent)
 
-**Why Pitan Wins for Neo-Darwin:**
+**Why Pitan Wins for Amalgam:**
 
 1. **Scavengeable motor** — The NEMA17 from your Ender 3 donor works perfectly
 2. **Enables M8 rods** — Don't need to upgrade to M10 for reasonable spans
@@ -433,7 +433,7 @@ These represent the "Formula 1" extruders—designed for Voron CoreXY machines c
 
 **Why Not Recommended:**
 
-| Issue | Impact on Neo-Darwin |
+| Issue | Impact on Amalgam |
 |-------|----------------------|
 | Cost | $60-120 exceeds entire extruder budget |
 | Proprietary | Requires Bondtech/BMG kits that can't be scavenged |
@@ -443,7 +443,7 @@ These represent the "Formula 1" extruders—designed for Voron CoreXY machines c
 
 **The Defense:**
 
-> "We chose the Pitan not because Voron extruders are bad, but because they solve problems we don't have. Neo-Darwin isn't chasing speed records—it's chasing reliable, repairable, affordable quality."
+> "We chose the Pitan not because Voron extruders are bad, but because they solve problems we don't have. Amalgam isn't chasing speed records—it's chasing reliable, repairable, affordable quality."
 
 **Status: ❌ Not Recommended**
 
@@ -470,7 +470,7 @@ Pre-assembled BMG extruders with full NEMA17 motors, sold as complete units.
 
 ### Why Pitan?
 
-The Pitan wins on multiple fronts for Neo-Darwin's philosophy:
+The Pitan wins on multiple fronts for Amalgam's philosophy:
 
 | Factor | Pitan | Dual-Drive Options | Wade |
 |--------|-------|-------------------|------|
@@ -493,7 +493,7 @@ The Sherpa Mini is mechanically excellent — lightweight, strong community, gre
 2. **Specific motor required** — NEMA14 pancake with integrated pinion (~$14-21)
 3. **BMG gears** — quality varies, and meshing gears = periodic extrusion variations
 
-For Neo-Darwin's quality-focused philosophy, the single-drive Pitan produces more consistent results.
+For Amalgam's quality-focused philosophy, the single-drive Pitan produces more consistent results.
 
 ### Why Not Wade?
 
@@ -627,7 +627,7 @@ For extreme budget constraints or if you already have one:
 
 **This is the most important option.**
 
-If you have an extruder in your parts bin—Titan, Hemera, or even a dual-drive BMG—**use it**. The Neo-Darwin carriage design is meant to be adaptable.
+If you have an extruder in your parts bin—Titan, Hemera, or even a dual-drive BMG—**use it**. The Amalgam carriage design is meant to be adaptable.
 
 The Pitan is the *reference specification*, not a mandate. The whole point of being a tinkerer is making it your own. If you already own a Sherpa Mini or Orbiter, the dual-drive concerns are academic — use what you have and enjoy printing.
 
@@ -656,15 +656,15 @@ With these spares, you're covered for 5+ years of operation.
 
 ### "Why not just use a Sherpa Mini like everyone else?"
 
-> "The Sherpa Mini is mechanically excellent, but it has two issues for Neo-Darwin: First, its dual-drive architecture introduces gear mesh artifacts that affect extrusion consistency — the same reason Bambu Lab uses single-drive. Second, it requires a specific NEMA14 pancake motor that can't be scavenged. The Pitan delivers cleaner extrusion with motors from any donor printer."
+> "The Sherpa Mini is mechanically excellent, but it has two issues for Amalgam: First, its dual-drive architecture introduces gear mesh artifacts that affect extrusion consistency — the same reason Bambu Lab uses single-drive. Second, it requires a specific NEMA14 pancake motor that can't be scavenged. The Pitan delivers cleaner extrusion with motors from any donor printer."
 
 ### "Dual-drive artifacts? That sounds like audiophile nonsense."
 
-> "Fair skepticism! The effect is subtle but measurable — periodic micro-variations in extrusion pressure as gear teeth mesh and unmesh. For most printing it's invisible. But Neo-Darwin targets quality over speed, and the single-drive architecture removes one variable from the quality equation. It's also why Bambu Lab — known for print quality — uses single-drive designs."
+> "Fair skepticism! The effect is subtle but measurable — periodic micro-variations in extrusion pressure as gear teeth mesh and unmesh. For most printing it's invisible. But Amalgam targets quality over speed, and the single-drive architecture removes one variable from the quality equation. It's also why Bambu Lab — known for print quality — uses single-drive designs."
 
 ### "The Orbiter has 7.5:1 gearing — isn't that better?"
 
-> "The Orbiter is excellent for high-speed printing where you need rapid extrusion acceleration. But Neo-Darwin targets 80-120mm/s where the Pitan's 3:1 ratio is plenty. The Orbiter also requires a specific $50-75 LDO motor and costs $75-100 complete. For our philosophy, the Pitan's $4-10 with scavenged motor makes more sense."
+> "The Orbiter is excellent for high-speed printing where you need rapid extrusion acceleration. But Amalgam targets 80-120mm/s where the Pitan's 3:1 ratio is plenty. The Orbiter also requires a specific $50-75 LDO motor and costs $75-100 complete. For our philosophy, the Pitan's $4-10 with scavenged motor makes more sense."
 
 ### "The Wade has more torque — isn't that better?"
 
@@ -672,7 +672,7 @@ With these spares, you're covered for 5+ years of operation.
 
 ### "Why not a Voron extruder? They're proven."
 
-> "Voron extruders are designed for 300mm/s+ racing with dual-drive BMG gears. Neo-Darwin targets 80-120mm/s quality printing with single-drive consistency. The $60-120 cost of a Clockwork 2 kit equals our entire extruder budget plus half the frame. We'd rather spend that money on a better heated bed or quality thermistors."
+> "Voron extruders are designed for 300mm/s+ racing with dual-drive BMG gears. Amalgam targets 80-120mm/s quality printing with single-drive consistency. The $60-120 cost of a Clockwork 2 kit equals our entire extruder budget plus half the frame. We'd rather spend that money on a better heated bed or quality thermistors."
 
 ### "Can I use [other extruder] instead?"
 
@@ -684,7 +684,7 @@ With these spares, you're covered for 5+ years of operation.
 
 ### The Pitan Decision
 
-The Pitan extruder embodies the Neo-Darwin philosophy:
+The Pitan extruder embodies the Amalgam philosophy:
 
 | Principle | How Pitan Delivers |
 |-----------|-------------------|
@@ -699,7 +699,7 @@ The Pitan extruder embodies the Neo-Darwin philosophy:
 
 > *"A tractor doesn't win races. It pulls loads reliably. The Pitan doesn't chase 300mm/s. It produces quality prints consistently, inexpensively, and repairably — without the hidden artifacts of dual-drive designs."*
 
-**Your extruder, your choice.** The Pitan is our answer — but Neo-Darwin is your machine.
+**Your extruder, your choice.** The Pitan is our answer — but Amalgam is your machine.
 
 ---
 
@@ -725,5 +725,5 @@ The Pitan extruder embodies the Neo-Darwin philosophy:
 
 ---
 
-*Document prepared for the Neo-Darwin Project*
+*Document prepared for the Amalgam Project*
 *"A Tractor with the Brain of a Racecar"*

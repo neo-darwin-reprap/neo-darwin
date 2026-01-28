@@ -1,5 +1,5 @@
 """
-Compatibility Rules for Neo-Darwin
+Compatibility Rules for Amalgam
 
 Determines tier eligibility, checks component compatibility,
 and generates warnings for edge cases.
@@ -62,12 +62,12 @@ TIER_REQUIREMENTS = {
     0: TierRequirements(
         tier=0,
         name="Klipper Only",
-        description="Just upgrade firmware, no Neo-Darwin build",
+        description="Just upgrade firmware, no Amalgam build",
         min_motors=0,
         min_drivers=0,
         z_type="existing",
         requires_host=True,
-        notes=["Not a Neo-Darwin build", "Flash Klipper on existing printer"],
+        notes=["Not a Amalgam build", "Flash Klipper on existing printer"],
     ),
     1: TierRequirements(
         tier=1,

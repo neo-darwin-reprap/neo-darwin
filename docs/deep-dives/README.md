@@ -20,7 +20,7 @@ This folder contains in-depth design explorations and discussions that led to th
 
 ## Reading Order
 
-For understanding the Neo-Darwin design:
+For understanding the Amalgam design:
 
 1. Start with `tractor_00_decision_guide.md` for an overview
 2. Read the ADRs for formal decisions

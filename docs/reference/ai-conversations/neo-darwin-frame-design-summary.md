@@ -1,4 +1,4 @@
-# Neo-Darwin "The Tractor" Frame Design Summary
+# Amalgam "The Tractor" Frame Design Summary
 
 A comprehensive summary of design decisions and recommendations for building a box-frame 3D printer using threaded rods, derived from iterative design discussions.
 
@@ -6,7 +6,7 @@ A comprehensive summary of design decisions and recommendations for building a b
 
 ## 1. Design Philosophy
 
-The Neo-Darwin (nicknamed "The Tractor") follows the **Scavenger Build** philosophy:
+The Amalgam (nicknamed "The Tractor") follows the **Scavenger Build** philosophy:
 
 - Use readily available hardware from hardware stores (Bunnings) and salvaged components
 - Bootstrap the build using a donor printer (Ender, Anet, i3 Mega) to print initial parts
@@ -212,7 +212,7 @@ Design "nut windows" into the brackets:
 
 ### 6.1 Motion System Overview
 
-The Neo-Darwin uses a **Z-dropdown** configuration:
+The Amalgam uses a **Z-dropdown** configuration:
 - Bed moves only vertically (Z-axis) on Triple-Z lead screws
 - X-Y gantry moves at the top of the frame
 - Similar to CoreXY/Voron layout but using the "Tractor" frame
@@ -505,4 +505,4 @@ With the massive MDF base and M10 frame:
 
 ---
 
-*Document generated from Neo-Darwin design discussions. Design philosophy: "A Tractor with the Brain of a Racecar"—heavy, reliable hardware with modern Klipper firmware.*
+*Document generated from Amalgam design discussions. Design philosophy: "A Tractor with the Brain of a Racecar"—heavy, reliable hardware with modern Klipper firmware.*

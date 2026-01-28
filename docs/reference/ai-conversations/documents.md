@@ -37,7 +37,7 @@ That’s unusually complete — especially for an open, scavenger-oriented proje
 
 If/when you’re ready, the *next* logical (optional) additions would be:
 
-* *“What Neo-Darwin is not”* (short boundary-setting section)
+* *“What Amalgam is not”* (short boundary-setting section)
 * A **Contributor Change Proposal template**
 * A simple **“Reference Compliance Matrix”** (one table)
 

@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin requires mounting points for:
+The Amalgam requires mounting points for:
 - Z-motors and leadscrew nuts
 - Main electronics/brain board
 - Extruder/toolhead on X-carriage
@@ -16,7 +16,7 @@ In 2026, mounting solutions are:
 - Bolt-on brackets (custom for each part)
 - Modular pucks (standardized mounting interface)
 
-The Neo-Darwin's "forever machine" philosophy and multipurpose gantry require a standardized mounting system that allows:
+The Amalgam's "forever machine" philosophy and multipurpose gantry require a standardized mounting system that allows:
 - Future upgrades without redesign
 - Easy repair and replacement
 - Tool swapping for multipurpose use

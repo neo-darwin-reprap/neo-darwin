@@ -1,5 +1,5 @@
 """
-Board Registry for Neo-Darwin
+Board Registry for Amalgam
 
 Defines supported control boards and their capabilities.
 Each board entry contains metadata used by:

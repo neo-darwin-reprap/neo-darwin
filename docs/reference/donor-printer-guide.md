@@ -1,6 +1,6 @@
 # Donor 3D Printer Compatibility Guide
 
-This guide helps Neo-Darwin builders identify which donor printers provide the most value and what to expect from each. Not all printers are equal donors—some provide smooth rods, others don't.
+This guide helps Amalgam builders identify which donor printers provide the most value and what to expect from each. Not all printers are equal donors—some provide smooth rods, others don't.
 
 **Target release:** End of 2026
 **Expected donor pricing:** ~$50 AUD per unit (secondhand market floor)
@@ -37,9 +37,9 @@ Limited usefulness due to size or proprietary parts:
 
 ### Anet A8 / A6
 
-**Why it's excellent:** Millions sold, often "broken" (usually just needs firmware update or new MOSFET). 220×220mm bed matches Neo-Darwin reference spec exactly.
+**Why it's excellent:** Millions sold, often "broken" (usually just needs firmware update or new MOSFET). 220×220mm bed matches Amalgam reference spec exactly.
 
-| Component | Spec | Neo-Darwin Use | Notes |
+| Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
 | **Smooth rods** | 6× 8mm (various lengths) | ✅ Direct use | Check for wear/rust |
 | **Linear bearings** | 6× LM8UU | ✅ Direct use | Clean and regrease |
@@ -71,7 +71,7 @@ Limited usefulness due to size or proprietary parts:
 
 **Why it's good:** Direct descendants of original RepRap design. Very similar to Anet A8 but build quality varies.
 
-| Component | Spec | Neo-Darwin Use | Notes |
+| Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
 | **Smooth rods** | 6× 8mm | ✅ Direct use | Quality varies by brand |
 | **Linear bearings** | 6× LM8UU | ✅ Direct use | Often cheap quality |
@@ -92,7 +92,7 @@ Limited usefulness due to size or proprietary parts:
 
 **Why it's good:** Better build quality than Anet, still has smooth rods.
 
-| Component | Spec | Neo-Darwin Use | Notes |
+| Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
 | **Smooth rods** | 6× 8mm | ✅ Direct use | Good quality |
 | **Linear bearings** | 6× LM8UU | ✅ Direct use | Often branded |
@@ -109,7 +109,7 @@ Limited usefulness due to size or proprietary parts:
 
 **Why it's premium:** Highest quality parts, but rarely found cheap secondhand.
 
-| Component | Spec | Neo-Darwin Use | Notes |
+| Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
 | **Smooth rods** | 6× 8mm (hardened) | ✅ Excellent | Premium quality |
 | **Linear bearings** | 3× LM8UU + 3× LM8LUU | ✅ Direct use | Mix of short/long |
@@ -128,7 +128,7 @@ Limited usefulness due to size or proprietary parts:
 
 **Why it's common:** Best-selling printer ever. Cheap and everywhere. But NO SMOOTH RODS.
 
-| Component | Spec | Neo-Darwin Use | Notes |
+| Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
 | **Smooth rods** | ❌ None | ❌ Must purchase | Uses V-slot rollers |
 | **Linear bearings** | ❌ None | ❌ Must purchase | |
@@ -165,7 +165,7 @@ You MUST purchase smooth rods and bearings:
 
 **Why consider it:** Larger format, dual Z motors. Still V-slot though.
 
-| Component | Spec | Neo-Darwin Use | Notes |
+| Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
 | **Smooth rods** | ❌ None | ❌ Must purchase | V-slot system |
 | **NEMA17 motors** | 5× (dual Z) | ✅ Direct use | Extra Z motor! |
@@ -185,7 +185,7 @@ You MUST purchase smooth rods and bearings:
 
 **Why consider it:** Direct drive, good PSU, but V-slot.
 
-| Component | Spec | Neo-Darwin Use | Notes |
+| Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
 | **Smooth rods** | ❌ None | ❌ Must purchase | V-slot system |
 | **NEMA17 motors** | 5× | ✅ Direct use | Dual Z standard |
@@ -205,7 +205,7 @@ You MUST purchase smooth rods and bearings:
 
 **Limited donor value:**
 
-| Component | Spec | Neo-Darwin Use | Notes |
+| Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
 | **Smooth rods** | 4× 8mm (short) | ⚠️ Too short | Cantilever design |
 | **Heated bed** | 180×180mm | ⚠️ Very small | Below minimum |

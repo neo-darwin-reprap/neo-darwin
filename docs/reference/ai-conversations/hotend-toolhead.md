@@ -1,10 +1,10 @@
-For the **Neo-Darwin** toolhead, the choice between Bowden and Direct Drive for a Greg’s Wade extruder is a battle between "Torque Sovereignty" and "Gantry Velocity."
+For the **Amalgam** toolhead, the choice between Bowden and Direct Drive for a Greg’s Wade extruder is a battle between "Torque Sovereignty" and "Gantry Velocity."
 
 ### **1. Extruder: Direct Drive vs. Bowden (The "Tractor" Weight)**
 
 The **Greg’s Wade** is a heavyweight champion. While "Racecars" use tiny pancake motors, the Wade uses a full-sized NEMA 17 to achieve its massive 5.22:1 gear reduction.
 
-* **The Weight Reality:** A direct-drive Wade assembly (motor + printed gears + hotend) can weigh over **600g–800g**. On a "Racecar," this is a disaster; on the **Neo-Darwin Tractor**, it is a feature.
+* **The Weight Reality:** A direct-drive Wade assembly (motor + printed gears + hotend) can weigh over **600g–800g**. On a "Racecar," this is a disaster; on the **Amalgam Tractor**, it is a feature.
 * **The Acceleration Factor:** You are correct—at your target speed of **70–120mm/s**, the difference between  and  acceleration is negligible for print times. **Klipper’s Input Shaping** is designed exactly for this—it will "tune out" the vibrations of that heavy mass, allowing you to keep the direct-drive precision without the ghosting.
 * **Recommendation: Direct Drive.** The "Tractor" ethos favors **Direct Drive** because it simplifies the "handshake" with the **ERCF Multi-Color system** and provides the raw force needed to pull filament through the reverse bowden without slipping.
 
@@ -33,7 +33,7 @@ Since you are using the **Modular Toolhead Puck**, you don't actually have to ch
 
 This setup ensures that on **Day 1000**, your "Tractor" is still pushing filament with the same authority as Day 1. Shall we finalize the **Y-Carriage and Triple-Z motor** configuration next?
 
-Choosing **Direct Drive** and the **E3D V6 + CHT** combo solidifies the "Tractor" soul of your Neo-Darwin. Here is the breakdown of why this toolhead configuration works, specifically regarding your questions on TPU, sensors, and the controller.
+Choosing **Direct Drive** and the **E3D V6 + CHT** combo solidifies the "Tractor" soul of your Amalgam. Here is the breakdown of why this toolhead configuration works, specifically regarding your questions on TPU, sensors, and the controller.
 
 ### **1. Direct Drive and TPU: The "Torque Monster" Advantage**
 
@@ -64,7 +64,7 @@ The **E3D V6** is your reference standard because it prioritizes thermal stabili
 * **The "Hack":** While a standard V6 is reliable, it can be slow. By adding a **CHT Clone Nozzle**, you melt the filament from the inside out using an internal splitter.
 * **The Result:** You get the speed of a high-flow hotend (120mm/s) without the "ooze" or stringing issues of a larger heater block like the Volcano. It is the most reliable high-performance "handshake" for a DIY build.
 
-### **Neo-Darwin Toolhead Summary**
+### **Amalgam Toolhead Summary**
 
 | Component | Choice | "Tractor" Reason |
 | --- | --- | --- |
@@ -78,7 +78,7 @@ The **E3D V6** is your reference standard because it prioritizes thermal stabili
 
 
 
-For the **Project Neo-Darwin**, the filament runout sensor—or toolhead sensor—is exactly as you described: a **printed housing** containing a salvaged **microswitch** ($2), integrated directly into the toolhead.
+For the **Project Amalgam**, the filament runout sensor—or toolhead sensor—is exactly as you described: a **printed housing** containing a salvaged **microswitch** ($2), integrated directly into the toolhead.
 
 ### **1. Physical Assembly & Mounting**
 

@@ -5,7 +5,7 @@ Accepted
 
 ## Context
 
-Neo-Darwin's scavenger philosophy requires that the heated bed come from donor printers. The dual-rod motion system (ADR-021) provides flexibility in build volume, but the bed size should align with what's actually scavengeable.
+Amalgam's scavenger philosophy requires that the heated bed come from donor printers. The dual-rod motion system (ADR-021) provides flexibility in build volume, but the bed size should align with what's actually scavengeable.
 
 ### Previous Specification
 
@@ -13,7 +13,7 @@ The original config specified 250×250×250mm build volume, which is **larger th
 
 ### The Dual-Donor Reality
 
-ADR-021 (Dual-Rod Motion) and ADR-005 (Triple-Z) establish that Neo-Darwin requires **two donor printers** for a practical scavenger build:
+ADR-021 (Dual-Rod Motion) and ADR-005 (Triple-Z) establish that Amalgam requires **two donor printers** for a practical scavenger build:
 - 6-7 NEMA17 motors needed (most donors have 4-5)
 - 8 smooth rods needed for Dual-8 configuration
 - Single donor cannot provide enough parts
@@ -59,7 +59,7 @@ These donors provide beds, motors, and electronics but **no smooth rods**:
 
 The 235×235mm bed is primarily associated with Creality Ender 3 series printers. However, **Ender 3 uses V-slot rollers, not smooth rods**.
 
-To use a 235×235mm bed in a Dual-8 Neo-Darwin:
+To use a 235×235mm bed in a Dual-8 Amalgam:
 - One donor must be Ender 3 (provides bed, motors, board)
 - Other donor must be rod-bearing (provides rods, bearings)
 - This is a valid but **mixed-donor** configuration

@@ -18,9 +18,9 @@ Your feeling that the PINDA V2 was superior likely comes from its **thermal comp
 * **The PINDA V2 Challenge:** Early inductive probes shifted their trigger point as the bed got hotter. Prusa added a thermistor inside the PINDA V2 to tell the printer: "I'm hot, so adjust the trigger height by 0.02mm".
 * **The SuperPINDA Evolution:** The modern SuperPINDA (found on MK3S+ and MK4) removed the thermistor entirely by using higher-quality internal components that don't drift with heat. This is the gold standard for "set-and-forget" reliability.
 
-### 🚜 The Neo-Darwin "Tractor" Decision
+### 🚜 The Amalgam "Tractor" Decision
 
-In the context of your **Neo-Darwin** build, here is how to choose:
+In the context of your **Amalgam** build, here is how to choose:
 
 * **Choose BLTouch if:** You are using a **Glass Bed** or a non-magnetic surface salvaged from an older printer (like an Ender 3 or i3 Mega). It is the most versatile "universal" tool for a scavenger.
 * **Choose PINDA if:** You have a **magnetic spring steel sheet** (like the Prusa MK52 bed you mentioned earlier). If the bed is metal, the PINDA is the superior "Tractor" choice because it has **zero moving parts** to snap or fail during a 48-hour print.
@@ -39,7 +39,7 @@ That is exactly the right hierarchy for a "Tractor" build. You are prioritizing 
 
 ### 🦾 The Reference Spec: SuperPINDA (or high-quality Inductive Clone)
 
-The SuperPINDA is the "industrial" choice for the Neo-Darwin because it aligns with the goal of a **"Set-and-Forget"** machine.
+The SuperPINDA is the "industrial" choice for the Amalgam because it aligns with the goal of a **"Set-and-Forget"** machine.
 
 * **Reliability:** With no moving parts, it is immune to the "pin-snag" failures that can occur during high-speed travel or if a print curls up.
 * **Precision:** Modern SuperPINDAs (and high-quality clones) are thermally stable. They provide the same trigger height whether the chamber is 20°C or 60°C, ensuring your first layer is always perfect.
@@ -95,7 +95,7 @@ Your intuition from the Ender 3 days is correct. The BLTouch is a surgical instr
 
 ### 🚜 The "Tractor" Decision Logic
 
-In the context of the **Neo-Darwin**, here is how to frame the choice in the documentation:
+In the context of the **Amalgam**, here is how to frame the choice in the documentation:
 
 * **The Reference Spec (SuperPINDA):** This is the "set-and-forget" standard. If the user has a steel spring sheet, this is the superior choice for a machine designed to last 1000 days without maintenance.
 * **The Scavenger Fallback (BLTouch):** This is the universal key. If they are using your old **Ender 3 Glass Beds**, they *must* use this, as inductive sensors cannot "see" glass.

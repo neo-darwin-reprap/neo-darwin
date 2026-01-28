@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Neo-Darwin Engineering Analysis TUI
+Amalgam Engineering Analysis TUI
 
-An interactive tool to help builders assess their Neo-Darwin
+An interactive tool to help builders assess their Amalgam
 configuration before construction. Analyzes rod sag, frame sizing,
 and acceleration limits.
 
@@ -84,7 +84,7 @@ def get_number(prompt: str, default: float = None) -> float:
 
 def run_interactive():
     """Run the interactive TUI."""
-    print_header("Neo-Darwin Engineering Analysis")
+    print_header("Amalgam Engineering Analysis")
     print("\nThis tool helps you assess your build configuration.")
     print("Answer the questions to get recommendations.\n")
 
@@ -226,7 +226,7 @@ square_corner_velocity: {klipper['square_corner_velocity']}
 
 def run_quick():
     """Run quick analysis with reference spec defaults."""
-    print_header("Neo-Darwin Quick Analysis (Reference Spec)")
+    print_header("Amalgam Quick Analysis (Reference Spec)")
 
     # Reference spec: 235x235 bed, Pitan, M10 rods
     bed_x, bed_y = 235, 235
@@ -262,7 +262,7 @@ def main():
     import argparse
 
     parser = argparse.ArgumentParser(
-        description="Neo-Darwin Engineering Analysis Tool",
+        description="Amalgam Engineering Analysis Tool",
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:

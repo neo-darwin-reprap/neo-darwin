@@ -1,4 +1,4 @@
-# Building Neo-Darwin
+# Building Amalgam
 
 This guide covers the three build systems:
 1. **CAD/STL Generation** - Parametric parts from build123d
@@ -14,8 +14,8 @@ This section explains how to generate STL files from the parametric CAD files.
 Clone the repository and navigate to the CAD directory:
 
 ```bash
-git clone https://github.com/neo-darwin-reprap/neo-darwin.git
-cd neo-darwin/cad
+git clone https://github.com/amalgam-reprap/amalgam.git
+cd amalgam/cad
 ```
 
 Run the setup wizard:
@@ -297,7 +297,7 @@ pip install -r requirements.txt
 
 ### Architecture: Engine + Parts
 
-Neo-Darwin's CAD system follows a **library + application** pattern:
+Amalgam's CAD system follows a **library + application** pattern:
 
 **`include/` - The Engine:**
 - Contains all reusable build123d components
@@ -313,7 +313,7 @@ Neo-Darwin's CAD system follows a **library + application** pattern:
 
 ### Parametric Design
 
-Neo-Darwin uses **build123d**, a modern Python CAD library:
+Amalgam uses **build123d**, a modern Python CAD library:
 - **Code-based design**: All parts defined in Python scripts
 - **Single source of truth**: `config.py` controls all dimensions
 - **Composable components**: Import from `include/`, configure, export
@@ -482,7 +482,7 @@ Want to add new parts or improve existing ones?
 
 ## Getting Help
 
-- **Issues**: [GitHub Issues](https://github.com/neo-darwin-reprap/neo-darwin/issues)
+- **Issues**: [GitHub Issues](https://github.com/amalgam-reprap/amalgam/issues)
 - **Discussions**: Coming soon
 - **Documentation**: See `docs/` directory for detailed design docs
 

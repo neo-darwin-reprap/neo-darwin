@@ -1,5 +1,5 @@
 """
-Neo-Darwin Build Orchestration
+Amalgam Build Orchestration
 
 Modules for building different outputs from configuration:
 - config_builder: Generate config.py from inventory

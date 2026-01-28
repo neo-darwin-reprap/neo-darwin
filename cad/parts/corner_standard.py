@@ -1,5 +1,5 @@
 """
-Neo-Darwin Standard Corner
+Amalgam Standard Corner
 Basic corner with 4 M12 rod clamps and jam nut access
 """
 

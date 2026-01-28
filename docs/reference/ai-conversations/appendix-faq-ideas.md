@@ -249,11 +249,11 @@ Builders interested in experimenting with dual‑drive designs are free to do so
 
 # FAQ Entry: Why Not CoreXY?
 
-**Q: Why does the Neo-Darwin project use a Cartesian motion system instead of CoreXY?**
+**Q: Why does the Amalgam project use a Cartesian motion system instead of CoreXY?**
 
 **A:** CoreXY is an efficient and capable motion system, but it introduces additional belt paths, alignment sensitivity, and tuning complexity. These factors increase the build and debugging burden, particularly when using scavenged or mixed-quality components.
 
-The Neo-Darwin project prioritises:
+The Amalgam project prioritises:
 
 * mechanical clarity
 * ease of diagnosis
@@ -277,7 +277,7 @@ Smooth rods and linear bearings:
 * fail gradually and visibly
 * are easier to clean, replace, and realign
 
-For the spans and loads used in the Neo-Darwin reference design, smooth rods provide sufficient stiffness without introducing additional sourcing or maintenance burden. Linear rails are therefore supported as optional upgrades, but not required for reference builds.
+For the spans and loads used in the Amalgam reference design, smooth rods provide sufficient stiffness without introducing additional sourcing or maintenance burden. Linear rails are therefore supported as optional upgrades, but not required for reference builds.
 
 ---
 

@@ -1,6 +1,6 @@
-# Neo-Darwin Build System
+# Amalgam Build System
 
-The Neo-Darwin build system generates everything you need from a single configuration:
+The Amalgam build system generates everything you need from a single configuration:
 
 - **STL files** for 3D printing
 - **Documentation** customized to your build
@@ -236,7 +236,7 @@ The wizard auto-detects your tier based on available parts.
 
 ## Philosophy
 
-This build system embodies Neo-Darwin's principles:
+This build system embodies Amalgam's principles:
 
 1. **Single Source of Truth**: `config.py` drives everything
 2. **Discoverable Components**: Add files, not code

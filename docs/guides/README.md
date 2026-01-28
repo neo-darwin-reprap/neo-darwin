@@ -1,6 +1,6 @@
 # Build Guides
 
-This folder contains tier-specific build guides for Neo-Darwin.
+This folder contains tier-specific build guides for Amalgam.
 
 ## Tier System
 

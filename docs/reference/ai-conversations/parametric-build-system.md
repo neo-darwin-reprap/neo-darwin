@@ -62,7 +62,7 @@ You are right that the term **"build"** is overloaded here. In a 3D printing pro
 
 ### 3. Strategy for the "Cognitively Demanding" User
 
-Your plan for a **Web Interface** is an excellent "bridge" for the Neo-Darwin's philosophy of being **"Mechanically Forgiving, Cognitively Demanding"**.
+Your plan for a **Web Interface** is an excellent "bridge" for the Amalgam's philosophy of being **"Mechanically Forgiving, Cognitively Demanding"**.
 
 * **Sovereignty for Non-Coders:** Providing a web form that generates a custom `.zip` (STLs + Custom Manual + CutList) lowers the barrier to entry while keeping the "Parametric Sovereignty" intact.
 * **The "One-Click" Reference:** For the **Tier 3 Reference Spec**, you could provide a pre-generated "Reference Spec Archive" so users don't even have to use the web form if they are building the standard machine.

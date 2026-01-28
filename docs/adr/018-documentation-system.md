@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin requires a documentation system that supports:
+The Amalgam requires a documentation system that supports:
 - **Assembly Guides**: Step-by-step instructions for building the printer
 - **Bills of Materials (BOM)**: Parts lists for different build tiers
 - **Cut Lists**: Rod lengths, sheet dimensions

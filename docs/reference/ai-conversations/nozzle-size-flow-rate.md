@@ -77,7 +77,7 @@ If you’re printing at:
 * 60–120 mm/s → **stock nozzle is fine**
 * 200+ mm/s → CHT starts to matter
 
-Neo-Darwin is **not** targeting Voron-class speeds, so this is important.
+Amalgam is **not** targeting Voron-class speeds, so this is important.
 
 ---
 

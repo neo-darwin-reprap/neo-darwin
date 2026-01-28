@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin requires a motion control strategy that balances reliability, cost, and accuracy. Key considerations:
+The Amalgam requires a motion control strategy that balances reliability, cost, and accuracy. Key considerations:
 
 **Driver Technology**:
 - **"Smart" Drivers** (TMC2130, TMC2209, TMC2240): UART communication, sensorless homing, silent operation
@@ -15,7 +15,7 @@ The Neo-Darwin requires a motion control strategy that balances reliability, cos
 - **Mechanical Endstops**: Physical switches with electrical contact
 
 **Z-Axis Safety**:
-- **Moving Bed**: Neo-Darwin uses moving bed (bed drops for increased Z)
+- **Moving Bed**: Amalgam uses moving bed (bed drops for increased Z)
 - **Bed-Drop Risk**: Power loss can cause heavy bed to back-drive lead screws and crash
 - **Homing Logic**: BLTouch probes bed from below (Z-min at nozzle)
 

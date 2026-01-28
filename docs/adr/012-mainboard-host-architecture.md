@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin requires **7 stepper drivers** (X, Y1, Y2, E, Z1, Z2, Z3) for the dual-Y gantry and Triple-Z kinematic leveling. The heavy XY gantry (dual 8mm rods, see ADR-021) benefits from dual Y motors driving from both sides. In 2026, the 3D printing electronics ecosystem offers three distinct approaches:
+The Amalgam requires **7 stepper drivers** (X, Y1, Y2, E, Z1, Z2, Z3) for the dual-Y gantry and Triple-Z kinematic leveling. The heavy XY gantry (dual 8mm rods, see ADR-021) benefits from dual Y motors driving from both sides. In 2026, the 3D printing electronics ecosystem offers three distinct approaches:
 
 1. **Salvaged Legacy Boards**: 4-driver boards from donor printers (Ender 3, Anet A8, i3 Mega)
 2. **Modular Modern Boards**: 5-8 driver boards requiring separate host (FYSETC Spider, BTT SKR 3)
@@ -31,7 +31,7 @@ We adopt a **three-tier architecture** with the **MKS SKIPR** as the Tier 3 Refe
 ### Tier 2: Multi-MCU Scavenger (Dual Board Triple-Z) ★ Recommended Scavenger Path
 **Hardware**: Two salvaged 4-driver boards + external host
 
-This is the **recommended path for dual-donor builds**. Two donor printers provide 8 stepper drivers total—more than enough for Neo-Darwin's 7 motors.
+This is the **recommended path for dual-donor builds**. Two donor printers provide 8 stepper drivers total—more than enough for Amalgam's 7 motors.
 
 - **Configuration**:
   - Board A: X, Y1, Z1, E (4 drivers)
@@ -89,7 +89,7 @@ Considered but rejected for Reference Spec due to:
 Useful for:
 - Builders with existing CB1/CM4 modules
 - Voron-style "Racecar" builds requiring 48V support
-- Future high-voltage upgrades (beyond Neo-Darwin scope)
+- Future high-voltage upgrades (beyond Amalgam scope)
 
 ### Host Performance Comparison
 

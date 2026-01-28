@@ -1,5 +1,5 @@
 """
-Bed Registry for Neo-Darwin
+Bed Registry for Amalgam
 
 Defines common bed sizes and heating specifications.
 Used by wizard to determine frame sizing and power requirements.

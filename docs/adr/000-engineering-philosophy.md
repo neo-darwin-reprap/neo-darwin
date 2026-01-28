@@ -1,15 +1,15 @@
-# ADR-000: Neo-Darwin Engineering Philosophy (20 Years of RepRap Wisdom)
+# ADR-000: Amalgam Engineering Philosophy (20 Years of RepRap Wisdom)
 
 ## Status
 Accepted
 
 ## Context
-The Neo-Darwin project stands on the shoulders of two decades of RepRap development (2007-2027). Over this period, the 3D printing community has evolved from experimental open-source innovation to mature engineering practices. This accumulated wisdom has settled on specific engineering truths that balance physical mass, software intelligence, and environmental control.
+The Amalgam project stands on the shoulders of two decades of RepRap development (2007-2027). Over this period, the 3D printing community has evolved from experimental open-source innovation to mature engineering practices. This accumulated wisdom has settled on specific engineering truths that balance physical mass, software intelligence, and environmental control.
 
-Many modern printers chase extreme specifications (600mm/s, linear rails, carbon fiber) at the expense of accessibility, cost, and reliability. The Neo-Darwin aims to distill 20 years of community knowledge into a cohesive engineering philosophy that delivers industrial-quality printing on a hobbyist budget.
+Many modern printers chase extreme specifications (600mm/s, linear rails, carbon fiber) at the expense of accessibility, cost, and reliability. The Amalgam aims to distill 20 years of community knowledge into a cohesive engineering philosophy that delivers industrial-quality printing on a hobbyist budget.
 
 ## Decision
-We adopt the **"Rigid Base, Agile Head"** philosophy, codified as the **Neo-Darwin Engineering Principles**:
+We adopt the **"Rigid Base, Agile Head"** philosophy, codified as the **Amalgam Engineering Principles**:
 
 ### Core Pillars
 
@@ -18,10 +18,10 @@ We adopt the **"Rigid Base, Agile Head"** philosophy, codified as the **Neo-Darw
 3. **Gearing is Sovereignty**: Geared direct drive (Wade/BMG) provides superior extrusion reliability
 4. **The "Good Enough" Zenith**: Performance that exceeds requirements without chasing diminishing returns
 
-### The Neo-Darwin Square
+### The Amalgam Square
 We balance four constraints, not three:
 
-| Corner | Neo-Darwin Position | Trade-off |
+| Corner | Amalgam Position | Trade-off |
 |--------|---------------------|-----------|
 | **Cost** | <$300 AUD | We sacrifice **Convenience**—more Effort, less money |
 | **Speed** | 70-120mm/s | We "settle" for adequate speed—perfect quality > high-speed failures |
@@ -130,7 +130,7 @@ We balance four constraints, not three:
 - **Validation**: Print calibration parts and tune Klipper features before production use
 
 ### Maintenance Philosophy
-- **Set-and-Forget**: Once properly built, Neo-Darwin requires minimal ongoing adjustment
+- **Set-and-Forget**: Once properly built, Amalgam requires minimal ongoing adjustment
 - **Preventive**: Focus on preventing issues (dry filament, draft control) rather than fixing them
 - **Overbuilt = Forgiving**: Heavy tolerances and robust hardware absorb minor issues
 
@@ -139,10 +139,10 @@ We balance four constraints, not three:
 ### Project Documentation
 - **PHILOSOPHY.md**: The "Tractor" philosophy and heritage acknowledgments
 - **MANIFESTO.md**: Project philosophy and "Tractor" concept
-- **docs/articles/3D-Printing-In-The-Age-Of-The-Appliance.md**: Context on why Neo-Darwin rejects the appliance model
+- **docs/articles/3D-Printing-In-The-Age-Of-The-Appliance.md**: Context on why Amalgam rejects the appliance model
 
 ### Technical Ancestors (What We Borrowed)
-| Project | Contribution to Neo-Darwin |
+| Project | Contribution to Amalgam |
 |---------|---------------------------|
 | [RepRap Darwin (2007)](https://reprap.org/wiki/Darwin) | Box-frame threaded-rod skeleton |
 | [RepRap Mendel (2009)](https://reprap.org/wiki/Mendel) | "Plough" X-carriage sled on dual rods |

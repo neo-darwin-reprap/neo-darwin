@@ -15,7 +15,7 @@ The extruder is the "heart" of a 3D printer, responsible for pushing filament th
 
 Modern "racecar" printers prioritize lightweight direct drive for high acceleration and short retraction distances. However, these often require proprietary gear kits, expensive components, and can lack the torque for challenging filaments.
 
-The Neo-Darwin's philosophy is "Tractor Torque" over "Racecar Speed."
+The Amalgam's philosophy is "Tractor Torque" over "Racecar Speed."
 
 ## Decision
 We choose **Greg's Wade Geared Extruder** (5.22:1 gear ratio) as the reference extruder.
@@ -60,7 +60,7 @@ We choose **Greg's Wade Geared Extruder** (5.22:1 gear ratio) as the reference e
 For multi-color (ERCF), the filament path is: **ERCF → Reverse Bowden → Direct Drive Wade → Hotend**
 
 ### "Neo" Flexibility
-The Neo-Darwin uses a **Modular Toolhead Puck** - the Wade is our baseline, but the carriage is compatible with:
+The Amalgam uses a **Modular Toolhead Puck** - the Wade is our baseline, but the carriage is compatible with:
 - Voron StealthBurner (for speed tinkerers)
 - Sherpa Mini (for lightweight upgrades)
 - Orbiter 1.5 (for precision direct drive)

@@ -1,5 +1,5 @@
 """
-Shared build123d components for Neo-Darwin corners
+Shared build123d components for Amalgam corners
 
 This module contains reusable components used by multiple corner types
 """

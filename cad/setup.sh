@@ -105,7 +105,7 @@ print_python_install_instructions() {
     echo "      via your system package manager or official installer."
     echo ""
     echo "Alternatively, you can use our web interface to generate STLs:"
-    echo "  https://neo-darwin.reprap.org (coming soon)"
+    echo "  https://amalgam.reprap.org (coming soon)"
     exit 1
 }
 

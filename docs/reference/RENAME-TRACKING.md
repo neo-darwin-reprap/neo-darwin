@@ -8,13 +8,13 @@ This document tracks the rename from "Neo-Darwin" to "Amalgam".
 - **New name:** Amalgam
 - **Tagline:** "Tractor with a Racecar Brain" (unchanged)
 - **Secondary phrases:** "Iron with Intelligence", "The Thinking Tank"
-- **Directory:** Currently `/neo-darwin/` — rename after GitHub repo update
+- **Directory:** Currently `/amalgam/` — rename after GitHub repo update
 
 ## Key Changes
 
 ### Structure (No More Tiers)
 
-**Old:**
+**Old (Neo-Darwin):**
 - Tier 1: One donor (not Neo-Darwin)
 - Tier 2: Two donors, dual-MCU
 - Tier 3: Two donors + MKS SKIPR
@@ -115,14 +115,14 @@ Once GitHub repo is renamed:
 
 ```bash
 # Rename local directory
-mv neo-darwin amalgam
+mv amalgam amalgam
 
 # Update git remote (if needed)
 git remote set-url origin git@github.com:username/amalgam.git
 
 # Global find/replace in key files
-find . -name "*.md" -o -name "*.py" -o -name "*.qmd" | xargs sed -i '' 's/Neo-Darwin/Amalgam/g'
-find . -name "*.md" -o -name "*.py" -o -name "*.qmd" | xargs sed -i '' 's/neo-darwin/amalgam/g'
+find . -name "*.md" -o -name "*.py" -o -name "*.qmd" | xargs sed -i '' 's/Amalgam/Amalgam/g'
+find . -name "*.md" -o -name "*.py" -o -name "*.qmd" | xargs sed -i '' 's/amalgam/amalgam/g'
 ```
 
 ---

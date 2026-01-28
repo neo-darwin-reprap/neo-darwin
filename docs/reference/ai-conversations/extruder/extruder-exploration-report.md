@@ -1,11 +1,11 @@
-# Neo-Darwin Extruder Exploration Report
+# Amalgam Extruder Exploration Report
 ## A Comprehensive Analysis of Extruder Options and Final Recommendation
 
 ---
 
 ## Executive Summary
 
-This report documents the exhaustive exploration of extruder options for the Neo-Darwin 3D printer project, following the "Tractor with the Brain of a Racecar" philosophy. After evaluating weight, cost, scavengability, mechanical performance, and compatibility with Klipper, the **Pitan Extruder** has been selected as the reference standard.
+This report documents the exhaustive exploration of extruder options for the Amalgam 3D printer project, following the "Tractor with the Brain of a Racecar" philosophy. After evaluating weight, cost, scavengability, mechanical performance, and compatibility with Klipper, the **Pitan Extruder** has been selected as the reference standard.
 
 **Key Finding:** Modern extruders like the Bambu Lab X1C prove that a well-tuned single direct-drive extruder can achieve superior print quality through software intelligence rather than raw mechanical complexity. The Pitan embodies this approach - lightweight, direct-drive, and perfectly suited to a Klipper-controlled "Tractor" that prioritizes quality over speed.
 
@@ -15,7 +15,7 @@ This report documents the exhaustive exploration of extruder options for the Neo
 
 ### The "Tractor" Philosophy
 
-The Neo-Darwin project is built around these core principles:
+The Amalgam project is built around these core principles:
 
 1. **High-Mass Foundation:** M12 threaded rod frame provides mechanical stability and vibration damping
 2. **Scavengable Parts:** Components should be obtainable from donor printers, office equipment, or hardware stores
@@ -25,7 +25,7 @@ The Neo-Darwin project is built around these core principles:
 
 ### The Material Requirements
 
-The Neo-Darwin is designed primarily for:
+The Amalgam is designed primarily for:
 - **PLA & PLA+:** Most common hobbyist filament
 - **PETG:** Functional prints and improved durability
 - **TPU:** Flexible materials (requires direct drive for best results)
@@ -87,7 +87,7 @@ The Greg's Wade is the "Flat-6 Engine" of the 3D printing world - mechanical, ge
 - M10 rods @ 250mm span with Wade: ~0.019mm sag (acceptable)
 - **Conclusion:** Wade forces M10 rods requirement for reliability
 
-**Compatibility with Neo-Darwin:**
+**Compatibility with Amalgam:**
 The Wade extruder conflicts with the scavenger-friendly approach because:
 1. Forces upgrade from scavenged M8 rods (common in Ender 3 donors)
 2. Requires stiffer gantry design
@@ -132,7 +132,7 @@ Developed by Annex Engineering, the Sherpa Mini has become the de facto standard
 - M8 rods @ 250mm span with Sherpa (NEMA17): ~0.034mm sag (good)
 - **Conclusion:** Sherpa enables M8 rods to work reliably
 
-**Cost Breakdown (from neo-darwin-extruder-options.md):**
+**Cost Breakdown (from amalgam-extruder-options.md):**
 - BMG clone gear set: $3-8 AUD
 - Round NEMA14 pancake motor: $10-15 AUD
 - Hardware/inserts/PTFE: ~$5 AUD
@@ -226,17 +226,17 @@ These represent the "Formula 1" extruders of the 3D printing world - designed fo
 - **Expensive:** Require $30-50 specialized gear kits
 - **Complex:** Many small parts, precision assembly required
 - **Proprietary:** Bondtech/BMG gears must be purchased
-- **Overkill:** Designed for racing speeds; Neo-Darwin prioritizes quality
+- **Overkill:** Designed for racing speeds; Amalgam prioritizes quality
 - **Poor Scavenge Fit:** No parts available in donor machines
 
 **Engineering Rationale:**
-The Voron extruders are engineered to minimize moving mass to enable high-speed printing. However, the Neo-Darwin explicitly **sacrifices speed** for quality and cost. As the user notes:
+The Voron extruders are engineered to minimize moving mass to enable high-speed printing. However, the Amalgam explicitly **sacrifices speed** for quality and cost. As the user notes:
 
 > "I suspect with 20 years of RepRap, if we sacrifice speed, I think we can get quality cheaply."
 
 The Bambu Lab X1C proves this thesis: a single-drive extruder tuned with Klipper can produce superior quality to most popular dual-drive systems.
 
-**Verdict: ❌ Not Recommended for Neo-Darwin Philosophy**
+**Verdict: ❌ Not Recommended for Amalgam Philosophy**
 
 ---
 
@@ -309,7 +309,7 @@ The dual-drive configuration provides:
 - Excellent control of flexible filaments
 - Consistent extrusion at all speeds
 
-This matches the Neo-Darwin material requirements (PLA, PLA+, PETG, TPU).
+This matches the Amalgam material requirements (PLA, PLA+, PETG, TPU).
 
 ##### 5. **Cost Analysis**
 
@@ -438,7 +438,7 @@ Pitan is superior if:
 - You prioritize scavenger-friendly design
 - You want motor flexibility (NEMA14 or NEMA17)
 
-**For Neo-Darwin's scavenger philosophy, Pitan wins.**
+**For Amalgam's scavenger philosophy, Pitan wins.**
 
 ### Pitan vs. Voron Extruders
 
@@ -450,9 +450,9 @@ Pitan is superior if:
 | Speed Optimization | Very High | Not Optimized | Voron |
 | Quality Optimization | Yes | **Yes** | Tie |
 | Complexity | High | Low | **Pitan** |
-| Neo-Darwin Philosophy | Poor fit | **Perfect fit** | **Pitan** |
+| Amalgam Philosophy | Poor fit | **Perfect fit** | **Pitan** |
 
-**Decision:** Voron extruders are engineered for 300mm/s+ racing, which Neo-Darwin explicitly does not prioritize. The cost and scavengability differences are decisive. Pitan achieves equivalent print quality through software intelligence rather than over-engineered hardware.
+**Decision:** Voron extruders are engineered for 300mm/s+ racing, which Amalgam explicitly does not prioritize. The cost and scavengability differences are decisive. Pitan achieves equivalent print quality through software intelligence rather than over-engineered hardware.
 
 ---
 
@@ -488,7 +488,7 @@ Automatic measurement of printer's natural frequencies allows Klipper to generat
 
 ---
 
-## Reference Configuration: Neo-Darwin with Pitan
+## Reference Configuration: Amalgam with Pitan
 
 ### Recommended Build: Tier 2 (Scavenge + Purchase)
 
@@ -661,7 +661,7 @@ Given the scavenger philosophy, maintain this spares kit:
 
 ### The Pitan Decision
 
-After exhaustive evaluation of weight, cost, scavengability, mechanical performance, and compatibility with Klipper firmware, the **Pitan Extruder** is the clear choice for the Neo-Darwin reference standard.
+After exhaustive evaluation of weight, cost, scavengability, mechanical performance, and compatibility with Klipper firmware, the **Pitan Extruder** is the clear choice for the Amalgam reference standard.
 
 **It is not the fastest extruder. It is not the lightest extruder. It is not the simplest extruder.**
 
@@ -674,7 +674,7 @@ After exhaustive evaluation of weight, cost, scavengability, mechanical performa
 
 ### Why This Matters
 
-The Neo-Darwin project exists to prove that:
+The Amalgam project exists to prove that:
 - You can achieve MK4/Bambu-quality prints on a $300 AUD budget
 - 20 years of RepRap knowledge, combined with modern Klipper firmware, outperforms expensive commercial systems
 - Quality comes from intelligent control, not raw speed or cost
@@ -683,7 +683,7 @@ The Pitan extruder embodies this philosophy perfectly.
 
 ### Final Recommendation
 
-**For the Neo-Darwin Reference Specification:**
+**For the Amalgam Reference Specification:**
 
 - ✅ **Primary:** Pitan Extruder with NEMA17 motor (scavenged) and BMG gears
 - ✅ **Alternative:** Sherpa Mini for builders preferring turnkey solutions
@@ -695,7 +695,7 @@ The Pitan extruder embodies this philosophy perfectly.
 2. Create detailed assembly documentation
 3. Validate performance with test prints
 4. Publish BOM and sourcing guide
-5. Update Neo-Darwin Manifesto with extruder specification
+5. Update Amalgam Manifesto with extruder specification
 
 ---
 
@@ -703,6 +703,6 @@ The Pitan extruder embodies this philosophy perfectly.
 
 ---
 
-**Document prepared for:** Neo-Darwin Project  
+**Document prepared for:** Amalgam Project  
 **Date:** January 2026  
 **Philosophy:** "A Tractor with the Brain of a Racecar"

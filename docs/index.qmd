@@ -1,8 +1,8 @@
 ---
-title: "Neo-Darwin Documentation"
+title: "Amalgam Documentation"
 ---
 
-# Neo-Darwin: A 2026 RepRap Reference Specification
+# Amalgam: A 2026 RepRap Reference Specification
 
 **High-Mass, Low-Cost, Total Control.**
 
@@ -30,9 +30,9 @@ title: "Neo-Darwin Documentation"
 | [Klipper Config](reference/klipper-config.qmd) | Printer configuration files |
 | [ADRs](adr/index.qmd) | Architecture Decision Records |
 
-## The Neo-Darwin Philosophy
+## The Amalgam Philosophy
 
-Neo-Darwin is not designed to compete with consumer printers. It's designed to teach you everything about 3D printers by building one from scratch.
+Amalgam is not designed to compete with consumer printers. It's designed to teach you everything about 3D printers by building one from scratch.
 
 **Key Principles:**
 

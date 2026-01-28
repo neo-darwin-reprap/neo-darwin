@@ -1,8 +1,8 @@
-# Neo-Darwin Reference Specification
+# Amalgam Reference Specification
 
 **The "Blessed" Hardware Configuration for 2026**
 
-This document defines the specific hardware choices for the Neo-Darwin. For the philosophy behind these choices, see [PHILOSOPHY.md](PHILOSOPHY.md). For build instructions, see [BUILDING.md](BUILDING.md).
+This document defines the specific hardware choices for the Amalgam. For the philosophy behind these choices, see [PHILOSOPHY.md](PHILOSOPHY.md). For build instructions, see [BUILDING.md](BUILDING.md).
 
 ---
 
@@ -35,7 +35,7 @@ This document defines the specific hardware choices for the Neo-Darwin. For the 
 
 ## Before You Build: The 5 Key Decisions
 
-Neo-Darwin operates within a wide envelope. Before purchasing materials:
+Amalgam operates within a wide envelope. Before purchasing materials:
 
 1. **Salvage or Buy Rods?** (M8 salvage vs M10 new)
 2. **Belted-Z or Triple-Z?** (1 motor vs 3 motors)
@@ -204,7 +204,7 @@ The Enraged Rabbit Carrot Feeder is the official multi-color expansion:
 
 ### The "Cold-Spare" Principle
 
-The Neo-Darwin is self-replicating. Maintain a "Vitamin Box" containing:
+The Amalgam is self-replicating. Maintain a "Vitamin Box" containing:
 
 * Complete set of Pitan gears (printed)
 * Spare MK8 drive gear or hobbed bolt

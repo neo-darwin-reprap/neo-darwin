@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin requires decisions on where to mount the mainboard, host (Pi/SKIPR), and power supply unit (PSU). The placement affects:
+The Amalgam requires decisions on where to mount the mainboard, host (Pi/SKIPR), and power supply unit (PSU). The placement affects:
 
 **Vibration Physics**:
 - Electronics and stepper drivers are sensitive to vibration

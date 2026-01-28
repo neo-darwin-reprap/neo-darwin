@@ -1,4 +1,4 @@
-# Z-Tilt Leveling: How It Works & Neo-Darwin Implications
+# Z-Tilt Leveling: How It Works & Amalgam Implications
 
 ## What is Z-Tilt?
 
@@ -146,7 +146,7 @@ After moves or maintenance:
 
 ### Q3: Do motors go inside or outside frame?
 
-**Answer: Voron Trident = INSIDE frame, Neo-Darwin can do either**
+**Answer: Voron Trident = INSIDE frame, Amalgam can do either**
 
 #### Voron Trident Approach
 ```
@@ -168,7 +168,7 @@ After moves or maintenance:
 - Compact footprint
 - Protected motors
 
-#### Neo-Darwin M12 Frame Options
+#### Amalgam M12 Frame Options
 
 **Option A: Inside frame (Voron-like)**
 ```
@@ -223,7 +223,7 @@ After moves or maintenance:
 
 ---
 
-## Neo-Darwin Frame Geometry Decisions
+## Amalgam Frame Geometry Decisions
 
 ### Z-Motor Placement
 ```
@@ -311,9 +311,9 @@ z_offset: 5.0       # Set during calibration
 4. **Z=0: Bed at bottom, Z=max: Bed near top gantry**
 5. **Triangle support pattern: Front L + Front R + Back C** OR variations
 
-### Voron vs Neo-Darwin Differences
+### Voron vs Amalgam Differences
 
-| Aspect | Voron Trident | Neo-Darwin |
+| Aspect | Voron Trident | Amalgam |
 |---------|---------------|--------------|
 | Frame | 2020/2040 aluminum | M12 threaded rods |
 | Z-mount | Bolt to extrusion | Z-puck clamped to rod |
@@ -324,7 +324,7 @@ z_offset: 5.0       # Set during calibration
 
 ---
 
-## Recommended Neo-Darwin Z-System Design
+## Recommended Amalgam Z-System Design
 
 ### Z-Puck on Vertical Rods (Inside Frame)
 ```

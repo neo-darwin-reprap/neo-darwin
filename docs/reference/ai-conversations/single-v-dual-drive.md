@@ -174,7 +174,7 @@ That violates your **No Downward Complexity** rule.
 
 If you want to encode this into documentation without poking the bear:
 
-> “Dual-drive extruders primarily increase extrusion force and filament handling robustness. The Neo-Darwin reference design does not require this additional complexity to achieve consistent, high-quality prints.”
+> “Dual-drive extruders primarily increase extrusion force and filament handling robustness. The Amalgam reference design does not require this additional complexity to achieve consistent, high-quality prints.”
 
 That’s factual, calm, and unarguable.
 

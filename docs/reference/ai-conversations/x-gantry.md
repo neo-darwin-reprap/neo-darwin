@@ -1,4 +1,4 @@
-In a box-frame "moving bed" machine like the **Neo-Darwin**, the orientation of your X-axis rods—**Horizontal** (Mendel-style) vs. **Vertical** (MK4-style)—is a critical mechanical decision. For the "Tractor" philosophy, the **Horizontal approach** is technically superior for several reasons related to mass and stability.
+In a box-frame "moving bed" machine like the **Amalgam**, the orientation of your X-axis rods—**Horizontal** (Mendel-style) vs. **Vertical** (MK4-style)—is a critical mechanical decision. For the "Tractor" philosophy, the **Horizontal approach** is technically superior for several reasons related to mass and stability.
 
 ### ⚖️ The Two Gantry Orientations
 
@@ -14,7 +14,7 @@ In a box-frame "moving bed" machine like the **Neo-Darwin**, the orientation of 
 
 ### 🚜 Why the Horizontal Gantry fits "The Tractor"
 
-For the Neo-Darwin, the **Horizontal orientation** (rods parallel in the Y-plane) is the recommended path because it aligns with your mandate for **High-Mass and Total Control**.
+For the Amalgam, the **Horizontal orientation** (rods parallel in the Y-plane) is the recommended path because it aligns with your mandate for **High-Mass and Total Control**.
 
 #### **1. Balanced Center of Gravity (CG)**
 
@@ -46,7 +46,7 @@ The only reason modern machines like the Prusa MK4 use a vertical stack is for *
 Would you like me to create the **Parametric Puck Design** (the mounting plate) for a horizontal carriage, including how to secure your 10mm rods to the M12 frame?
 
 
-It’s not stretching the metaphor at all—it is exactly how the **Neo-Darwin** is engineered to behave. In a horizontal layout, the X-gantry acts as a heavy-duty bridge spanning the "ploughed fields" of your print bed.
+It’s not stretching the metaphor at all—it is exactly how the **Amalgam** is engineered to behave. In a horizontal layout, the X-gantry acts as a heavy-duty bridge spanning the "ploughed fields" of your print bed.
 
 By placing the rods in the Y-plane, the toolhead doesn't just hang off the side; it sits **squarely on top of the mechanical foundation**, moving with the unstoppable momentum of a tractor.
 
@@ -79,7 +79,7 @@ To make this work, you need the **Y-Pucks**. These are the structural nodes that
 
 By following the **RepRap Darwin (2007)** lineage, you are building a machine where the **Center of Mass** of the toolhead is aligned with the **Center of Force** of the belts. This symmetry is what allows the "Tractor" to use its "Racecar Brain" (Klipper) so effectively—the physics are "cleaner," so the software doesn't have to work as hard to correct for mechanical slop.
 
-> **"A plow doesn't move fast; it moves with authority. The Neo-Darwin isn't racing the clock; it is mastering the material."**
+> **"A plow doesn't move fast; it moves with authority. The Amalgam isn't racing the clock; it is mastering the material."**
 
 ---
 
@@ -87,7 +87,7 @@ By following the **RepRap Darwin (2007)** lineage, you are building a machine wh
 
 Would you like me to generate the **BOM (Bill of Materials) specifically for the Y-Puck assembly**, or should we move on to how the **Triple-Z "Pucks"** will support the bed while the gantry "plows" above it?
 
-Don't apologize—this is exactly where the **Neo-Darwin’s** complexity becomes "cognitively demanding." The geometry you are describing is a **nested motion system** where the M12 frame acts as the static foundation, the Y-axis acts as the secondary carriage, and the X-axis "plow" rides on top.
+Don't apologize—this is exactly where the **Amalgam’s** complexity becomes "cognitively demanding." The geometry you are describing is a **nested motion system** where the M12 frame acts as the static foundation, the Y-axis acts as the secondary carriage, and the X-axis "plow" rides on top.
 
 ### 🏗️ The Motion Hierarchy: How it Fits Together
 
@@ -102,7 +102,7 @@ To keep your M12 rods as short as possible, you must understand the "stack". The
 
 ### 🚜 Why Direct Drive is the "Tractor" Choice
 
-You are right to lean back into **Team Direct-Drive**. While Bowden is lighter, it trades away the "Total Sovereignty" over the filament that the Neo-Darwin demands.
+You are right to lean back into **Team Direct-Drive**. While Bowden is lighter, it trades away the "Total Sovereignty" over the filament that the Amalgam demands.
 
 * **Quality over Velocity:** By using a **Direct Drive Greg's Wade (13:43 ratio)**, you get 5.22:1 gear reduction. This provides "Tractor" torque, which is technically superior for consistent extrusion and handling the "flexible" nature of TPU and PETG.
 * **The Mass Filter:** Since we aren't chasing speed (settling for 70-120mm/s), the extra weight of the motor on the gantry isn't a penalty—it’s a feature. The mass dampens small vibrations, and **Klipper Input Shaping** cleans up the rest.
@@ -116,7 +116,7 @@ To make the M12 rods as short as possible while hitting your ~250mm³ build volu
 
 * **X-Rod Length:** Your 370mm X-rods dictate the width. The M12 rods only need to be wide enough to clear the Y-Pucks at full travel.
 * **Y-Rod Length:** Your 350mm Y-rods dictate the depth.
-* **Z-Height Strategy:** Since the Neo-Darwin is a **moving-bed machine**, the bed starts at the top (near the nozzle) and moves *down*.
+* **Z-Height Strategy:** Since the Amalgam is a **moving-bed machine**, the bed starts at the top (near the nozzle) and moves *down*.
 * **The "Plow" Clearance:** Because the X-gantry "plows" on top, the toolhead needs to be able to reach the very edges of the bed. By mounting the Y-rods *inside* the M12 frame rather than on top of it, you save roughly 40mm of total machine height.
 
 ---
@@ -219,7 +219,7 @@ Technically, **Linear Rails** (like MGN12) are superior for resisting sag, but t
 
 * **Profile Rigidity:** Linear rails are much stiffer than rods of equivalent weight because their profiled shape and "Goethe-style" four-point contact design resist deformation in all directions.
 * **The Support Requirement:** To truly solve sag, linear rails are usually **anchored along their full length** to a rigid support, like aluminum extrusion.
-* **The Rod Alternative:** In a Neo-Darwin "Tractor" build, the best way to solve sag without adding the cost and complexity of rails is to simply **increase rod diameter**. A  rod is significantly stiffer than , and  is nearly twice as rigid as .
+* **The Rod Alternative:** In a Amalgam "Tractor" build, the best way to solve sag without adding the cost and complexity of rails is to simply **increase rod diameter**. A  rod is significantly stiffer than , and  is nearly twice as rigid as .
 
 ### 🚜 The "Tractor" Recommendation
 
@@ -277,14 +277,14 @@ If you are truly worried about sag on the Y-axis using salvaged 10mm (M10) rods,
 
 If you choose the **Ender 5 (V-slot) path**, you are building a "Hybrid Appliance." It will be faster to assemble but harder to maintain and more expensive to source.
 
-If you stick to the **10mm Photocopier Rods**, you are building a **Neo-Darwin Reference Spec**. It will be "Mechanically Forgiving" because the steel doesn't care about dust, hair, or long periods of standing still.
+If you stick to the **10mm Photocopier Rods**, you are building a **Amalgam Reference Spec**. It will be "Mechanically Forgiving" because the steel doesn't care about dust, hair, or long periods of standing still.
 
 > **"A Tractor isn't built from a kit; it's harvested from the environment."**
 
 **Would you like me to focus the design on the "Photocopier Harvest" (10mm rods) to ensure we hit the <$300 AUD budget?**
 
 
-The conflict between the **Heatbed Size**, **Rod Sag**, and **Extruder Weight** is the core engineering puzzle of the Neo-Darwin. To resolve this without breaking the "Tractor" ethos, we need to look at how these technical choices influence each other.
+The conflict between the **Heatbed Size**, **Rod Sag**, and **Extruder Weight** is the core engineering puzzle of the Amalgam. To resolve this without breaking the "Tractor" ethos, we need to look at how these technical choices influence each other.
 
 ### 📏 The Heatbed Dilemma: Scavenge vs. Buy
 
@@ -336,7 +336,7 @@ To maintain the **±0.1mm accuracy** and **"Set-and-Forget" reliability**:
 Would you like me to draft the **Y-Puck design requirements** for a "Double-Rod" 10mm configuration, or should we finalize the **M12 Skeleton's exact rod lengths** for the 200mm build volume?
 
 
-Taking flexible materials (TPU) off the table is a significant compromise that challenges the "Total Sovereignty" of the **Neo-Darwin**. However, transitioning from the heavy **Greg’s Wade** to a **BMG Clone with a pancake motor** is a strategic "Neo" evolution that addresses your sag concerns without abandoning the "Tractor" soul.
+Taking flexible materials (TPU) off the table is a significant compromise that challenges the "Total Sovereignty" of the **Amalgam**. However, transitioning from the heavy **Greg’s Wade** to a **BMG Clone with a pancake motor** is a strategic "Neo" evolution that addresses your sag concerns without abandoning the "Tractor" soul.
 
 ### 🛠️ The Extruder Evolution: Wade vs. BMG Clone
 
@@ -382,7 +382,7 @@ If you use a **$10 BMG Clone** and a **$15 Pancake Motor**, you move from a "Tie
 Would you like me to update the **Modular Toolhead Puck** design to support the **BMG + Pancake motor** orientation, or shall we finalize the **M12 Frame dimensions** for a standard  Ender bed donor?
 
 
-The worry about **BMG clones** wearing out is technically valid for the "Tractor" ethos, which prioritizes longevity. However, the **Neo-Darwin** handles this through its "Self-Healing" maintenance strategy and the fact that the **M12 frame** acts as the ultimate dampener regardless of the toolhead's weight.
+The worry about **BMG clones** wearing out is technically valid for the "Tractor" ethos, which prioritizes longevity. However, the **Amalgam** handles this through its "Self-Healing" maintenance strategy and the fact that the **M12 frame** acts as the ultimate dampener regardless of the toolhead's weight.
 
 ### 🛡️ The Reliability Trade-off: Wade vs. BMG Clone
 
@@ -397,7 +397,7 @@ The worry about **BMG clones** wearing out is technically valid for the "Tractor
 
 ### 🚜 Keeping the "Tractor" Mass with a BMG
 
-If you choose a BMG clone for the weight reduction but fear for its life, the **Neo-Darwin** philosophy provides three safeguards:
+If you choose a BMG clone for the weight reduction but fear for its life, the **Amalgam** philosophy provides three safeguards:
 
 #### **1. The "Cold-Spare" Principle**
 
@@ -433,7 +433,7 @@ If you want to use a **235mm Ender bed** without rod sag being a constant headac
 Would you like me to finalize the **M12 Skeleton dimensions** specifically for a **235x235mm Ender bed**, assuming we use the **"Double-Up" 10mm Y-rods** to support the mass of a Greg's Wade?
 
 
-The idea of using "suspension wires" moves us into the territory of **Cable-Driven Parallel Robots (CDPR)** or "Skycam" technology, which is a fascinating way to solve the sag problem without adding more "iron". In the context of the **Neo-Darwin**, this would be a "Spider" or "Hangprinter" hybrid.
+The idea of using "suspension wires" moves us into the territory of **Cable-Driven Parallel Robots (CDPR)** or "Skycam" technology, which is a fascinating way to solve the sag problem without adding more "iron". In the context of the **Amalgam**, this would be a "Spider" or "Hangprinter" hybrid.
 
 Here are three "out-of-the-box" ideas to fight sag while staying true to the **"Cognitively Demanding"** nature of the project:
 
@@ -479,7 +479,7 @@ Would you like to try the **"Bowstring" Pre-Tensioner** approach? I can help des
 
 Magnetic assistance (or "Mag-Lev Assistance") is a fascinating "Tractor" solution because it uses a passive physical force to counteract gravity without the mechanical wear of a bowstring or the complexity of a spider-wire system. It fits the **"Cognitively Demanding"** nature of the project perfectly.
 
-In the **Neo-Darwin**, this wouldn't be true levitation (which is unstable), but **Gravity Offloading**.
+In the **Amalgam**, this wouldn't be true levitation (which is unstable), but **Gravity Offloading**.
 
 ### 🧲 The "Magnetic Sky-Rail" Concept
 
@@ -545,7 +545,7 @@ For 10mm photocopier rods, 200mm is the "Infinite Stiffness" zone. At this span,
 
 ### 🏎️ How the "Racecars" Solve It
 
-Other manufacturers solve the "Span vs. Weight" problem using high-cost materials that contradict the Neo-Darwin's scavenger mission:
+Other manufacturers solve the "Span vs. Weight" problem using high-cost materials that contradict the Amalgam's scavenger mission:
 
 | Manufacturer | **Solution** | **Why they do it** | **Tractor Critique** |
 | --- | --- | --- | --- |
@@ -557,7 +557,7 @@ Other manufacturers solve the "Span vs. Weight" problem using high-cost material
 
 ### 🚜 The "Tractor" Way: Why 200x200 is the Winner
 
-For the Neo-Darwin, **200x200x250mm** is the "Pragmatic Reference Spec" for three reasons:
+For the Amalgam, **200x200x250mm** is the "Pragmatic Reference Spec" for three reasons:
 
 1. **The $20 MK3 Bed:** As you noted, the  heatbed is a standard, cheap, and easily replaceable "vitamin." It fits the <$300 AUD budget perfectly.
 2. **Scavenge-Ability:** Every mid-sized office printer has at least two 10mm rods that are at least 300mm long. Building for a 200mm print area gives you "room to breathe" on the rod ends for your M12 mounts.
@@ -669,7 +669,7 @@ Using the same  () point load and  Modulus:
 
 At ****, the sag is roughly 1/4 of a standard  layer height.
 
-1. **Klipper Bed Mesh:** Since the Neo-Darwin uses **Triple-Z Kinematic Leveling**, Klipper will easily "math away" a  dip.
+1. **Klipper Bed Mesh:** Since the Amalgam uses **Triple-Z Kinematic Leveling**, Klipper will easily "math away" a  dip.
 2. **The "Lumpy Factor":** Because the rods are salvaged, they might have  of wear or slight bends anyway. The  of sag just adds to the "analog noise" that the software brain has to filter.
 
 ### ⚠️ The Risk: Accidental Leverage
@@ -693,7 +693,7 @@ The real danger with 8mm rods isn't the weight of the motor; it's **you**.
 Should we move on to the **Triple-Z Bed Layout** to see how we’re going to support the other half of this equation?
 
 
-You’ve reached the "Pragmatic Zen" of the **Neo-Darwin**. You are exactly right: we use the **Iron** (M10 rods) to get as close to the truth as possible, and we use the **Brain** (Klipper) to handle the remaining "analog noise" of the scavenged parts.
+You’ve reached the "Pragmatic Zen" of the **Amalgam**. You are exactly right: we use the **Iron** (M10 rods) to get as close to the truth as possible, and we use the **Brain** (Klipper) to handle the remaining "analog noise" of the scavenged parts.
 
 Here is how we handle your parking and "Box-within-a-Box" engineering puzzles.
 
@@ -713,7 +713,7 @@ In Klipper, we can absolutely force the toolhead into a specific corner. In fact
 
 Your idea of building a larger frame but "shortening" the active rod span is a brilliant piece of **Tractor Engineering**. You don't need a literal second box; you just need **Inward Rod Mounts**.
 
-Because the Neo-Darwin uses **M12 Threaded Rods** for the frame, the entire frame is essentially a "mounting rail."
+Because the Amalgam uses **M12 Threaded Rods** for the frame, the entire frame is essentially a "mounting rail."
 
 * **How it works:** Instead of mounting your 10mm smooth-rod clamps at the very corners of the M12 frame, you slide them **inward** along the threaded rods.
 * **The Rigid Zone:** You can build the M12 frame wide enough to house a  Ender bed, but position your smooth rod clamps so the **unsupported span** of the rods is only 200mm.
@@ -798,7 +798,7 @@ To lock this skeleton together, you need the following M12 hardware:
 **You have the iron lengths. You have the philosophy. The "Field" is ready to be staked out.** Should I generate the **Bill of Materials (BOM)** for the "Vitamin Box" (bearings, belts, and fasteners) next, or are you heading to the hardware store?
 
 
-It’s time to move from the drawing board to the workshop. Based on our "Tractor" philosophy of **high-mass, low-cost, and software-led precision**, here is your definitive Build Blueprint for the **Neo-Darwin Reference Spec.**
+It’s time to move from the drawing board to the workshop. Based on our "Tractor" philosophy of **high-mass, low-cost, and software-led precision**, here is your definitive Build Blueprint for the **Amalgam Reference Spec.**
 
 ### 🏛️ Phase 1: The M12 Skeleton
 
@@ -899,7 +899,7 @@ We will use a **235mm span** (the wider Ender bed) and **10mm photocopier rods**
 
 ### 🚜 The "Tractor" Verdict: Wade vs. BMG
 
-The Wade Geared Extruder has indeed "had its day" as the primary RepRap choice. It is a beautiful piece of 2011 engineering, but for a 2026 **Neo-Darwin**, the BMG Clone is the better fit:
+The Wade Geared Extruder has indeed "had its day" as the primary RepRap choice. It is a beautiful piece of 2011 engineering, but for a 2026 **Amalgam**, the BMG Clone is the better fit:
 
 * **Wade is a Steam Tractor:** Heavy, powerful, but hard on the tracks (rods).
 * **BMG is a Modern Diesel:** Lighter, more efficient, and much easier for the "Racecar Brain" (Klipper) to throw around at .
@@ -965,7 +965,7 @@ A standard first layer is . The sag caused by your BMG toolhead is **1/20th of a
 
 **You are ready to turn "Active
 
-The thinking is over; the engineering is solid. By setting **200x200x250mm** as the "Reference Specification" for the **Neo-Darwin**, you are choosing the most reliable path for a DIY "Tractor."
+The thinking is over; the engineering is solid. By setting **200x200x250mm** as the "Reference Specification" for the **Amalgam**, you are choosing the most reliable path for a DIY "Tractor."
 
 ### 🌡️ Why skip the "Outer Edge" of a 235x235 Bed?
 
@@ -1017,7 +1017,7 @@ Since you are ready to build, here is your sequence of operations:
 
 
 
-**The Neo-Darwin is no longer a concept; it is an assembly project.** Do you want me to generate the **Klipper Configuration** for your Triple-Z motors so you can see how the "Brain" will handle that 200mm field, or do you have enough to start the physical build?
+**The Amalgam is no longer a concept; it is an assembly project.** Do you want me to generate the **Klipper Configuration** for your Triple-Z motors so you can see how the "Brain" will handle that 200mm field, or do you have enough to start the physical build?
 
 
 The Tractor" into reality. Which part of the build are you starting tonight?**
@@ -1067,7 +1067,7 @@ Your plan to mix motors for the **Triple-Z** is pure "Tractor" logic, but there 
 
 
 3. **The First Prints:**
-* Download the **Sherpa Mini STLs** and the **Neo-Darwin M12 Corner Blocks**.
+* Download the **Sherpa Mini STLs** and the **Amalgam M12 Corner Blocks**.
 * If you don't have a printer yet, find a local maker space or a friend. Print in **PETG** with 4 walls and 40% infill for "Tractor" strength.
 
 

@@ -1,5 +1,5 @@
 """
-Extruder Registry for Neo-Darwin
+Extruder Registry for Amalgam
 
 Defines supported extruder types with their mechanical and performance properties.
 Critical for engineering analysis (rod sag, acceleration limits).
@@ -123,7 +123,7 @@ EXTRUDERS = {
             "Requires purchase (not printable)",
         ],
         warnings=[
-            "Expensive for Neo-Darwin philosophy",
+            "Expensive for Amalgam philosophy",
             "Dual-drive may show gear mesh artifacts",
         ],
         min_rod_diameter=8,

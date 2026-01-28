@@ -5,7 +5,7 @@ Accepted (supersedes ADR-002)
 
 ## Context
 
-The extruder choice is critical to Neo-Darwin's philosophy of building a "Tractor with the Brain of a Racecar." After extensive evaluation documented in:
+The extruder choice is critical to Amalgam's philosophy of building a "Tractor with the Brain of a Racecar." After extensive evaluation documented in:
 
 - `docs/decisions/tractor_06_extruder_decision.md` (comprehensive analysis)
 - `docs/reference/ai-conversations/pitian-v-orbiter.md`
@@ -17,7 +17,7 @@ We reconsidered the original Greg's Wade decision (ADR-002) and evaluated multip
 
 A critical discovery shaped this decision: **dual-drive extruders introduce gear mesh artifacts** that affect print quality consistency. When two drive gears mesh, microscopic variations in tooth engagement create periodic pressure fluctuations on the filament.
 
-This is one reason Bambu Lab printers—known for print quality—use single-drive designs. For Neo-Darwin's quality-focused philosophy at 80-120mm/s, single-drive advantages outweigh dual-drive TPU benefits.
+This is one reason Bambu Lab printers—known for print quality—use single-drive designs. For Amalgam's quality-focused philosophy at 80-120mm/s, single-drive advantages outweigh dual-drive TPU benefits.
 
 ### Extruders Evaluated
 
@@ -32,7 +32,7 @@ This is one reason Bambu Lab printers—known for print quality—use single-dri
 
 ## Decision
 
-We choose the **Pitan Extruder** (Printable Titan) as the Neo-Darwin Reference Specification.
+We choose the **Pitan Extruder** (Printable Titan) as the Amalgam Reference Specification.
 
 ### Why Pitan?
 
@@ -151,7 +151,7 @@ For extreme budget constraints or if you already have one:
 
 ### Use What You Have
 
-**This is the most important option.** If you have an extruder in your parts bin—Titan, Hemera, BMG, Sherpa—**use it**. The Neo-Darwin carriage design is adaptable.
+**This is the most important option.** If you have an extruder in your parts bin—Titan, Hemera, BMG, Sherpa—**use it**. The Amalgam carriage design is adaptable.
 
 The Pitan is the *reference specification*, not a mandate. The single-drive recommendation is about optimal quality for new builds, not a condemnation of existing equipment.
 

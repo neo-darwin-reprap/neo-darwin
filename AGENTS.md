@@ -1,6 +1,6 @@
 # AGENTS.md
 
-## Neo-Darwin CAD Project - Agent Guidelines
+## Amalgam CAD Project - Agent Guidelines
 
 This document provides coding standards and workflows for AI agents working on this repository.
 

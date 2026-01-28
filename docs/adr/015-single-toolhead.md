@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin requires a decision on multi-material/color capability. Three approaches exist in 2026:
+The Amalgam requires a decision on multi-material/color capability. Three approaches exist in 2026:
 
 **1. Single Toolhead** (Base Spec)
 - One hotend/extruder
@@ -32,7 +32,7 @@ The Neo-Darwin requires a decision on multi-material/color capability. Three app
 - **Waste**: None → High → Near-zero
 - **Multi-Material**: No → Same-material only → True multi-material
 
-The Neo-Darwin's $300 AUD target and "Tractor" philosophy prioritizes reliability and low cost.
+The Amalgam's $300 AUD target and "Tractor" philosophy prioritizes reliability and low cost.
 
 ## Decision
 We adopt a **Single Toolhead Base Spec** with **ERCF v2 as Official Expansion**.
@@ -74,7 +74,7 @@ We adopt a **Single Toolhead Base Spec** with **ERCF v2 as Official Expansion**.
 ### Rejected: Automated Tool-Changer
 **Architecture**: Multiple hotends/extruders with automated docking
 
-**Why Rejected for Neo-Darwin**:
+**Why Rejected for Amalgam**:
 - **Cost**: Violates $300 AUD target immediately
 - **Complexity**: Sub-millimeter mechanical offsets required
 - **Calibration**: Tool A must be within 0.1mm of Tool B (expert-level tuning)
@@ -192,7 +192,7 @@ While automated tool-changing is rejected, the **Modular Puck System** enables m
 - **Cost implication**: Very High ($300-600+ AUD)
 - **Capability**: True multi-material (PLA+TPU+PVA), zero waste
 - **Complexity**: Extreme (sub-millimeter calibration, expert-level tuning)
-- **Status**: Rejected for Neo-Darwin (violates cost/reliability targets)
+- **Status**: Rejected for Amalgam (violates cost/reliability targets)
 
 ## Implementation Notes
 

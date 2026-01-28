@@ -1,8 +1,8 @@
-Building the **Neo-Darwin** as a "moving-bed" (Cartesian) machine vs. a "fixed-bed" (CoreXY or similar) machine is a fundamental design choice. Given your focus on the "Tractor" philosophy—High-Mass, Low-Cost, and Total Control—here is the breakdown of which path fits your mission.
+Building the **Amalgam** as a "moving-bed" (Cartesian) machine vs. a "fixed-bed" (CoreXY or similar) machine is a fundamental design choice. Given your focus on the "Tractor" philosophy—High-Mass, Low-Cost, and Total Control—here is the breakdown of which path fits your mission.
 
 ### ⚖️ The Comparison: Moving Bed vs. Fixed Bed
 
-| Feature | **Moving Bed (Neo-Darwin)** | **Fixed Bed (e.g., CoreXY/Voron)** |
+| Feature | **Moving Bed (Amalgam)** | **Fixed Bed (e.g., CoreXY/Voron)** |
 | --- | --- | --- |
 | **Mechanical Logic** | Cartesian (Simple  isolation) | Kinematic (Complex  belt interaction) |
 | **Gantry Weight** | Light (Only carries -motor) | Heavy (Carries entire  frame) |
@@ -14,7 +14,7 @@ Building the **Neo-Darwin** as a "moving-bed" (Cartesian) machine vs. a "fixed-b
 
 ### 🚜 Why the "Moving Bed" Suits the Tractor Philosophy
 
-The current Neo-Darwin design (Moving Bed) is the **better option** for your specific goals for three key reasons:
+The current Amalgam design (Moving Bed) is the **better option** for your specific goals for three key reasons:
 
 #### **1. The "Tractor" Torque Advantage**
 
@@ -51,7 +51,7 @@ To maintain the "Tractor" ethos while maximizing quality, your X-Y gantry should
 Would you like me to generate the **Klipper configuration logic** for the Triple-Z alignment so you can see how the software handles the "Racecar Brain" leveling?
 
 
-Technically, **Fixed Bed (CoreXY)** systems are often considered "superior" for pure performance metrics like speed and acceleration, but **Moving Bed (Cartesian)** systems—like your Neo-Darwin—are technically superior for the **"Tractor" mandates** of mechanical sovereignty, reliability, and torque.
+Technically, **Fixed Bed (CoreXY)** systems are often considered "superior" for pure performance metrics like speed and acceleration, but **Moving Bed (Cartesian)** systems—like your Amalgam—are technically superior for the **"Tractor" mandates** of mechanical sovereignty, reliability, and torque.
 
 The choice depends on which technical "zenith" you are aiming for.
 
@@ -77,7 +77,7 @@ However, the "Fixed Bed" logic usually requires a **Flying Gantry** (the whole X
 
 ### 🚜 Why Moving Bed (Cartesian) is "The Tractor"
 
-For the Neo-Darwin philosophy, the Moving Bed is technically superior for **Sovereignty**:
+For the Amalgam philosophy, the Moving Bed is technically superior for **Sovereignty**:
 
 1. **Independent Axes:** In a Cartesian system, X and Y movements are mathematically isolated. If your X-axis belt is slightly loose, it only affects X. In CoreXY, one loose belt ruins **both** X and Y accuracy.
 2. **The Belt Tension Paradox:** CoreXY uses very long belts that act like springs; the longer they are, the more they stretch. Shorter Cartesian belts are technically "stiffer," which can actually lead to better dimensional accuracy at moderate speeds.

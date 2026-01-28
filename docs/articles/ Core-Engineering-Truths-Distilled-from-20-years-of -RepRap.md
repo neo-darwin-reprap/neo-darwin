@@ -1,4 +1,4 @@
-After two decades of RepRap development, the "distilled wisdom" of the 3D printing community has moved beyond just the "Neo-Darwin" philosophy. It now focuses on the balance between physical mass, software intelligence, and environmental control.
+After two decades of RepRap development, the "distilled wisdom" of the 3D printing community has moved beyond just the "Amalgam" philosophy. It now focuses on the balance between physical mass, software intelligence, and environmental control.
 
 Here are the core engineering truths distilled from 20 years of RepRap history:
 
@@ -53,7 +53,7 @@ The greatest jump in the last 20 years hasn't been just in iron, but in **math**
 
 ### 📦 6. General "RepRap Wisdom"
 
-* **Mass is a Double-Edged Sword:** High-mass frames (like the Neo-Darwin M12) dampen high-frequency ringing but require more torque to move.
+* **Mass is a Double-Edged Sword:** High-mass frames (like the Amalgam M12) dampen high-frequency ringing but require more torque to move.
 * **Drafts are the Enemy:** Keeping the print area draft-free is essential to minimize warping and delamination, especially for materials like ABS.
 * **Over-Cooling Kills Strength:** Too much fan cooling can destroy inter-layer bonding; sometimes "ugly" prints with less cooling are mechanically stronger.
 * **Fasteners in Plastic:** Don't over-tighten bolts running through printed parts; plastic deforms over time. Use **nylon locking nuts** or jam nuts to prevent them from backing out due to vibration.
@@ -67,7 +67,7 @@ The ideal setup is a **high-mass frame** paired with a **low-weight gantry**.
 
 * **High-Mass Frame:** A heavy frame (like the M12 steel skeleton) acts as a mechanical "battery" that absorbs and dampens high-frequency vibrations. This provides **structural authority**, ensuring the machine doesn't physically shake itself out of alignment during rapid moves.
 * **Low-Weight Gantry:** Every gram you remove from the moving gantry (X and Y axes) reduces **inertia**. A lightweight toolhead can stop, start, and change direction instantly without "ghosting" or ringing artifacts.
-* **The Conflict:** High-torque "Tractor" extruders like the **Greg's Wade** are heavy. While they provide superior reliability, they limit outright speed. This is why the Neo-Darwin is a "Tractor"—it trades the lightning-fast speed of a lightweight carriage for the **unstoppable flow** and quality of a geared motor.
+* **The Conflict:** High-torque "Tractor" extruders like the **Greg's Wade** are heavy. While they provide superior reliability, they limit outright speed. This is why the Amalgam is a "Tractor"—it trades the lightning-fast speed of a lightweight carriage for the **unstoppable flow** and quality of a geared motor.
 
 ---
 
@@ -107,9 +107,9 @@ This is the great debate of 2026. Both systems allow for colors, but their "phil
 * **Cable Chains vs. Umbilicals:** While cable chains look cool, they can cause "hidden" wire fatigue. Many modern high-end builds have returned to the simple **"Umbilical"** (a bundle of wires held up by a single piece of filament) because it places less stress on the copper over thousands of hours.
 
 
-### 📐 The Neo-Darwin Square: Speed, Quality, Cost, and Effort
+### 📐 The Amalgam Square: Speed, Quality, Cost, and Effort
 
-In engineering, we often talk about the **"Iron Triangle"** (Pick two: Fast, Cheap, or Good). But for 3D printing—and specifically for the **Neo-Darwin**—a triangle is too simple. The project actually balances a **Square of Constraints**.
+In engineering, we often talk about the **"Iron Triangle"** (Pick two: Fast, Cheap, or Good). But for 3D printing—and specifically for the **Amalgam**—a triangle is too simple. The project actually balances a **Square of Constraints**.
 
 To build a machine for under $300 AUD that performs like a modern industrial tool, you have to understand how these four corners pull against each other.
 
@@ -138,7 +138,7 @@ Thanks to **Klipper**, quality is no longer tied to the price of the hardware.
 
 This is the fourth corner. A machine can be cheap and high-quality, but usually, that means it's a "tinker-trap" (like a stock Ender 3).
 
-* **The Neo-Darwin approach:** We use **Overbuilt Hardware** (M12 rods, Geared Wade, E3D V6). It takes more effort to *build* (Effort), but once it’s running, it requires almost no *maintenance* (Reliability).
+* **The Amalgam approach:** We use **Overbuilt Hardware** (M12 rods, Geared Wade, E3D V6). It takes more effort to *build* (Effort), but once it’s running, it requires almost no *maintenance* (Reliability).
 
 ---
 
@@ -148,14 +148,14 @@ If you look at the last 20 years, the "Golden Ratio" of these trade-offs has shi
 
 * **2007 (Darwin Era):** High Cost / Low Speed / Low Quality / Maximum Effort. (Everything was a struggle).
 * **2014 (i3 Era):** Medium Cost / Medium Speed / Medium Quality / Medium Effort. (The birth of the "reliable enough" hobbyist).
-* **2026 (Neo-Darwin Era):** **Ultra-Low Cost / Medium Speed / High Quality / High Initial Effort.**
+* **2026 (Amalgam Era):** **Ultra-Low Cost / Medium Speed / High Quality / High Initial Effort.**
 
 ### 💎 The Distilled "Pillars of Truth"
 
-If you were to sum up the wisdom of those 20 years into the Neo-Darwin "Standard," it would look like this:
+If you were to sum up the wisdom of those 20 years into the Amalgam "Standard," it would look like this:
 
 1. **Mass is a Filter:** A heavy machine is a quiet machine. Mass filters out the "noise" of cheap motors.
 2. **Gearing is Sovereignty:** Direct drive is good, but **Geared Direct Drive** (Wade/BMG) is king. It turns a cheap motor into a powerful one.
 3. **Software is the Great Equalizer:** Don't spend $200 on rails if $0 of code (Klipper) can fix the vibration.
-4. **The "Good Enough" Zenith:** Chasing the last 5% of speed costs 500% more money. The Neo-Darwin lives at the "Zenith"—where performance is high, but the cost is still accessible to anyone with a local hardware store.
+4. **The "Good Enough" Zenith:** Chasing the last 5% of speed costs 500% more money. The Amalgam lives at the "Zenith"—where performance is high, but the cost is still accessible to anyone with a local hardware store.
 

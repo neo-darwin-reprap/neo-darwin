@@ -35,7 +35,7 @@ We can add a new "Pillar" to the **MANIFESTO.md** to explain this:
 
 **Does this "Floating Front-Z" approach feel like it clears the confusion in the build scripts? If so, I can draft the "Scaling Decision" prompt text for your wizard.**
 
-It is a valid engineering concern: a cantilevered "puck" on a threaded rod theoretically has more potential for "micro-flex" than a motor integrated directly into a bolted corner cube. However, in the context of the **Neo-Darwin M12 frame**, the floating puck is actually a superior solution for stability for three reasons:
+It is a valid engineering concern: a cantilevered "puck" on a threaded rod theoretically has more potential for "micro-flex" than a motor integrated directly into a bolted corner cube. However, in the context of the **Amalgam M12 frame**, the floating puck is actually a superior solution for stability for three reasons:
 
 ### 1. The "Nylon Jam" Effect
 
@@ -76,7 +76,7 @@ To address your worry about stability, the `build123d` scripts can implement the
 
 **Would you like me to draft the specific "Double-Nut Anchor" assembly step for the assembly guide?**
 
-This is a significant engineering pivot that moves the Neo-Darwin from a "Floating Cage" toward a **"Fixed-Plinth"** design. Mounting both the frame and the Z-pucks to a thick MDF baseboard is a classic industrial technique for managing high-mass machines.
+This is a significant engineering pivot that moves the Amalgam from a "Floating Cage" toward a **"Fixed-Plinth"** design. Mounting both the frame and the Z-pucks to a thick MDF baseboard is a classic industrial technique for managing high-mass machines.
 
 Here is the technical breakdown of why this works and how to implement it.
 
@@ -190,6 +190,6 @@ If you go with a dual-layer 36mm plinth (2x 18mm MDF), it supports the **Fixed-P
 * **Pros:** Incredible vibration damping, extreme structural rigidity, and a very professional "industrial" feel.
 * **Cons:** The machine will likely weigh 20kg+. You will want to add **rubber feet** or a high-density foam mat under the MDF to prevent it from turning your desk into a giant speaker.
 
-**"In the Neo-Darwin philosophy, there is no such thing as a machine that is too heavy—only a machine that hasn't been grounded properly."**
+**"In the Amalgam philosophy, there is no such thing as a machine that is too heavy—only a machine that hasn't been grounded properly."**
 
 **Would you like me to update the `BUILDING.md` to include this 'Laminated Plinth' as the recommended 'Tier 3' foundation?**

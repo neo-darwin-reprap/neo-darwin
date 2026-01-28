@@ -16,7 +16,7 @@ In 2026, there are multiple bed support options:
 - Aluminum frame: Machined plate (expensive)
 - Modular spider: Interlocking pieces (printable, rigid)
 
-The Neo-Darwin's bootstrapping philosophy requires using small donor printers to build the larger Neo-Darwin machine.
+The Amalgam's bootstrapping philosophy requires using small donor printers to build the larger Amalgam machine.
 
 ## Decision
 We choose the **Modular Spider Trident Bed Support** - an interlocking three-arm design printed in sections and bolted together.

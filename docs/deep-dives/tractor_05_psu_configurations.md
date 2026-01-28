@@ -1,8 +1,8 @@
-# Neo-Darwin: Power Supply Configurations
+# Amalgam: Power Supply Configurations
 
 ## Overview
 
-Neo-Darwin requires power for seven stepper motors (1×X, 2×Y, 3×Z, 1×E), a hotend, heated bed, control boards, and cooling fans. A single scavenged PSU from a donor printer (typically 150W–250W) is often insufficient. This document covers safe configurations for single and dual PSU setups.
+Amalgam requires power for seven stepper motors (1×X, 2×Y, 3×Z, 1×E), a hotend, heated bed, control boards, and cooling fans. A single scavenged PSU from a donor printer (typically 150W–250W) is often insufficient. This document covers safe configurations for single and dual PSU setups.
 
 ---
 
@@ -313,7 +313,7 @@ Server PSUs from old HP, Dell, or IBM rack servers are often available free from
 
 ### The 12V Limitation
 
-Server PSUs output 12V, but Neo-Darwin prefers 24V.
+Server PSUs output 12V, but Amalgam prefers 24V.
 
 **Options:**
 
@@ -454,7 +454,7 @@ Klipper automatically synchronizes timing between MCUs. The common ground connec
 
 ## Pre-Power Checklist
 
-Before turning on your Neo-Darwin for the first time:
+Before turning on your Amalgam for the first time:
 
 ### Voltage Verification
 
@@ -533,7 +533,7 @@ Before turning on your Neo-Darwin for the first time:
 
 ## Summary: Recommended Configuration
 
-For Neo-Darwin "Tier 0" scavenger build:
+For Amalgam "Tier 0" scavenger build:
 
 | Setup | Recommendation |
 |-------|----------------|

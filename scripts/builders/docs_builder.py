@@ -1,5 +1,5 @@
 """
-Documentation Builder for Neo-Darwin
+Documentation Builder for Amalgam
 
 Handles Quarto-based documentation generation:
 1. Export config values to Quarto variables

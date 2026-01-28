@@ -1,4 +1,4 @@
-Great question — this is exactly the right level of analysis for a **Neo-Darwin / Tractor-class machine**, and your instincts are good. I’ll do three things:
+Great question — this is exactly the right level of analysis for a **Amalgam / Tractor-class machine**, and your instincts are good. I’ll do three things:
 
 1. **Validate the math and assumptions** (the other LLM was mostly right, with a few caveats).
 2. **Define reasonable masses for each extruder configuration**.
@@ -39,7 +39,7 @@ So: ✔️ **math is sound**, ✔️ **physics is appropriate**.
 
 ---
 
-## 2. Geometry & load model for Neo-Darwin
+## 2. Geometry & load model for Amalgam
 
 ### Axes that matter
 
@@ -84,7 +84,7 @@ We treat these separately.
 
 ### Assumptions
 
-* Span (L = 300\text{ mm}) (realistic Neo-Darwin)
+* Span (L = 300\text{ mm}) (realistic Amalgam)
 * Load applied at mid-span
 * Load shared evenly between rods
 
@@ -192,7 +192,7 @@ Force ≈ **20.6 N**, split across **two Y rods → 10.3 N per rod**
 
 ---
 
-## 8. Why Neo-Darwin’s design choice makes sense
+## 8. Why Amalgam’s design choice makes sense
 
 Your design works because:
 
@@ -207,14 +207,14 @@ This is why the machine *feels* stiff even with simple rods.
 
 ## 9. One-sentence takeaway
 
-> **M10 rods make the Neo-Darwin genuinely “Tractor-grade”; M8 rods turn stiffness into a configuration-dependent compromise.**
+> **M10 rods make the Amalgam genuinely “Tractor-grade”; M8 rods turn stiffness into a configuration-dependent compromise.**
 
 If you want, next we can:
 
 * Compare **supported vs unsupported rods**
 * Estimate **dynamic deflection under acceleration**
 * Compare **M10 rods vs MGN12 rails**
-* Or formalise this into a **Neo-Darwin Reference Spec appendix**
+* Or formalise this into a **Amalgam Reference Spec appendix**
 
 
 Excellent — this is where the **M12 “iron frame”** really starts paying dividends. I’ll answer in two clean parts:
@@ -395,7 +395,7 @@ At that point, the Y axis is effectively rigid.
 
 ---
 
-## 4. What I’d recommend *specifically for Neo-Darwin*
+## 4. What I’d recommend *specifically for Amalgam*
 
 **Minimal change, maximum stiffness:**
 
@@ -562,7 +562,7 @@ With **M10 rods**:
 
 ---
 
-## 6. The key philosophical point (Neo-Darwin “Tractor” ethos)
+## 6. The key philosophical point (Amalgam “Tractor” ethos)
 
 Klipper should be:
 
@@ -578,7 +578,7 @@ If firmware *has* to compensate for flex:
 
 ## 7. Final recommendation (clear and actionable)
 
-### For 250×250 Neo-Darwin:
+### For 250×250 Amalgam:
 
 | Choice                 | Verdict                  |
 | ---------------------- | ------------------------ |
@@ -920,7 +920,7 @@ That’s a **win**, not a loss.
 
 Your emerging design doctrine looks like this:
 
-### Neo-Darwin Scavenger Doctrine
+### Amalgam Scavenger Doctrine
 
 > *The frame defines stiffness.
 > The motion system defines accuracy.
@@ -938,7 +938,7 @@ You might consider wording along these lines:
 > 200×200×280 mm
 >
 > **Scavenger Compatibility:**
-> The Neo-Darwin frame may be expanded to accommodate larger scavenged beds (e.g. 235×235 mm). When using 8 mm smooth rods, the XY motion system **must be mechanically supported such that the effective unsupported span does not exceed 200 mm**.
+> The Amalgam frame may be expanded to accommodate larger scavenged beds (e.g. 235×235 mm). When using 8 mm smooth rods, the XY motion system **must be mechanically supported such that the effective unsupported span does not exceed 200 mm**.
 >
 > This may be achieved via frame-mounted rod supports or braces without reducing usable bed size.
 
@@ -963,7 +963,7 @@ If you want, next we can:
 * Sketch a **standardised M12 → rod-support module**
 * Define **“effective motion envelope” vs “heated envelope” diagrams**
 * Sanity-check **belt geometry with reduced travel**
-* Or help you formalise this into a **Neo-Darwin Scavenger Base Spec v1.0**
+* Or help you formalise this into a **Amalgam Scavenger Base Spec v1.0**
 
 You’re converging on something very solid here.
 
@@ -1097,7 +1097,7 @@ Here’s a clear breakdown of your options and what I’d recommend:
 
 Given your goals:
 
-* **Make Sherpa Mini the baseline** for the Neo-Darwin “scavenger reference printer”
+* **Make Sherpa Mini the baseline** for the Amalgam “scavenger reference printer”
 * **Prefer the full kit for consistency** if the goal is reproducible builds by others
 * If someone wants to *scavenge*, your spec can allow **gear-only + printed parts + NEMA14** as an alternative, but call it a “scavenger variant”
 
@@ -1123,7 +1123,7 @@ This approach is clean, simple, and keeps all the **mechanical calculations you 
 
 ---
 
-If you want, I can **update your Neo-Darwin Reference Spec “extruder section”** to reflect the Sherpa Mini as the base, including **scavenger options**, and show the **rod sag implications** clearly.
+If you want, I can **update your Amalgam Reference Spec “extruder section”** to reflect the Sherpa Mini as the base, including **scavenger options**, and show the **rod sag implications** clearly.
 
 Do you want me to do that?
 
@@ -2499,7 +2499,7 @@ Klipper can *reduce* these symptoms (input shaping, accel limits), but **cannot 
 
 ---
 
-## 5️⃣ Recommended stance for the Neo-Darwin spec
+## 5️⃣ Recommended stance for the Amalgam spec
 
 This fits your scavenger philosophy nicely:
 
@@ -2622,7 +2622,7 @@ You’re not just “within tolerance” — you’re **well inside the comfort 
 
 If you want, next we can:
 
-* Turn this into a **table for the Neo-Darwin Reference Spec**
+* Turn this into a **table for the Amalgam Reference Spec**
 * Or lock down **Y-axis numbers** (they’re even better, structurally)
 * Or help write a **“Why these limits exist”** explainer for scavenger users
 

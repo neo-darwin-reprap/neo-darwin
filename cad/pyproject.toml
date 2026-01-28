@@ -1,5 +1,5 @@
 [project]
-name = "neo-darwin-cad"
+name = "amalgam-cad"
 version = "0.1.0"
 description = "Neo-Darwin 3D Printer CAD Parts"
 readme = "README.md"

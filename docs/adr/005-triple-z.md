@@ -18,7 +18,7 @@ In 2026, there are multiple Z-system options:
 Most budget printers use single Z-motor systems and rely on software compensation (mesh bed leveling). This works but doesn't fix the root cause - a physically non-level bed. Industrial printers use kinematic leveling with independent motors.
 
 ## Decision
-We choose **Triple-Z Independent Motors with Klipper Z-Tilt** for the Neo-Darwin reference specification.
+We choose **Triple-Z Independent Motors with Klipper Z-Tilt** for the Amalgam reference specification.
 
 ### Why Triple-Z?
 1. **Kinematic leveling**: Physically aligns bed to gantry (not software compensation)

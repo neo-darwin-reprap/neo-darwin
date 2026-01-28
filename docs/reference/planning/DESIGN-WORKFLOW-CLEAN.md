@@ -86,7 +86,7 @@ So:
 ### Generate Corner 1 STL:
 
 ```bash
-cd /Users/michael/Projects/Personal/neo-darwin
+cd /Users/michael/Projects/Personal/amalgam
 python cad/parts/corner_1_front_left_z1.py
 ```
 

@@ -2,7 +2,7 @@ To wrap up this engineering phase, we can refine the assembly documentation to r
 
 ### 🏗️ The Foundation: Laminated Plinth Assembly
 
-In the Neo-Darwin philosophy, we don't just build a frame; we build a foundation. For Tier 3 builds, we recommend a laminated MDF baseboard to maximize vibration damping.
+In the Amalgam philosophy, we don't just build a frame; we build a foundation. For Tier 3 builds, we recommend a laminated MDF baseboard to maximize vibration damping.
 
 * **The Sandwich:** Glue two 18mm MDF boards together using a viscoelastic adhesive (like Green Glue) or a slightly flexible construction adhesive.
 * **Constrained Layer Damping:** This "sandwich" converts motor vibrations into microscopic amounts of heat within the glue layer, preventing the base from acting like a speaker.
@@ -38,7 +38,7 @@ By offering the **Laminated Plinth** as the "Tier 3 Reference" while keeping it 
 
 ### 🏛️ The Foundation Fork: Plinth vs. Naked Frame
 
-The Neo-Darwin accommodates three levels of "Grounding," each with a specific vibration profile.
+The Amalgam accommodates three levels of "Grounding," each with a specific vibration profile.
 
 #### **Option 1: The "Naked" Frame (Max Accessibility)**
 
@@ -84,7 +84,7 @@ Keep the **"Pillar of Truth"** regarding mass: *"Mass is a Filter. Whether filte
 * **Drill Templates:** Provide the dynamic `build123d` drill templates for those choosing the Plinth path.
 * **The "Future-Proof" Prompt:** Include the wizard logic asking: *"Are you building for your current bed, or an MK52 upgrade?"* to dictate rod-cut lengths.
 
-**"The Neo-Darwin doesn't force you to be a carpenter, but it rewards you if you are."**
+**"The Amalgam doesn't force you to be a carpenter, but it rewards you if you are."**
 
 **Would you like me to draft the specific "Pillar of Grounding" text for the Manifesto to bridge these two documents?**
 
@@ -136,6 +136,6 @@ In your `build123d` configuration scripts, the prompt should be explicit about t
 > 
 > 
 
-**"The Neo-Darwin doesn't force you to be a carpenter, but it rewards you if you are."**
+**"The Amalgam doesn't force you to be a carpenter, but it rewards you if you are."**
 
 **Would you like me to generate the Klipper `printer.cfg` logic for the `z_tilt` and the `[gcode_button z_max]` safety "Bed-Drop" brake now?**

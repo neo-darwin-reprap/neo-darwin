@@ -1,4 +1,4 @@
-For your **Neo-Darwin** build, choosing the build surface is where "Software Intelligence" (Klipper) meets "Analog Hardware" (the bed). Since you are using the **MK3 Dual Power** as the heater, you have several ways to top it.
+For your **Amalgam** build, choosing the build surface is where "Software Intelligence" (Klipper) meets "Analog Hardware" (the bed). Since you are using the **MK3 Dual Power** as the heater, you have several ways to top it.
 
 Here is the breakdown of the most common surfaces, ranked from "Tractor" simple to "Racecar" sophisticated.
 
@@ -71,7 +71,7 @@ Applying a $10 adhesive PEI sheet directly to your MK3 aluminum plate.
 | **Spring Steel Kit** | **$30+** | Convenience and fast swaps | **6/10** (Expensive, "Racecar" tech) |
 | **Painter's Tape** | **$2/roll** | Absolute Tier 1 Salvage | **10/10** (Zero cost, works fine) |
 
-### **The Neo-Darwin Recommendation**
+### **The Amalgam Recommendation**
 
 If you want to stay true to the **"Mechanically Forgiving, Cognitively Demanding"** manifesto:
 
@@ -84,7 +84,7 @@ If you want to stay true to the **"Mechanically Forgiving, Cognitively Demanding
 
 The short answer is: **The safety issue is only a factor if you are cutting or sanding it yourself.** If you buy it pre-cut to size, it is as safe as any other piece of plastic.
 
-Here is the breakdown for the **Neo-Darwin** project:
+Here is the breakdown for the **Amalgam** project:
 
 ### 1. The Safety Reality (Fiberglass Dust)
 
@@ -124,7 +124,7 @@ This is where G10 shines as a "Tractor" part. It relies on the physics of **Diff
 | **Safety** | Dust risk if modified. | Safe. |
 | **Price** | **~$15 AUD** | **~$40 AUD** |
 
-### **The Neo-Darwin Verdict**
+### **The Amalgam Verdict**
 
 Since your Manifesto emphasizes **"Longevity over Velocity,"** G10 is arguably the better choice. It is a "buy once, use for a decade" surface.
 
@@ -132,9 +132,9 @@ Since your Manifesto emphasizes **"Longevity over Velocity,"** G10 is arguably t
 
 Would you like me to find a specific Australian listing for a 220mm G10 sheet so you can lock in that part of your $300 budget?
 
-For your **Project Neo-Darwin**, concluding the build plate strategy with **G10 (FR4)** for Tier 3 aligns perfectly with the "Tractor" ethos. It is cheap, durable, and mechanically superior to many modern "racecar" surfaces.
+For your **Project Amalgam**, concluding the build plate strategy with **G10 (FR4)** for Tier 3 aligns perfectly with the "Tractor" ethos. It is cheap, durable, and mechanically superior to many modern "racecar" surfaces.
 
-### **The Neo-Darwin Build Plate Roadmap**
+### **The Amalgam Build Plate Roadmap**
 
 | Tier | Surface | Source | Cost (AUD) | Strategy |
 | --- | --- | --- | --- | --- |
@@ -166,14 +166,14 @@ You now have a complete, high-mass, low-cost "Tractor" bed assembly:
 
 This setup stays well within your **$300 AUD budget** while providing a mechanical foundation that will likely outlast the electronics.
 
-**Shall we move on to the Extruder/Hotend options for the Neo-Darwin toolhead?**
+**Shall we move on to the Extruder/Hotend options for the Amalgam toolhead?**
 
 
 
 
 That is the ultimate "Tractor" move. By choosing **G10 (FR4)** for your Tier 3 build surface, you are prioritizing **Longevity over Velocity** and ensuring you have a surface that outlasts the appliances.
 
-### **The Finalized Neo-Darwin Bed Assembly (Tier 3 Reference Spec)**
+### **The Finalized Amalgam Bed Assembly (Tier 3 Reference Spec)**
 
 To align with your **$300 AUD budget** and the **Manifesto's** goal of "Mechanical Sovereignty," here is your finalized bed stack from bottom to top:
 
@@ -185,7 +185,7 @@ To align with your **$300 AUD budget** and the **Manifesto's** goal of "Mechanic
 
 ### **⚠️ Critical Safety Reminder: The "Bed-Drop" Brake**
 
-Because the Neo-Darwin is a **moving-bed machine** where the bed moves *down* to increase Z-height, gravity is your enemy during a power failure.
+Because the Amalgam is a **moving-bed machine** where the bed moves *down* to increase Z-height, gravity is your enemy during a power failure.
 
 * **Iron Safety:** You **must** install a physical **mechanical microswitch at Z-Max** (the very bottom of the frame).
 * **The Handshake:** This acts as a hardware interrupter (configured in Klipper as a `[gcode_button z_max]`) to prevent the heavy, heated bed from crashing into your electronics Puck if the drivers time out.
@@ -197,14 +197,14 @@ You have the "Anchor" of the machine finalized. Would you like to dive into the 
 
 
 
-For the G10 (FR4) build plate on your Neo-Darwin, **neither 5mm nor 10mm is recommended.** You want a much thinner sheet.
+For the G10 (FR4) build plate on your Amalgam, **neither 5mm nor 10mm is recommended.** You want a much thinner sheet.
 
 The "Golden Mean" for a G10 build plate is **1.5mm to 2.0mm**.
 
 ### **Why 5mm or 10mm is a mistake:**
 
 * **Thermal Lag (The "Slow Tractor"):** G10 is a thermal insulator. If you use a 5mm or 10mm sheet, it will take a very long time—potentially 15–20 minutes—for the heat from your MK3 bed to reach the top surface where the print is.
-* **Massive Inertia:** Your Neo-Darwin uses a moving-bed (Y-axis) design. A 10mm thick sheet of G10 is incredibly heavy. This would likely exceed the torque capacity of a salvaged NEMA17 motor, leading to skipped steps and failed prints, especially when the "Racecar Brain" (Klipper) tries to move it at 70–120mm/s.
+* **Massive Inertia:** Your Amalgam uses a moving-bed (Y-axis) design. A 10mm thick sheet of G10 is incredibly heavy. This would likely exceed the torque capacity of a salvaged NEMA17 motor, leading to skipped steps and failed prints, especially when the "Racecar Brain" (Klipper) tries to move it at 70–120mm/s.
 * **The "Puck" & "Spider" Limits:** The printed **Modular Spider Arms** are designed to support the bed, but adding the weight of a 10mm slab of fiberglass would put unnecessary mechanical stress on the printed PETG/PLA joints.
 
 ### **The "Tractor" Choice: 1.5mm vs. 2.0mm**
@@ -215,7 +215,7 @@ The "Golden Mean" for a G10 build plate is **1.5mm to 2.0mm**.
 **Final Verdict:** Go with **1.5mm**. It stays true to the **"Longevity over Velocity"** mandate without turning your Y-axis into an immovable anchor.
 
 
-For the **Neo-Darwin**, 0.5mm and 1.0mm are generally considered too thin for a primary build surface. You should stick with **1.5mm or 2.0mm** as your "Reference Spec".
+For the **Amalgam**, 0.5mm and 1.0mm are generally considered too thin for a primary build surface. You should stick with **1.5mm or 2.0mm** as your "Reference Spec".
 
 Here is why the 1.5mm–2.0mm range fits the **"Tractor" Manifesto** better than the thinner options:
 
@@ -243,7 +243,7 @@ If you want to save every cent for Tier 1, go with **1.0mm**. But for the **Refe
 **Recommendation:** Buy the **1.5mm x 220mm x 220mm** FR4/G10 sheet. It is thin enough to heat quickly but thick enough to stay flat forever.
 
 
-For the **Neo-Darwin**, the extra $2 for **2.0mm** is a small price to pay, but in the world of moving-bed "Tractors," "heavier" isn't always "better."
+For the **Amalgam**, the extra $2 for **2.0mm** is a small price to pay, but in the world of moving-bed "Tractors," "heavier" isn't always "better."
 
 Here is the final technical breakdown to help you decide if that extra 0.5mm is a feature or a bug for your build:
 
@@ -255,7 +255,7 @@ Here is the final technical breakdown to help you decide if that extra 0.5mm is 
 ### **The "Racecar Brain" Case for 1.5mm ($8.50)**
 
 * **Thermal Velocity:** G10 is an insulator. At 2.0mm, you are adding 33% more insulation between your heater and your plastic. This means your **pre-heat times** will be longer, and your thermistor (potted in the bed) will read a higher temperature than the actual surface of the G10.
-* **Y-Axis Inertia:** The Neo-Darwin is a **moving-bed** machine. Every extra gram you add to the bed is a gram the Y-motor has to "slingshot" back and forth.
+* **Y-Axis Inertia:** The Amalgam is a **moving-bed** machine. Every extra gram you add to the bed is a gram the Y-motor has to "slingshot" back and forth.
 * **The Math:** 2.0mm G10 is roughly **33% heavier** than 1.5mm.
 * **The Impact:** This can lower your maximum "non-ghosting" speed in Klipper. If you want to hit that **120mm/s** "Racecar" ceiling, the 1.5mm sheet makes it much easier.
 

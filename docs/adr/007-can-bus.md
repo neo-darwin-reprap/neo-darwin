@@ -4,7 +4,7 @@
 Accepted
 
 ## Context
-The Neo-Darwin has multiple electrical components that need to communicate:
+The Amalgam has multiple electrical components that need to communicate:
 - Main board (motion control)
 - Toolhead (extruder, hotend, fan)
 - Z-probe (BLTouch/PINDA)
@@ -17,7 +17,7 @@ In 2026, there are two main communication architectures:
 Traditional 3D printers use direct wiring, but high-end systems (Voron 2.4, toolhead boards) use CAN bus for reduced wiring and improved reliability.
 
 ## Decision
-We choose **CAN bus support as an optional upgrade path** for Neo-Darwin, with traditional wiring as the baseline.
+We choose **CAN bus support as an optional upgrade path** for Amalgam, with traditional wiring as the baseline.
 
 ### Architecture Options
 1. **Tier 1-2: Traditional Wiring** (Baseline)
@@ -250,7 +250,7 @@ Diagnostic: Measure resistance between CAN-H and CAN-L
 - Without terminators: Open circuit
 ```
 
-### Recommended Path for Neo-Darwin
+### Recommended Path for Amalgam
 ```
 Tier 1-2:
   - Use traditional wiring

@@ -1,12 +1,12 @@
-# Neo-Darwin: Tier 0 Decision Guide
+# Amalgam: Tier 0 Decision Guide
 
 ## Before You Start: An Honest Conversation
 
-Neo-Darwin is a tribute to the original RepRap Darwin printer—a "Tractor with a Racecar Brain" built from scavenged parts, M10 threaded rods, and the Klipper firmware. It prioritizes understanding, repairability, and the satisfaction of building something with your hands.
+Amalgam is a tribute to the original RepRap Darwin printer—a "Tractor with a Racecar Brain" built from scavenged parts, M10 threaded rods, and the Klipper firmware. It prioritizes understanding, repairability, and the satisfaction of building something with your hands.
 
 **But it's not for everyone.**
 
-This guide will help you honestly assess whether Neo-Darwin is the right project for you, or whether you'd be better served buying a commercial printer.
+This guide will help you honestly assess whether Amalgam is the right project for you, or whether you'd be better served buying a commercial printer.
 
 ---
 
@@ -21,7 +21,7 @@ The 3D printer market has fundamentally changed since the RepRap era:
 | 2018 (Ender era) | ~$300 | $200 (Ender 3) | Learning experience only |
 | 2025 (Today) | ~$200+ | $180 (Ender 3 V3 SE) | **None** (economically) |
 
-**The brutal truth:** If you need to *purchase* most of the parts for Neo-Darwin, you cannot compete with Chinese manufacturing on cost, and increasingly not on quality either.
+**The brutal truth:** If you need to *purchase* most of the parts for Amalgam, you cannot compete with Chinese manufacturing on cost, and increasingly not on quality either.
 
 ### The New Landscape
 
@@ -74,7 +74,7 @@ Bambu Lab makes excellent printers. They "just work." But there's a trade-off:
 | Voron (Self-sourced) | 100% open, community-driven | You build it yourself |
 | Creality (Klipper models) | Open firmware, mixed hardware | Quality inconsistent |
 | Elegoo/QIDI | Mostly open (Klipper-based) | Some proprietary elements |
-| **Neo-Darwin** | 100% open, scavenger-friendly | You build it yourself |
+| **Amalgam** | 100% open, scavenger-friendly | You build it yourself |
 
 **Our stance:** We mention Bambu Lab because they make genuinely good printers, and honesty requires acknowledging that. But we also believe you should know what you're trading away. **Make an informed choice.**
 
@@ -94,9 +94,9 @@ Voron is a family of open-source, self-sourced CoreXY printers designed by enthu
 | Voron Trident | 250-350mm³ | Enclosed, triple-Z | $1,000-1,500 |
 | Voron 2.4 | 250-350mm³ | Enclosed, flying gantry | $1,200-1,800 |
 
-#### Voron vs. Neo-Darwin
+#### Voron vs. Amalgam
 
-| Factor | Voron | Neo-Darwin |
+| Factor | Voron | Amalgam |
 |--------|-------|------------|
 | **Goal** | Best possible DIY printer | Learn, scavenge, understand |
 | **Frame** | Aluminum extrusion (purchased) | M10 threaded rod (hardware store) |
@@ -106,10 +106,10 @@ Voron is a family of open-source, self-sourced CoreXY printers designed by enthu
 | **Cost** | $800-1,800 (self-sourced) | $85-170 (with parts bin) |
 | **Build time** | 40-80 hours | 20-40 hours |
 | **Scavenger-friendly** | No (specific parts required) | Yes (that's the point) |
-| **Community** | Large, active, helpful | Neo-Darwin specific |
+| **Community** | Large, active, helpful | Amalgam specific |
 | **Philosophy** | "Best DIY printer possible" | "Understand your machine" |
 
-#### When to Choose Voron Over Neo-Darwin
+#### When to Choose Voron Over Amalgam
 
 Choose Voron if:
 - You want DIY **and** top-tier performance
@@ -118,7 +118,7 @@ Choose Voron if:
 - You enjoy precision assembly and tuning
 - You have time for a 40-80 hour build
 
-Choose Neo-Darwin if:
+Choose Amalgam if:
 - You prioritize learning over performance
 - You have a parts bin to use
 - You want the cheapest viable path
@@ -146,14 +146,14 @@ A Bambu Lab P1S costs $600 and prints out of the box.
 
 **Voron makes sense if you value the build process and want maximum performance from a DIY machine.** It doesn't make sense purely as a cost-saving measure.
 
-#### Voron and Neo-Darwin: Not Competitors
+#### Voron and Amalgam: Not Competitors
 
-Neo-Darwin and Voron serve different purposes:
+Amalgam and Voron serve different purposes:
 
 - **Voron:** "I want to build the best printer I can"
-- **Neo-Darwin:** "I want to understand printers and use what I have"
+- **Amalgam:** "I want to understand printers and use what I have"
 
-Many makers own both — a Voron for production, a Neo-Darwin for the joy of building and learning. They're complementary philosophies, not competing ones.
+Many makers own both — a Voron for production, a Amalgam for the joy of building and learning. They're complementary philosophies, not competing ones.
 
 ---
 
@@ -187,24 +187,24 @@ What do I actually want?
     │   └─► Build a Voron (but budget $1,000+)
     │
     ├─► I have a parts bin (dead printers, scavenged rods, etc.)
-    │   └─► Neo-Darwin is for you ✓
+    │   └─► Amalgam is for you ✓
     │
     ├─► I want to deeply understand how printers work
-    │   └─► Neo-Darwin is for you ✓
+    │   └─► Amalgam is for you ✓
     │
     ├─► I enjoy the build process itself
-    │   └─► Neo-Darwin or Voron (depending on budget)
+    │   └─► Amalgam or Voron (depending on budget)
     │
     ├─► I need to buy most/all parts
     │   └─► Reconsider—Voron if budget allows, else buy commercial
     │
     └─► I want a project but have limited budget
-        └─► Neo-Darwin with patience (accumulate parts first)
+        └─► Amalgam with patience (accumulate parts first)
 ```
 
 ---
 
-## Who Neo-Darwin Is For
+## Who Amalgam Is For
 
 ### ✅ The Tinkerer with a Parts Bin
 
@@ -214,7 +214,7 @@ You have:
 - Smooth rods from a photocopier teardown
 - Random bearings, belts, and electronics
 
-**For you:** Neo-Darwin turns that junk into a functional, capable printer. The "cost" is already sunk—now it's just time and learning.
+**For you:** Amalgam turns that junk into a functional, capable printer. The "cost" is already sunk—now it's just time and learning.
 
 ### ✅ The Educator / Student
 
@@ -223,7 +223,7 @@ You want:
 - A teaching tool for mechanics, electronics, and firmware
 - A project that forces engagement with every subsystem
 
-**For you:** Neo-Darwin is a learning platform. Building it teaches more than any YouTube video or manual ever could.
+**For you:** Amalgam is a learning platform. Building it teaches more than any YouTube video or manual ever could.
 
 ### ✅ The Repair-First Philosophy
 
@@ -232,7 +232,7 @@ You believe:
 - A machine should be fixable with basic tools
 - Understanding your tools makes you a better maker
 
-**For you:** Neo-Darwin is designed for 20-year repairability. Every part is replaceable, understandable, and sourceable from a hardware store.
+**For you:** Amalgam is designed for 20-year repairability. Every part is replaceable, understandable, and sourceable from a hardware store.
 
 ### ✅ The Challenge Seeker
 
@@ -241,21 +241,21 @@ You already:
 - Want a project, not a product
 - Enjoy the satisfaction of "I made this"
 
-**For you:** Neo-Darwin is the journey, not the destination. The printer at the end is a bonus.
+**For you:** Amalgam is the journey, not the destination. The printer at the end is a bonus.
 
 ---
 
-## Who Neo-Darwin Is NOT For
+## Who Amalgam Is NOT For
 
 ### ❌ The "I Just Want to Print" User
 
-If your goal is to download STLs and press print, **buy a commercial printer**. Neo-Darwin will frustrate you—it requires tuning, understanding, and patience.
+If your goal is to download STLs and press print, **buy a commercial printer**. Amalgam will frustrate you—it requires tuning, understanding, and patience.
 
 **Better choice:** Bambu Lab A1 Mini ($250) — genuinely "it just works"
 
 ### ❌ The Cost Optimizer (Without Parts Bin)
 
-If you're building Neo-Darwin to "save money" but need to buy:
+If you're building Amalgam to "save money" but need to buy:
 - Stepper motors (~$40-60 for 7)
 - Smooth rods (~$30-50)
 - Linear bearings (~$20-30)
@@ -271,15 +271,15 @@ If you're building Neo-Darwin to "save money" but need to buy:
 
 ### ❌ The Speed Chaser
 
-Neo-Darwin philosophy: **Quality over Speed**
+Amalgam philosophy: **Quality over Speed**
 
-If you want 500mm/s printing with 20,000mm/s² acceleration, Neo-Darwin's heavy M10 gantry and sled design is the wrong architecture.
+If you want 500mm/s printing with 20,000mm/s² acceleration, Amalgam's heavy M10 gantry and sled design is the wrong architecture.
 
 **Better choice:** Bambu Lab P1S or Voron 2.4
 
 ### ❌ The Deadline-Driven
 
-If you need a working printer by next week for a project, **do not start Neo-Darwin**. It's a journey measured in weeks or months, not days.
+If you need a working printer by next week for a project, **do not start Amalgam**. It's a journey measured in weeks or months, not days.
 
 **Better choice:** Any commercial printer with 2-day shipping
 
@@ -293,12 +293,12 @@ For many people reading this, the honest best answer is:
 
 ### Why the MK3 Makes Sense
 
-| Factor | Prusa MK3S+ | Neo-Darwin |
+| Factor | Prusa MK3S+ | Amalgam |
 |--------|-------------|------------|
 | Time to first print | 1-2 hours (assembly/calibration) | Weeks to months |
 | Print quality | Excellent | Good (with tuning) |
 | Reliability | Proven over years | Depends on your build |
-| Community support | Massive | Neo-Darwin specific only |
+| Community support | Massive | Amalgam specific only |
 | Klipper compatible | Yes (flash it) | Yes (native) |
 | Repairability | Excellent | Excellent |
 | Speed | Moderate | Moderate |
@@ -312,9 +312,9 @@ The Prusa MK4 is now available, which means:
 - Proven machines with known reliability
 - Huge parts availability
 
-**The MK3 shares Neo-Darwin's philosophy** (quality over speed, repairability, open source) without the build time investment.
+**The MK3 shares Amalgam's philosophy** (quality over speed, repairability, open source) without the build time investment.
 
-### When to Choose MK3 Over Neo-Darwin
+### When to Choose MK3 Over Amalgam
 
 - You want to *print*, not *build*
 - You value your time highly
@@ -326,7 +326,7 @@ The Prusa MK4 is now available, which means:
 
 ## The Tier System Explained
 
-Neo-Darwin uses a "Tier" system to help you assess your starting point:
+Amalgam uses a "Tier" system to help you assess your starting point:
 
 ### Tier 0: Evaluate First
 
@@ -338,7 +338,7 @@ Neo-Darwin uses a "Tier" system to help you assess your starting point:
 4. Compare against commercial options
 5. Make an honest decision
 
-**If Tier 0 analysis says "don't build"** — that's a valid outcome. The goal is to help you make the right choice, not convince you to build Neo-Darwin regardless.
+**If Tier 0 analysis says "don't build"** — that's a valid outcome. The goal is to help you make the right choice, not convince you to build Amalgam regardless.
 
 ### Tier 1: Klipper Upgrade Path
 
@@ -352,7 +352,7 @@ Consider just upgrading it:
 
 **This might be all you need.** A Klipper-upgraded Ender 3 is a very capable machine.
 
-### Tier 2: The Full Neo-Darwin Build
+### Tier 2: The Full Amalgam Build
 
 **If you have:**
 - Significant parts bin (2+ donor printers worth)
@@ -360,7 +360,7 @@ Consider just upgrading it:
 - Desire to learn deeply
 - Acceptance that commercial options are "better" on paper
 
-**Then Neo-Darwin is for you.** Build the Tractor.
+**Then Amalgam is for you.** Build the Tractor.
 
 ---
 
@@ -419,7 +419,7 @@ Our suggestion: **If you need to spend more than $150 on parts, seriously consid
 
 ## The Value Proposition (Honest Version)
 
-### What Neo-Darwin Offers
+### What Amalgam Offers
 
 ✅ **A project, not a product** — The build *is* the point
 
@@ -433,7 +433,7 @@ Our suggestion: **If you need to spend more than $150 on parts, seriously consid
 
 ✅ **Parts bin redemption** — Turn junk into a functional tool
 
-### What Neo-Darwin Does NOT Offer
+### What Amalgam Does NOT Offer
 
 ❌ **Cost savings** — If buying parts, commercial is cheaper
 
@@ -451,7 +451,7 @@ Our suggestion: **If you need to spend more than $150 on parts, seriously consid
 
 ## Final Recommendation
 
-### Build Neo-Darwin If:
+### Build Amalgam If:
 
 - You have a meaningful parts bin (50%+ of components)
 - You want to *understand* printers, not just use them
@@ -460,7 +460,7 @@ Our suggestion: **If you need to spend more than $150 on parts, seriously consid
 - You value repairability and longevity
 - You're not in a hurry
 
-### Don't Build Neo-Darwin If:
+### Don't Build Amalgam If:
 
 - You need to buy most parts (buy commercial instead)
 - You just want to print things (buy a Bambu)
@@ -472,17 +472,17 @@ Our suggestion: **If you need to spend more than $150 on parts, seriously consid
 
 - **Buy a used Prusa MK3S+ ($300-400)** — Same philosophy, proven design
 - **Flash Klipper on an existing printer** — Upgrade what you have
-- **Wait and accumulate parts** — Start Neo-Darwin when your parts bin is ready
+- **Wait and accumulate parts** — Start Amalgam when your parts bin is ready
 
 ---
 
 ## Conclusion
 
-Neo-Darwin is a passion project for builders, tinkerers, and learners. It's not a budget option, a performance option, or a convenience option.
+Amalgam is a passion project for builders, tinkerers, and learners. It's not a budget option, a performance option, or a convenience option.
 
 **If the decision tree led you here, welcome aboard.** Let's build a Tractor.
 
-**If the decision tree led you elsewhere, that's okay too.** The goal was never to convince everyone to build Neo-Darwin—it was to help you find the right printer for *you*.
+**If the decision tree led you elsewhere, that's okay too.** The goal was never to convince everyone to build Amalgam—it was to help you find the right printer for *you*.
 
 Happy printing, however you get there.
 
@@ -498,7 +498,7 @@ Happy printing, however you get there.
 | Speed (closed) | Bambu Lab P1S | ~$600 | ❌ Closed |
 | Speed (open, buy) | Prusa XL | ~$1,800 | ✅ Fully open |
 | Speed (open, build) | **Voron 2.4** | ~$1,200 | ✅ Fully open |
-| Learn by building | **Neo-Darwin** | Parts bin + time | ✅ Fully open |
+| Learn by building | **Amalgam** | Parts bin + time | ✅ Fully open |
 | Enclosed budget | QIDI X-Plus 3 | ~$500 | Mostly ✓ |
 | Large format | Creality K1 Max | ~$600 | Mostly ✓ |
 
@@ -509,5 +509,5 @@ Happy printing, however you get there.
 | "Just works, don't care about openness" | Bambu Lab |
 | "Open source matters, willing to pay more" | Prusa |
 | "DIY + best performance, have budget" | Voron |
-| "DIY + learning, use what I have" | Neo-Darwin |
+| "DIY + learning, use what I have" | Amalgam |
 | "Cheap and functional, some tinkering okay" | Creality/Elegoo Klipper models |

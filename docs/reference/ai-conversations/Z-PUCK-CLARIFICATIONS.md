@@ -30,7 +30,7 @@
 # config.py
 CORNER_TYPE = "Z_MOUNT"  # 3 corners have Z-motor integrated
 # OR
-# CORNER_TYPE = "STANDARD"  # Plain corner bracket (not for Neo-Darwin baseline)
+# CORNER_TYPE = "STANDARD"  # Plain corner bracket (not for Amalgam baseline)
 
 # CORNERS TOTAL: 4 parts
 Z_MOUNT_CORNERS = [
@@ -60,9 +60,9 @@ Z_MOUNT_CORNERS = [
 - Back-left: Standard corner (completes rectangle)
 
 **Key insight**:
-- Neo-Darwin does NOT use 8 corner brackets like Voron
+- Amalgam does NOT use 8 corner brackets like Voron
 - Voron uses 8 corners + 3 Z-motors = 11 parts
-- Neo-Darwin uses 4 corners total (3 Z-mount + 1 standard)
+- Amalgam uses 4 corners total (3 Z-mount + 1 standard)
 - Fewer parts = simpler, less tolerance stacking
 
 **Recommendation: YES - integrate Z-pucks into corner brackets!**

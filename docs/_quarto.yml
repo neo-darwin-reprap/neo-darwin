@@ -28,7 +28,7 @@ website:
         href: adr/index.qmd
     right:
       - icon: github
-        href: https://github.com/neo-darwin-reprap/neo-darwin
+        href: https://github.com/amalgam-reprap/amalgam
 
   sidebar:
     - title: "Build Guides"

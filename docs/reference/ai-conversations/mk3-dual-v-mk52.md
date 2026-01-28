@@ -230,7 +230,7 @@ If you want to do this right, here is the recommended "sandwich" from top to bot
 
 **Would you like me to help you find a source for high-temperature magnets or a pre-cut cork insulator for the  size?**
 
-For a **Neo-Darwin (M12 Box Frame)** build, you are navigating the classic "Tractor vs. Racecar" trade-off. Since you are aiming for a ** ceiling** and prioritize mechanical sovereignty, your choice of bed and sensor is the "anchor" of the entire build.
+For a **Amalgam (M12 Box Frame)** build, you are navigating the classic "Tractor vs. Racecar" trade-off. Since you are aiming for a ** ceiling** and prioritize mechanical sovereignty, your choice of bed and sensor is the "anchor" of the entire build.
 
 ### **1. The Sensor Showdown: What actually works with a Magnetic Sticker?**
 
@@ -247,7 +247,7 @@ If you choose the **MK3 Dual Power + Magnetic Sticker** route, your sensor choic
 
 ### **2. Recommended Heatbed Strategy: The "Tractor" Sweet Spot**
 
-Given your **Project Neo-Darwin** goals of "Sovereignty" and "Salvage", the **MK3 Dual Power ()** remains your best foundation for the following reasons:
+Given your **Project Amalgam** goals of "Sovereignty" and "Salvage", the **MK3 Dual Power ()** remains your best foundation for the following reasons:
 
 #### **The "Neo-Sandwich" Build**
 
@@ -269,13 +269,13 @@ If you are dead-set on using the **SuperPINDA** because of its reliability, you 
 * **Option A: The PEI-on-Aluminum approach.** Skip the magnetic sheet entirely. Apply a PEI sheet directly to the aluminum. You lose the "removable sheet" convenience, but your SuperPINDA will have a perfect, direct "handshake" with the metal.
 * **Option B: The Voron TAP / Piezo route.** These use the nozzle itself as the probe. It is the ultimate "surface-agnostic" solution, but it increases toolhead weight—which slightly contradicts your "Tractor" torque-over-speed goal.
 
-### **Final Recommendation for Neo-Darwin**
+### **Final Recommendation for Amalgam**
 
 Stick with the **MK3 Dual Power + High-Temp Magnetic Sticker + Cork**. For the sensor, if you want the "Racecar Brain" on a budget, use a **BLTouch (or 3DTouch clone)**. It handles the magnetic sticker flawlessly and fits your Tier 3 "Set-and-Forget" goal for ~$267 AUD.
 
 Would you like me to find the specific **Klipper configuration** for a BLTouch on a generic MK3 bed?
 
-For the **Neo-Darwin (M12 Box Frame)**, where you are balancing the "Tractor" philosophy (high mass, reliability) with a $300 AUD budget, there are three other paths worth considering.
+For the **Amalgam (M12 Box Frame)**, where you are balancing the "Tractor" philosophy (high mass, reliability) with a $300 AUD budget, there are three other paths worth considering.
 
 Since you have already decided on the **Klicky Probe**, you have unlocked "Surface Sovereignty"—you can use any material without worrying about inductive sensors.
 
@@ -322,7 +322,7 @@ If you want to skip the "Magnetic Sticker" entirely to save money and weight.
 
 ---
 
-### **The "Neo-Darwin" Comparison Table**
+### **The "Amalgam" Comparison Table**
 
 | Feature | MK3 Dual Power | MK52 (Prusa) | Silicone + MIC6 |
 | --- | --- | --- | --- |

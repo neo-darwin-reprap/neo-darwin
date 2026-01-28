@@ -2,7 +2,7 @@
 title: "Build Guides"
 ---
 
-# Neo-Darwin Build Guides
+# Amalgam Build Guides
 
 Step-by-step assembly instructions for your Tier {{< var tier >}} build.
 
