@@ -1,6 +1,6 @@
-# Neo-Darwin Architecture Decision Records (ADRs)
+# Amalgam Architecture Decision Records (ADRs)
 
-This directory contains all Architecture Decision Records (ADRs) for the Neo-Darwin project. Each ADR documents a significant engineering decision, including context, alternatives, rationale, and consequences.
+This directory contains all Architecture Decision Records (ADRs) for the Amalgam project. Each ADR documents a significant engineering decision, including context, alternatives, rationale, and consequences.
 
 ## How to Read This Directory
 
@@ -20,7 +20,7 @@ Note: Some ADRs are superseded (003→021, 002→019, 006→014). Superseded ADR
 
 | ADR | Title | Status | Summary |
 |-----|-------|--------|---------|
-| [ADR-000](000-engineering-philosophy.md) | Engineering Philosophy (20 Years of RepRap Wisdom) | Accepted | Core principles: Mass, Software, Gearing, Neo-Darwin Square trade-offs |
+| [ADR-000](000-engineering-philosophy.md) | Engineering Philosophy (20 Years of RepRap Wisdom) | Accepted | Core principles: Mass, Software, Gearing, Amalgam Square trade-offs |
 | [ADR-001](001-m10-skeleton.md) | M10 Threaded Rod Skeleton | Accepted | Steel frame for mass damping and rigidity (M10 over M12 for practicality) |
 | ~~[ADR-002](002-greg-wade.md)~~ | ~~Greg's Wade Geared Extruder~~ | **Archived** | Superseded by ADR-019 (Pitan) |
 | ~~[ADR-003](003-smooth-rods.md)~~ | ~~Smooth Rods vs Linear Rails~~ | **Superseded** | Superseded by ADR-021 (Dual-Rod Motion System) |
@@ -39,6 +39,7 @@ Note: Some ADRs are superseded (003→021, 002→019, 006→014). Superseded ADR
 | [ADR-022](022-linear-bearings.md) | Linear Bearing Selection | **Accepted** | LM8LUU for X, LM8UU for Y/Z; scavenged bearing protocol |
 | [ADR-023](023-z-drop-architecture.md) | Z-Drop Architecture | **Accepted** | Bed moves only in Z, XY gantry at fixed height; enables Triple-Z |
 | [ADR-024](024-heated-bed-size.md) | Heated Bed Size Selection | **Accepted** | 220×220mm reference (Anet A8); analysis of scavengeable bed sizes |
+| [ADR-025](025-multi-frame-architecture.md) | Multi-Frame Architecture | **Accepted** | Darwin (M10), S-Core, V-Core paths; MDF base; tier system update |
 
 ### Foundation & Electronics ADRs
 
@@ -68,10 +69,11 @@ Note: Some ADRs are superseded (003→021, 002→019, 006→014). Superseded ADR
 
 ## ADR Categories
 
-### Core Hardware (001, 004, 019, 021)
+### Core Hardware (001, 004, 019, 021, 025)
 Frame, extruder, hotend, and motion system - the physical foundation of the machine.
-- ADR-001: M10 Frame Skeleton
-- ADR-021: Dual-Rod Motion System (Dual 8mm vertical stacking - Reference Spec)
+- ADR-025: Multi-Frame Architecture (Darwin, S-Core, V-Core paths - all on MDF base)
+- ADR-001: M10 Frame Skeleton (Darwin path primary)
+- ADR-021: Dual-Rod Motion System (Dual 8mm vertical stacking - Darwin/S-Core)
 - ADR-004: E3D V6 + CHT Hotend
 - ADR-019: Pitan Extruder (Reference Spec)
 
@@ -89,15 +91,16 @@ CAD system and documentation - parametric design and assembly guides.
 
 ## Reading Order for New Contributors
 
-If you're new to Neo-Darwin and want to understand the engineering decisions:
+If you're new to Amalgam and want to understand the engineering decisions:
 
 1. **Engineering Philosophy** → ADR-000
-2. **Hardware Foundations** → ADR-001 (M10 Frame), ADR-019 (Pitan Extruder), ADR-004 (Hotend)
-3. **Motion System** → ADR-021 (Dual-Rod Motion), ADR-005 (Triple-Z)
-4. **Electronics** → ADR-012, 013
-5. **Probing** → ADR-014
-6. **Advanced Features** → ADR-007, 009, 011, 015, 016
-7. **Tooling** → ADR-017, 018
+2. **Frame Architecture** → ADR-025 (Multi-Frame: Darwin, S-Core, V-Core paths)
+3. **Hardware Foundations** → ADR-001 (M10 Frame), ADR-019 (Pitan Extruder), ADR-004 (Hotend)
+4. **Motion System** → ADR-021 (Dual-Rod Motion), ADR-005 (Triple-Z)
+5. **Electronics** → ADR-012, 013
+6. **Probing** → ADR-014
+7. **Advanced Features** → ADR-007, 009, 011, 015, 016
+8. **Tooling** → ADR-017, 018
 
 Notes:
 - ADR-002 (Greg's Wade) is archived—see ADR-019 for the current extruder decision.

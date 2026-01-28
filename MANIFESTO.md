@@ -1,14 +1,14 @@
-# Neo-Darwin: A 2026 RepRap Reference Specification
+# Amalgam: A 2026 RepRap Reference Specification
 
 **High-Mass, Low-Cost, Total Control.**
 
-The Neo-Darwin is a reimagining of the 2007 RepRap Darwin. It replaces the "black-box" appliance philosophy of modern 3D printers with an open, parametric, and rigid threaded-rod skeleton.
+Amalgam is a scavenger-friendly 3D printer built from two donor printers. It replaces the "black-box" appliance philosophy of modern printers with an open, parametric system that adapts to what you scavenged.
 
 > **"A Tractor with the Brain of a Racecar"**
 
 ---
 
-## What is Neo-Darwin?
+## What is Amalgam?
 
 A 3D printer that uses:
 - **Heavy hardware** (M10 threaded rods, geared extruder) for mechanical stability
@@ -32,33 +32,34 @@ A 3D printer that uses:
 | [REFERENCE-SPEC.md](REFERENCE-SPEC.md) | The specific hardware choices (M10, Pitan, SKIPR, etc.) |
 | [BUILDING.md](BUILDING.md) | How to generate STL files from parametric CAD |
 | [docs/adr/](docs/adr/) | Architecture Decision Records |
-| [docs/guides/](docs/guides/) | Tier-specific build guides |
+| [docs/guides/](docs/guides/) | Path-specific build guides |
 | [docs/deep-dives/](docs/deep-dives/) | Design exploration documents |
 
 ---
 
-## The Tier System
+## Frame Paths
 
-Build what fits your budget and parts bin:
+Amalgam requires **two donor printers**. Pick your path based on what you scavenged:
 
-| Tier | Description | Cost (AUD) |
-|------|-------------|------------|
-| **0** | Flash Klipper on your existing printer | $0 |
-| **1** | Single donor, belt-driven Z | ~$80 |
-| **2** | Dual donor, Triple-Z, multi-MCU | ~$200 |
-| **3** | Reference Spec (MKS SKIPR, Triple-Z) | ~$270 |
+| Path | Frame | Motion | Best Donors | Cost |
+|------|-------|--------|-------------|------|
+| **Darwin** | M10 Threaded Rod | Smooth Rods | Anet A8, Wanhao, Prusa clones | ~$190-230 |
+| **S-Core** | Aluminum Extrusion | Smooth Rods | i3 Mega, Artillery | ~$160-185 |
+| **V-Core** | Aluminum Extrusion | V-Slots | Ender 3, CR-10 | ~$160-185 |
+
+**Optional:** Add MKS SKIPR (~$130) for cleaner single-board electronics.
 
 ---
 
-## Reference Specification Summary
+## Shared Components (All Paths)
 
 | Component | Choice | Why |
 |-----------|--------|-----|
-| **Frame** | M10 Threaded Rods | 3× rigidity of M8, standard 17mm wrench |
+| **Base** | MDF | Squaring jig + mass damping |
 | **Extruder** | Pitan (3:1 geared) | Single-drive, scavengeable NEMA17, $4-10 |
 | **Hotend** | E3D V6 + CHT Nozzle | Proven reliability, +50% flow |
-| **Controller** | MKS SKIPR | Integrated Klipper, CAN bus ready |
 | **Z-System** | Triple-Z Independent | Auto-leveling via Klipper |
+| **Firmware** | Klipper | Input Shaping, Pressure Advance |
 
 See [REFERENCE-SPEC.md](REFERENCE-SPEC.md) for complete details.
 
@@ -66,8 +67,8 @@ See [REFERENCE-SPEC.md](REFERENCE-SPEC.md) for complete details.
 
 ## Who is this for?
 
-**Build Neo-Darwin if you:**
-- Have a broken/cheap printer to scavenge
+**Build Amalgam if you:**
+- Have **two** broken/cheap printers to scavenge
 - Love understanding every bolt and line of code
 - Want a machine you can repair with hardware store parts
 - Reject cloud-lock and proprietary ecosystems
@@ -83,25 +84,25 @@ See [REFERENCE-SPEC.md](REFERENCE-SPEC.md) for complete details.
 
 1. **Read the philosophy:** [PHILOSOPHY.md](PHILOSOPHY.md)
 2. **Understand the hardware:** [REFERENCE-SPEC.md](REFERENCE-SPEC.md)
-3. **Choose your tier:** Based on what you can scavenge
-4. **Generate parts:** [BUILDING.md](BUILDING.md)
+3. **Get two donors:** Match donor types if possible (two rod-based or two V-slot)
+4. **Run the wizard:** `python scripts/wizard.py` — it recommends your frame path
 5. **Build it:** [docs/guides/](docs/guides/)
 
 ---
 
 ## The Bootstrapping Path
 
-1. **Get a donor** - Used Ender 3, Anet A8, or similar ($50-80)
-2. **Print Neo-Darwin parts** - Use the donor to manufacture its replacement
-3. **Tear down the donor** - Salvage motors, bed, PSU, electronics
-4. **Assemble Neo-Darwin** - The M10 skeleton + salvaged organs
+1. **Get two matching donors** - Two Ender 3s, two Anet A8s, etc. (~$100-120 total)
+2. **Print Amalgam parts** - Use one donor to manufacture all printed parts
+3. **Tear down both donors** - Salvage motors, beds, PSUs, electronics, rods/extrusions
+4. **Assemble Amalgam** - MDF base + frame + salvaged organs
 5. **Transcend** - Re-print parts on the rigid new frame for higher precision
 
 ---
 
 ## Community & License
 
-The Neo-Darwin is released under **GNU GPL v3**, the same license as the original RepRap Darwin.
+The Amalgam is released under **GNU GPL v3**, the same license as the original RepRap Darwin.
 
 > *"You aren't just building a printer; you're joining a 20-year conversation about sovereignty."*
 

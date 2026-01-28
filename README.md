@@ -1,4 +1,4 @@
-# Neo-Darwin
+# Amalgam
 
 ### A 2026 RepRap Reference Specification
 
@@ -8,7 +8,7 @@
 
 ## The Tractor is Coming
 
-Neo-Darwin is a reimagining of the 2007 RepRap Darwin — a high-mass, fully parametric 3D printer built from M10 threaded rod, salvaged components, and open-source intelligence.
+Amalgam is a scavenger-friendly 3D printer — a high-mass, fully parametric machine built from two donor printers and open-source intelligence. The name reflects its nature: an amalgam of salvaged parts merged into something new.
 
 **Expected Release:** Q2/Q3 2026
 
@@ -33,17 +33,17 @@ We build a **"Tractor with the Brain of a Racecar"** — using heavy, high-torqu
 ### Option 1: Configuration Wizard (Recommended)
 
 ```bash
-git clone https://github.com/neo-darwin-reprap/neo-darwin.git
-cd neo-darwin
+git clone https://github.com/amalgam-3d/amalgam.git  # URL pending rename
+cd amalgam
 
-# Run the wizard - it asks what parts you have
+# Run the wizard - it asks what donor printers you have
 python scripts/wizard.py
 ```
 
 The wizard:
-1. Asks about your scavenged parts (motors, boards, bed)
-2. Auto-detects your build tier (1-3)
-3. Generates `config.py`
+1. Asks what donor printers you have
+2. Recommends a frame path (Darwin, S-Core, or V-Core)
+3. Generates `config.py` for your specific build
 4. Runs engineering analysis
 
 ### Option 2: Quick Analysis
@@ -69,15 +69,21 @@ See [BUILDING.md](BUILDING.md) for complete guide.
 
 ---
 
-## Build Tiers
+## Frame Paths
 
-| Tier | Name | Description | Cost |
-|------|------|-------------|------|
-| 1 | Single Donor | One printer, belt-driven Z, no auto-level | ~$80 AUD |
-| **2** | **Dual Donor** | Two printers, Triple-Z, dual-MCU Klipper | **~$200 AUD** |
-| 3 | Reference Spec | MKS SKIPR, Triple-Z, integrated host | ~$300 AUD |
+Amalgam requires **two donor printers**. The frame path depends on what you scavenge:
 
-**Tier 2 is the recommended scavenger path.** Two donor printers provide 8 stepper drivers (need 7), eliminating the need for new electronics. All tiers use the same Pitan extruder, dual-rod motion system, and Klipper tuning.
+| Path | Frame | Motion | Best Donors | Cost |
+|------|-------|--------|-------------|------|
+| **Darwin** | M10 Threaded Rod + MDF | Smooth Rods | Anet A8, Wanhao, Prusa clones | ~$190-230 |
+| **S-Core** | Aluminum Extrusion + MDF | Smooth Rods | i3 Mega, Artillery | ~$160-185 |
+| **V-Core** | Aluminum Extrusion + MDF | V-Slots | Ender 3, CR-10 | ~$160-185 |
+
+**All paths share:** MDF base (squaring jig + damping), Triple-Z leveling, Pitan extruder, E3D V6, Klipper.
+
+**Optional:** Add MKS SKIPR (~$130) for cleaner single-board electronics.
+
+**Got one donor?** Just add Klipper to it. Amalgam requires two.
 
 ---
 
@@ -99,7 +105,7 @@ See [BUILDING.md](BUILDING.md) for complete guide.
 
 We stand on the shoulders of giants:
 
-* **[RepRap Darwin (2007)](https://reprap.org/wiki/Darwin):** Box-frame threaded-rod origin. We carry its name forward.
+* **[RepRap Darwin (2007)](https://reprap.org/wiki/Darwin):** Box-frame threaded-rod origin. Inspired our "Darwin" frame path.
 * **[RepRap Mendel (2009)](https://reprap.org/wiki/Mendel):** The "plough" X-carriage sled design.
 * **[Prusa i3 Rework (2013)](https://www.thingiverse.com/thing:119616):** Greg's Wade geared extruder—ancestor of our Pitan.
 * **[Voron Legacy](https://vorondesign.com/voron_legacy):** Dual 8mm rods with vertical stacking for X-Y gantry.

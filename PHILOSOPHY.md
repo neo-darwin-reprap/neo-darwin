@@ -2,7 +2,7 @@
 
 **20 Years of RepRap Wisdom, Distilled**
 
-This document captures the engineering philosophy behind Neo-Darwin. For the specific hardware specification, see [REFERENCE-SPEC.md](REFERENCE-SPEC.md). For build instructions, see [BUILDING.md](BUILDING.md).
+This document captures the engineering philosophy behind Amalgam. For the specific hardware specification, see [REFERENCE-SPEC.md](REFERENCE-SPEC.md). For build instructions, see [BUILDING.md](BUILDING.md).
 
 ---
 
@@ -23,9 +23,9 @@ In 2026, you can buy a 3D-printing "appliance" that is fast but fragile, or you 
 
 ---
 
-## The Neo-Darwin Square
+## The Amalgam Square
 
-In engineering, we often talk about the "Iron Triangle" (Pick two: Fast, Cheap, or Good). But for 3D printing, a triangle is too simple. The Neo-Darwin balances a **Square of Constraints**:
+In engineering, we often talk about the "Iron Triangle" (Pick two: Fast, Cheap, or Good). But for 3D printing, a triangle is too simple. The Amalgam balances a **Square of Constraints**:
 
 ```
          COST
@@ -57,7 +57,7 @@ Thanks to Klipper, quality is no longer tied to the price of the hardware.
 
 A machine can be cheap and high-quality, but usually that means it's a "tinker-trap" (like a stock Ender 3).
 
-**The Neo-Darwin approach:** We use Overbuilt Hardware (M10 rods, Geared Extruder, E3D V6). It takes more effort to *build*, but once running, it requires almost no *maintenance*.
+**The Amalgam approach:** We use Overbuilt Hardware (M10 rods, Geared Extruder, E3D V6). It takes more effort to *build*, but once running, it requires almost no *maintenance*.
 
 ---
 
@@ -67,7 +67,7 @@ If you look at the last 20 years, the "Golden Ratio" of these trade-offs has shi
 
 * **2007 (Darwin Era):** High Cost / Low Speed / Low Quality / Maximum Effort
 * **2014 (i3 Era):** Medium Cost / Medium Speed / Medium Quality / Medium Effort
-* **2026 (Neo-Darwin Era):** **Ultra-Low Cost / Medium Speed / High Quality / High Initial Effort**
+* **2026 (Amalgam Era):** **Ultra-Low Cost / Medium Speed / High Quality / High Initial Effort**
 
 ---
 
@@ -81,7 +81,7 @@ If you were to sum up the wisdom of those 20 years:
 
 3. **Software is the Great Equalizer:** Don't spend $200 on rails if $0 of code (Klipper) can fix the vibration.
 
-4. **The "Good Enough" Zenith:** Chasing the last 5% of speed costs 500% more money. The Neo-Darwin lives at the "Zenith"—where performance is high, but the cost is still accessible.
+4. **The "Good Enough" Zenith:** Chasing the last 5% of speed costs 500% more money. The Amalgam lives at the "Zenith"—where performance is high, but the cost is still accessible.
 
 5. **The Bed is the Anchor:** The frame serves the bed, not the other way around. We prioritize a quiet, immovable foundation.
 
@@ -91,7 +91,7 @@ If you were to sum up the wisdom of those 20 years:
 
 We stand on the shoulders of giants. Each project contributed specific technical elements:
 
-* **[RepRap Darwin (2007)](https://reprap.org/wiki/Darwin):** The origin. Box-frame threaded-rod skeleton. We carry its name and its frame philosophy forward.
+* **[RepRap Darwin (2007)](https://reprap.org/wiki/Darwin):** The origin. Box-frame threaded-rod skeleton. Inspired our "Darwin" frame path.
 * **[RepRap Mendel (2009)](https://reprap.org/wiki/Mendel) / [Mendel i2](https://reprap.org/wiki/Prusa_Mendel):** The "plough" X-carriage sled design riding on dual rods.
 * **[Prusa i3 Rework (2013)](https://www.thingiverse.com/thing:119616):** Greg's Wade geared extruder—the ancestor of our Pitan.
 * **[RepRap Mendel Revisited (2024)](https://www.thingiverse.com/thing:6783269):** Modern validation that heavy threaded-rod skeletons still work.
@@ -99,11 +99,11 @@ We stand on the shoulders of giants. Each project contributed specific technical
 
 ---
 
-## Why Build a Neo-Darwin?
+## Why Build an Amalgam?
 
 ### What it IS for
 
-* **The Scavengers:** Turn $80 AUD and a pile of salvage into a machine that rivals a $1,100 printer
+* **The Scavengers:** Turn two $50-60 donors into a machine that rivals a $1,100 printer
 * **The Engineers:** Those who love understanding every bolt and line of code
 * **The Sovereign:** Those who reject cloud-lock and proprietary ecosystems
 * **The Repairers:** Those who want a machine that can print its own replacement parts
@@ -115,7 +115,7 @@ We stand on the shoulders of giants. Each project contributed specific technical
 
 ### The Reality Check
 
-| Feature | Neo-Darwin | Bambu A1 Mini | Prusa MK4 |
+| Feature | Amalgam | Bambu A1 Mini | Prusa MK4 |
 |---------|------------|---------------|-----------|
 | **Price (AUD)** | ~$250 | ~$489 | ~$1,100 |
 | **Z-Logic** | Triple-Z Tilt | Single Motor | Dual (Synced) |
@@ -136,11 +136,11 @@ In a world of proprietary "Cloud" appliances, we choose the Red Pill. We choose 
 
 ## Standing on the Shoulders of Giants
 
-The Neo-Darwin is not an island; it is a 2026 entry into a long-running conversation about mechanical sovereignty.
+The Amalgam is not an island; it is a 2026 entry into a long-running conversation about mechanical sovereignty.
 
 ### Technical Ancestors
 
-Each of these projects contributed specific technical DNA to Neo-Darwin:
+Each of these projects contributed specific technical DNA to Amalgam:
 
 | Project | What We Borrowed |
 |---------|------------------|
