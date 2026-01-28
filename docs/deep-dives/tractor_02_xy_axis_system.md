@@ -1,5 +1,15 @@
 # The Tractor: X-Y Axis System
 
+✅ **Still Relevant:** This exploration of Cartesian Z-drop and motion system design remains current. **For canonical design decisions, see:**
+- **ADR-021**: Dual-Rod Motion System (X-Y motion architecture)
+- **ADR-022**: Linear Bearing Selection (smooth rods vs. alternatives)
+- **ADR-023**: Z-Drop Architecture (why bed moves, not gantry)
+- **ADR-005**: Triple-Z Kinematic Leveling
+
+This deep-dive provides rationale for why Z-drop + dual rods works well for scavenger builds.
+
+---
+
 ## Overview
 
 "The Tractor" uses a Z-Drop (Z-Dropdown) design where the bed moves vertically on Triple-Z while a gantry handles X-Y motion at the top of the frame. This document covers the X-carriage ("The Plough"), Y-axis gantry system, and motion components.

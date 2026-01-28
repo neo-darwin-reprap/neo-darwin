@@ -1,5 +1,12 @@
 # Amalgam: Extruder Selection & Decision Record
 
+✅ **Still Relevant:** This deep exploration of extruder options and rationale for Pitan selection remains current. **For canonical decision, see:**
+- **ADR-019**: Pitan Extruder (formal decision, supersedes ADR-002: Greg's Wade)
+
+This deep-dive provides detailed engineering analysis of why Pitan was chosen (cost, scavengability, performance, Klipper compatibility).
+
+---
+
 ## Executive Summary
 
 After extensive evaluation of weight, cost, scavengability, mechanical performance, drive architecture, and Klipper compatibility, the **Pitan Extruder** has been selected as the Amalgam reference specification.

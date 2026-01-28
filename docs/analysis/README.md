@@ -1,28 +1,28 @@
-# Engineering Analysis
+# Engineering Analysis & Validation
 
-This folder contains engineering calculations and analysis that inform Amalgam design decisions.
-
-These documents provide the mathematical foundation for understanding trade-offs in the design.
+This folder contains **technical calculations and measurements** that validate Amalgam design decisions and support parametric configuration. Use this when you need to understand the physics behind design choices or want to explore trade-offs.
 
 ## Contents
 
 | Document | Topic | Key Insight |
 |----------|-------|-------------|
-| [rod-sag-analysis.md](rod-sag-analysis.md) | Smooth rod deflection | M8 vs M10 at various spans |
-| [max-safe-acceleration.md](max-safe-acceleration.md) | Motion limits | Toolhead mass vs acceleration |
+| [rod-sag-analysis.md](rod-sag-analysis.md) | Smooth rod deflection | M8 vs M10 deflection at various spans; why 8mm + MDF works |
+| [max-safe-acceleration.md](max-safe-acceleration.md) | Motion limits | Toolhead mass vs acceleration; tuning Klipper for stability |
 
-## Future Analysis
+## What These Validate
 
-The following analyses are planned for the engineering analysis TUI tool:
+These analyses support:
+- **ADR decisions** — Physics-based justification for design choices (e.g., why M10 frame, why MDF damping)
+- **Parametric defaults** — config.py settings based on tested ranges
+- **Tuning guidance** — Input Shaping, acceleration profiles per frame path
+- **Fitness constraints** — ADR-026 stability analysis for bed size and Z-height
 
-- **Frame rigidity calculator**: M8/M10/M12 threaded rod stiffness
-- **Bed size optimizer**: Heat bed size vs frame dimensions
-- **Motor torque requirements**: Extruder gear ratios vs filament resistance
-- **Resonance frequency estimator**: For Input Shaping configuration
+## Related Documentation
 
-## Using These Calculations
+- **Design Decisions** → See `docs/adr/` (these analyses inform those choices)
+- **Reference Specs** → See `docs/reference/` (factual component specs)
+- **Build Guides** → See `docs/guides/` (how to implement these validated designs)
 
-These analyses are inputs to:
-- **ADRs**: Justifying design choices
-- **config.py**: Setting parametric defaults
-- **Analysis TUI**: Interactive build assessment tool (planned)
+---
+
+*These are technical deep-dives. For how-to instructions, see guides/. For design context, see ADRs.*

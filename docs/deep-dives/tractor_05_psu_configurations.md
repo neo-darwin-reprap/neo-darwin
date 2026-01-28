@@ -1,5 +1,14 @@
 # Amalgam: Power Supply Configurations
 
+⚠️ **Outdated Tier System:** This document uses the old Tier 0/1/2/3 framework and explores multi-PSU configurations. **Current canonical decisions are in:**
+- **ADR-012**: Mainboard & Host Architecture (electronics configuration)
+- **ADR-016**: Electronics & PSU Mounting Strategy
+- **docs/reference/MASTER_PARTS_LIST.md** (current PSU specs per configuration)
+
+With the simplified two-donor model (ADR-025), most builds use scavenged PSUs; refer to current BOM for accurate specs.
+
+---
+
 ## Overview
 
 Amalgam requires power for seven stepper motors (1×X, 2×Y, 3×Z, 1×E), a hotend, heated bed, control boards, and cooling fans. A single scavenged PSU from a donor printer (typically 150W–250W) is often insufficient. This document covers safe configurations for single and dual PSU setups.

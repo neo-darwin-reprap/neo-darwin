@@ -1,42 +1,69 @@
-# Build Guides
+# Build Guides & Assembly Instructions
 
-This folder contains tier-specific build guides for Amalgam.
+This folder contains **step-by-step instructional guides** for assembling Amalgam. These are Quarto documents that generate professional PDFs with conditional content per frame path and configuration.
 
-## Tier System
+## Core Principle
 
-| Tier | Description | Klipper Host | Key Characteristic |
-|------|-------------|--------------|-------------------|
-| **0** | Klipper-only | Laptop/RPi/Zero2W | Keep donor printer, just flash Klipper |
-| **1** | Single donor | Laptop/RPi/Zero2W | 1 donor + buy 1 motor (dual Y) |
-| **2** | Dual donor | Laptop/RPi/Zero2W | 2 donors, multi-MCU, enough parts |
-| **3** | Reference Spec | Integrated (SKIPR) | MKS SKIPR, CAN bus, single PSU |
+Amalgam requires **two matching donor printers**. Choose your frame path based on your donors, then follow the guides.
+
+## Frame Paths
+
+| Path | Frame | Motion | Best Donors | Reference |
+|------|-------|--------|-------------|-----------|
+| **Darwin** | M10 threaded rod + MDF | Dual 8mm smooth rods | Anet A8, Wanhao i3, Prusa clones | ADR-025, ADR-001, ADR-021 |
+| **S-Core** | Aluminum extrusion + MDF | Dual 8mm smooth rods | i3 Mega, Artillery | ADR-025, ADR-021 |
+| **V-Core** | Aluminum extrusion + MDF | V-slot rails + POM wheels | Ender 3, CR-10, Aquila | ADR-025, ADR-025 |
+
+## Electronics Options
+
+| Option | Controller | Cost | Complexity |
+|--------|-----------|------|-----------|
+| **Dual-MCU** | Two scavenged boards + Klipper | $0 (scavenged) | Medium (wiring) |
+| **SKIPR** | Single MKS SKIPR board | ~$130 | Low (cleaner setup) |
 
 ## Guides (In Progress)
 
 Build order for documentation:
-1. **Tier 3** - Reference specification (MKS SKIPR integrated)
-2. **Tier 2** - Dual donor with Klipper host variations
-3. **Tier 1** - Single donor, minimal purchases
-4. **Tier 0** - Pointers to Klipper flashing resources
+1. **frame-assembly.qmd** - Construct your frame per path (Darwin/S-Core/V-Core)
+2. **klipper-config.qmd** - Configure Klipper firmware (electronics-agnostic)
+3. **klipper/** - Host-specific setup (Raspberry Pi, laptop, etc.)
+
+### Frame Assembly Guides
+
+Each frame path has its own assembly section:
+1. **Prerequisites** - What you need before starting
+2. **Bill of Materials** - Frame-path-specific BOM
+3. **Assembly** - Step-by-step with photos
+4. **Wiring** - Electrical connections (all paths share Triple-Z, Pitan + E3D V6)
+5. **Klipper Config** - printer.cfg per path
+
+### Klipper Configuration
+
+The `klipper-config.qmd` guide covers:
+- Printer configuration for all frame paths
+- Dual-MCU vs. single-board (SKIPR) wiring
+- Input shaping and motion tuning
+- First print calibration
 
 ### Klipper Host Guides
 
 The `klipper/` subfolder contains host-specific setup:
-- `laptop-host.md` - Repurposed laptop running Klipper
-- `rpi-3b-host.md` - Raspberry Pi 3B+ setup
-- `zero-2w-host.md` - Raspberry Pi Zero 2W setup
-
-## Guide Structure
-
-Each tier guide follows this structure:
-1. **Prerequisites** - What you need before starting
-2. **Bill of Materials** - Tier-specific BOM
-3. **Assembly** - Step-by-step with photos
-4. **Wiring** - Electrical connections
-5. **Klipper Config** - printer.cfg for the tier
-6. **First Print** - Calibration and tuning
+- Host options: Laptop, Raspberry Pi 3B+, Pi Zero 2W, etc.
+- Installation and service configuration
+- Network setup for remote access
 
 ## Config-Driven Documentation
 
 These guides are generated from templates using `config.py` settings via Quarto.
 This ensures documentation stays in sync with the parametric CAD system.
+
+## Related Documentation
+
+- **Donor Selection** → See `docs/reference/donor-printer-guide.md`
+- **Parts & Costs** → See `docs/reference/MASTER_PARTS_LIST.md`
+- **Design Decisions** → See `docs/adr/` (why these design choices)
+- **Technical Specs** → See `docs/analysis/` (calculations and measurements)
+
+---
+
+*All paths use: MDF base damping, Triple-Z leveling, Pitan extruder, E3D V6 hotend, Klipper firmware.*

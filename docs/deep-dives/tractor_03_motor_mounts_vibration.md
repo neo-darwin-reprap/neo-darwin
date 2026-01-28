@@ -1,5 +1,15 @@
 # The Tractor: Motor Mounts & Vibration Control
 
+✅ **Still Relevant:** This exploration of vibration damping and motor mounting strategies remains current. **For canonical design decisions, see:**
+- **ADR-000**: Engineering Philosophy (mass damping as core principle)
+- **ADR-011**: Laminated Plinth Baseboard (MDF damping)
+- **ADR-009**: Modular Puck & Spider Bed System (motor mounting)
+- **ADR-005**: Triple-Z Kinematic Leveling
+
+This deep-dive explains the philosophy behind why mass damping + strategic motor placement is essential for scavenger builds.
+
+---
+
 ## Overview
 
 "The Tractor" addresses motor vibration through strategic mounting: Z-motors sink into the massive MDF base for mass damping, while X and Y motors use "Sandwich Mounts" with rubber isolation. This document covers mount designs, vibration control, and the Triple-Z bed system.

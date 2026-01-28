@@ -1,5 +1,14 @@
 # Amalgam: Tier 0 Decision Guide
 
+⚠️ **Historical Document:** This guide explores design space and philosophy from the exploratory phase. **Current canonical decisions are in:**
+- **ADR-025**: Multi-Frame Architecture (Darwin, S-Core, V-Core paths)
+- **ADR-026**: Donor Fitness & Frame Constraints (bed size, Z-height tiers)
+- **ADR-000**: Engineering Philosophy (core "Tractor" principles)
+
+This deep-dive is useful for understanding *how we arrived at* the simplified two-donor model, but refer to ADRs above for current guidance.
+
+---
+
 ## Before You Start: An Honest Conversation
 
 Amalgam is a tribute to the original RepRap Darwin printer—a "Tractor with a Racecar Brain" built from scavenged parts, M10 threaded rods, and the Klipper firmware. It prioritizes understanding, repairability, and the satisfaction of building something with your hands.
