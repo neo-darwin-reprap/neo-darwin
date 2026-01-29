@@ -5,6 +5,8 @@ This guide helps Amalgam builders identify which donor printers provide the most
 **Target release:** End of 2026
 **Expected donor pricing:** ~$50 AUD per unit (secondhand market floor)
 
+⚠️ **Cost Reality Check:** Before you start shopping, read [When NOT to Scavenge](#when-not-to-scavenge-enclosed--proprietary-printers) later in this guide. Amalgam makes financial sense only when donors are $100-150 each. Beyond that, commercial alternatives are competitive.
+
 ## Quick Reference: Donor Tiers
 
 ### Fitness Categories (See ADR-026)
@@ -503,6 +505,93 @@ Before dismantling, verify:
 5. **Document wiring**
    - Photo before disconnecting
    - Label connectors with tape
+
+---
+
+## When NOT to Scavenge: Enclosed & Proprietary Printers
+
+At a certain price point, **dismantling an old printer costs more than its parts are worth**. These machines are better off Klipperized whole or skipped entirely.
+
+### Cost Threshold Reality
+
+**Amalgam makes financial sense only if donors are reasonably priced.** Before you commit:
+
+| Donor Cost | Recommendation |
+|-----------|-----------------|
+| **$100-150 each** | ✅ Good range—Amalgam build: $200-300 total |
+| **$150-200 each** | ⚠️ Borderline—reconsider your strategy |
+| **>$200 each** | ❌ Just buy **Bambu A1 Mini** (~$180) or **Ender 3 V3 SE** (~$150) new |
+
+**Your goal:** Save money by scavenging. If you're paying premium prices, you've already lost.
+
+### Enclosed Box-Frame Printers: Just Klipperize, Don't Dismantle
+
+These machines are **better upgraded whole than dismantled**:
+
+#### Anycubic 4Max Pro 2.0
+- **Secondhand price:** ~$250 AUD
+- **Why keep it whole?** Already enclosed, good frame, dual Z built-in, TMC drivers
+- **What to do:** Flash Klipper firmware; use as-is
+- **Benefit:** Working closed-loop system + Klipper's best features
+- **Dismantle cost:** Labor > parts value at this price
+
+#### XYZ da Vinci (All Models: Pro, Jr., Mini)
+- **Mainboard:** Proprietary; reverse engineering required for Klipper
+- **Hotend:** Proprietary cartridge system; incompatible with E3D V6
+- **Bed system:** Single-point support (sag issues, like Ender 5)
+- **Frame:** Integrated design (can't reuse cleanly)
+- **Donor value:** Low; locked-down ecosystem
+- **What to do:** Keep and upgrade with Klipper if you want it; don't dismantle for parts
+- **Reality:** Parts salvage value << disassembly effort
+
+#### FlashForge (Creator, Pro, Adventure)
+- **Everything:** Proprietary firmware, mainboard, hotend connectors, bed system
+- **Integration:** Tightly integrated; difficult disassembly
+- **Donor value:** Very low
+- **Compatibility:** None with standard Klipper builds
+- **What to do:** Keep as-is or recycle; not a practical Amalgam source
+
+### Scavenging Strategy: How to Avoid Wasting Money
+
+**Before you buy an old printer to scavenge:**
+
+1. **Identify two matched donors** (both smooth-rod OR both v-slot)
+   - Example: Two Anet A8s, or Two Ender 3s
+   - Avoid mixing (requires extra purchases)
+
+2. **Calculate total cost:**
+   - Donor 1: $_____
+   - Donor 2: $_____
+   - MDF base: $15-20
+   - Frame material (M10 rods if Darwin, $0 if V-Core): $0-45
+   - Misc (bolts, wires): ~$40
+   - **Total: $____**
+
+3. **Apply the rule:**
+   - **If total < $280 AUD:** ✅ Good scavenger territory (matched donors)
+   - **If total $280-300 AUD:** ⚠️ At parity with Bambu A1 Mini; reconsider
+   - **If total > $300 AUD:** ❌ Just buy a new commercial printer instead
+
+4. **If you find one printer, but no second match:**
+   - Don't overpay for a second one just to avoid buying M10 rods
+   - Buy M10 rods (~$35) and pick *any* other Darwin-compatible donor
+   - Or buy a different matched pair
+
+### The Enclosed Printer Problem in a Nutshell
+
+**Enclosed machines gain little from Amalgam disassembly:**
+
+| Issue | Impact |
+|-------|--------|
+| Proprietary mainboards | Don't work with standard Klipper setups; reverse engineering required |
+| Integrated frame + electronics | Can't reuse either cleanly; disassembly is destructive |
+| Non-standard hotends | Require custom mounts; incompatible with E3D V6 reference spec |
+| Proprietary bed systems | Can't adapt to Amalgam's Triple-Z leveling |
+| Difficult disassembly | More labor than the salvaged parts are worth |
+
+---
+
+**Bottom line:** Amalgam is for **matching donor pairs** scavenged in the **$100-150 each range**. Enclosed, proprietary machines at $200+ are better left alone, upgraded whole with Klipper, or skipped entirely. Don't pay premium prices for parts that will cost you premium labor to extract.
 
 ---
 
