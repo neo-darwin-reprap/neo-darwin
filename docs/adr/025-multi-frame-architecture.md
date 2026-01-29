@@ -78,12 +78,14 @@ We adopt a **Multi-Frame Architecture** with three supported paths, all sharing 
 | Base | MDF squaring jig + damping mass |
 | Motion | Dual 8mm smooth rods, vertical stacking |
 | Bearings | LM8LUU (X), LM8UU (Y/Z), or IGUS |
-| Best donors | Anycubic i3 Mega, Artillery Sidewinder |
+| Best donors | Mixed: one extrusion donor + one smooth-rod donor |
 
-**Why supported:**
-- Some smooth-rod printers have extrusion frames
-- Stiffer than M10 (2020 is ~5× stiffer in bending)
-- Natural fit for i3 Mega donors
+**Why supported (fallback path):**
+- Extrusion + smooth-rod combination is **rare in modern donors**
+- Useful for **mixed donor scenarios**: e.g., Ender 3 extrusions + Anet A8 rods
+- Alternatively: scavenger with custom extrusion source + smooth rods
+- Stiffer than M10 (2020 is ~5× stiffer in bending) when extrusions available
+- **Not a primary path** — use only if you have mixed donors or cannot source matched donors
 
 ### Supported Variant: V-Core (Extrusion + V-Slots)
 
@@ -115,49 +117,55 @@ All paths share:
 
 **Got one donor?** Just add Klipper to it. Amalgam isn't for you.
 
-**Got two matching donors?** Perfect. Pick your frame path based on what you scavenged.
+**Got two matching donors?** Perfect. Pick your frame path:
+- **Two smooth-rod donors** (Anet A8, Wanhao, Prusa clones) → **Darwin** (buy M10 rods)
+- **Two v-slot donors** (Ender 3, CR-10, Aquila) → **V-Core** (zero-waste)
+- **Mixed donors** (one extrusion + one smooth-rod) → **S-Core** (fallback, rare)
 
 **Want to buy new?** Just buy a Bambu A1 Mini. This project is for scavengers.
 
-### Cost Breakdown (Two Donors)
+### Cost Breakdown (Two Donors, Matched)
 
-| Item | Darwin Path | S-Core Path | V-Core Path |
+| Item | Darwin Path | V-Core Path | S-Core Path (Mixed) |
 |------|-------------|-------------|-------------|
-| Two matching donors | $100-120 | $100-120 | $100-120 |
+| Two matching donors | $100-120 | $100-120 | — |
 | MDF base | $15-20 | $15-20 | $15-20 |
-| Frame material | M10 rods: $30-45 | $0 (scavenged) | $0 (scavenged) |
-| Motion (rods/rails) | $0 (scavenged) | $0 (scavenged) | $0 (scavenged) |
+| Frame material | M10 rods: $30-45 | $0 | $0–40 |
+| Motion (rods/rails) | $0 | $0 | $0–75* |
 | Pitan gear | $2 | $2 | $2 |
 | Klicky microswitch | $2 | $2 | $2 |
 | Misc (wires, bolts) | $40 | $40 | $40 |
-| **Total** | **~$190-230** | **~$160-185** | **~$160-185** |
+| **Total** | **~$190-230** | **~$160-185** | **~$160–220** |
+
+*S-Core motion cost varies: $0 if both donors contribute parts, ~$75 if must buy smooth rods + IGUS
 
 **Optional:** Add MKS SKIPR (~$130) for cleaner single-board electronics: **~$290-315**
 
 All paths achieve the **<$300 AUD target**.
 
-### Mixed Donors
+### Mismatched Donors (S-Core Fallback)
 
-If donors don't match (one rod-based + one V-slot):
+If you have **one extrusion donor + one smooth-rod donor**:
 
-| Fix | Cost | Recommendation |
-|-----|------|----------------|
-| Buy M10 rods, use smooth rods | ~$30-45 | Cheapest option |
-| Buy extrusion, use V-slots | ~$40-60 | More expensive |
-| Buy smooth rods + IGUS | ~$70-90 | Most expensive |
+| Option | Cost | Notes |
+|--------|------|-------|
+| Use S-Core (extrusion + smooth rods) | ~$0-75 | Extrusions from one donor, rods from other; may need IGUS |
+| Buy M10 rods, build Darwin | ~$30-45 | Cheaper; discard extrusions; simpler setup |
+| Buy matching donor instead | ~$50-100 | Better long-term; fewer unknowns |
 
-**Advice:** Try to match donors. Sell the odd one out on Marketplace.
+**Advice:** Matched donors are **strongly recommended**. S-Core exists for the rare mixed scenario—don't force it if you can match donors or buy M10 rods instead.
 
 ## Consequences
 
 ### Benefits
 
 1. **True scavenger philosophy** — use what you have
-2. **Ender 3 support** — the most common donor is now zero-waste
-3. **Differentiated paths** — Darwin (M10) for heritage, S-Core/V-Core for extrusion donors
-4. **Same print quality** — Klipper + Pitan + E3D V6 equalizes all paths
-5. **Simple requirement** — two donors, pick your path
-6. **Parametric flexibility** — config.py branches on donor type
+2. **Ender 3 support** — the most common donor (Ender 3) is now zero-waste via V-Core
+3. **Two primary paths** — Darwin (M10 rods) for heritage; V-Core (extrusions + v-slots) for modern donors
+4. **S-Core as fallback** — rare, but supports mixed donor scenarios (extrusion + smooth-rod combinations)
+5. **Same print quality** — Klipper + Pitan + E3D V6 equalizes all paths
+6. **Simple requirement** — two donors, pick your path
+7. **Parametric flexibility** — config.py branches on donor type
 
 ### Trade-offs
 

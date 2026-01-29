@@ -40,15 +40,15 @@ Amalgam is a **2026 RepRap-inspired reference specification** for a scavenger-fr
 
 Amalgam supports three frame/motion configurations based on donor type:
 
-| Path | Frame | Motion | Best Donors | Primary? |
+| Path | Frame | Motion | Best Donors | Use Case |
 |------|-------|--------|-------------|----------|
-| **Darwin** | M10 Threaded Rod + MDF | Smooth Rods + LM8UU | Anet A8, Wanhao, Prusa clones | **Yes (flagship)** |
-| S-Core | Aluminum Extrusion + MDF | Smooth Rods + LM8UU/IGUS | i3 Mega, Artillery | Supported |
-| V-Core | Aluminum Extrusion + MDF | V-Slots + POM Wheels | Ender 3, CR-10 | Supported |
+| **Darwin** | M10 Threaded Rod + MDF | Smooth Rods + LM8UU | Anet A8, Wanhao, Prusa clones | **Primary (heritage, common donors)** |
+| **V-Core** | Aluminum Extrusion + MDF | V-Slots + POM Wheels | Ender 3, CR-10, Aquila | **Primary (modern donors, zero-waste)** |
+| S-Core | Aluminum Extrusion + MDF | Smooth Rods + LM8UU/IGUS | Mixed: extrusion + smooth-rod donors | Fallback (rare in practice) |
 
 **All paths share:** MDF base (squaring jig + damping), Triple-Z, Pitan + E3D V6, Klipper.
 
-**Darwin is the flagship** — RepRap heritage, industrial "tractor" aesthetic, forces scavenger mindset.
+**Two primary paths:** Darwin (RepRap heritage, industrial "tractor" aesthetic) and V-Core (modern, waste-free). S-Core exists for mixed donor scenarios but is rarely needed.
 
 ## Who Is Amalgam For?
 

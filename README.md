@@ -73,17 +73,19 @@ See [BUILDING.md](BUILDING.md) for complete guide.
 
 Amalgam requires **two donor printers**. The frame path depends on what you scavenge:
 
-| Path | Frame | Motion | Best Donors | Cost |
-|------|-------|--------|-------------|------|
-| **Darwin** | M10 Threaded Rod + MDF | Smooth Rods | Anet A8, Wanhao, Prusa clones | ~$190-230 |
-| **S-Core** | Aluminum Extrusion + MDF | Smooth Rods | i3 Mega, Artillery | ~$160-185 |
-| **V-Core** | Aluminum Extrusion + MDF | V-Slots | Ender 3, CR-10 | ~$160-185 |
+| Path | Frame | Motion | Best Donors | Use Case |
+|------|-------|--------|-------------|----------|
+| **Darwin** | M10 Threaded Rod + MDF | Smooth Rods | Anet A8, Wanhao, Prusa i3 clones | Primary (RepRap heritage, common donors) |
+| **V-Core** | Aluminum Extrusion + MDF | V-Slots | Ender 3, CR-10, Voxelab Aquila | Primary (modern donors, zero-waste) |
+| **S-Core** | Aluminum Extrusion + MDF | Smooth Rods | Mixed donors, custom scenarios | Fallback (rare in practice) |
+
+**Cost:** ~$160-230 depending on path and scavenged components.
 
 **All paths share:** MDF base (squaring jig + damping), Triple-Z leveling, Pitan extruder, E3D V6, Klipper.
 
 **Optional:** Add MKS SKIPR (~$130) for cleaner single-board electronics.
 
-**Got one donor?** Just add Klipper to it. Amalgam requires two.
+**Got one donor?** Just add Klipper to it. Amalgam requires two matching donors for a complete build.
 
 ---
 

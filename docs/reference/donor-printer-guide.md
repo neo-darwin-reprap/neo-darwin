@@ -15,6 +15,20 @@ This section now uses **fitness tiers** based on bed size and Z-height (see ADR-
 - **Tier 2 (Supported with notes):** 235–300mm bed, 280–400mm Z → Works with heatbed swap or heavier MDF
 - **Tier 3 (Unsupported):** >300mm bed, >400mm Z → Not recommended, re-sell and buy Tier 1 donors
 
+## Frame Paths by Donor Type
+
+**Amalgam has three frame paths** (see ADR-025):
+
+| Path | Component Match | Common Donors | Recommendation |
+|------|-----------------|---------------|----------------|
+| **Darwin** | Two smooth-rod donors | Anet A8, Wanhao i3, Prusa clones | Primary—buy M10 rods (~$30-45) |
+| **V-Core** | Two v-slot donors | Ender 3, CR-10, Aquila | Primary—zero-waste, recommended |
+| **S-Core** | Mixed: extrusion + smooth-rod | Rare; mixed donor scenarios | Fallback only—usually avoid |
+
+**S-Core is rare:** Most real-world printers are either all-smooth-rods (Darwin path) or all-v-slots (V-Core path). Extrusion + smooth-rod combinations are uncommon. If you have mixed donors, either:
+1. Buy M10 rods and use Darwin path (cheaper, simpler)
+2. Build S-Core if you have good extrusions available
+
 ---
 
 ### Tier 1: Rod-Bearing Donors (Recommended)
@@ -73,9 +87,9 @@ Limited usefulness due to size, proprietary parts, or unsupported geometry:
 ### Anet A8 / A6
 
 **Fitness Tier:** ✅ **Tier 1 (Recommended)**
-**Bed:** 220×220mm | **Z-travel:** 240mm | **Frame path:** Darwin (primary) or S-Core
+**Bed:** 220×220mm | **Z-travel:** 240mm | **Frame path:** Darwin (primary)
 
-**Why it's excellent:** Millions sold, often "broken" (usually just needs firmware update or new MOSFET). 220×220mm bed matches Amalgam reference spec exactly. Perfect fit for Darwin frame path.
+**Why it's excellent:** Millions sold, often "broken" (usually just needs firmware update or new MOSFET). 220×220mm bed matches Amalgam reference spec exactly. Perfect fit for Darwin frame path. Steel frame is not useful for Amalgam, but motion components are excellent.
 
 | Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
@@ -108,10 +122,10 @@ Limited usefulness due to size, proprietary parts, or unsupported geometry:
 ### Prusa i3 Clones (Geeetech, Tronxy X3, Wanhao i3, Coolcoin Create, CTC, Alunar, etc.)
 
 **Fitness Tier:** ✅ **Tier 1 (Recommended)**
-**Bed:** 200–220mm | **Z-travel:** 260mm (typical) | **Frame path:** Darwin (primary), S-Core possible
+**Bed:** 200–220mm | **Z-travel:** 260mm (typical) | **Frame path:** Darwin (primary)
 **Frame type:** Steel rod frame (like Anet A8, not extrusion-based)
 
-**Why it's good:** Direct descendants of original RepRap design. Rod-based steel frames are compatible with Darwin/M10 path philosophy. Build quality varies by brand. All Tier 1 compatible.
+**Why it's good:** Direct descendants of original RepRap design. Rod-based steel frames are compatible with Darwin/M10 path philosophy. Build quality varies by brand. All Tier 1 compatible. Steel frame not useful for Amalgam, but smooth rods and motors are excellent.
 
 | Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
@@ -137,9 +151,9 @@ Limited usefulness due to size, proprietary parts, or unsupported geometry:
 ### Anycubic i3 Mega / Mega S
 
 **Fitness Tier:** ✅ **Tier 1 (Recommended)**
-**Bed:** 210×210mm | **Z-travel:** 200mm | **Frame path:** Darwin (primary) or S-Core
+**Bed:** 210×210mm | **Z-travel:** 200mm | **Frame path:** Darwin (primary)
 
-**Why it's good:** Better build quality than Anet A8, still has smooth rods and a steel frame. Rod-based design like Anet A8. Excellent components for Darwin or S-Core paths.
+**Why it's good:** Better build quality than Anet A8, still has smooth rods and a steel frame. Rod-based design like Anet A8. Excellent components for Darwin path. Steel frame not useful for Amalgam, but motion components are premium quality.
 
 | Component | Spec | Amalgam Use | Notes |
 |-----------|------|----------------|-------|
