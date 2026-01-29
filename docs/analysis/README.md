@@ -8,6 +8,9 @@ This folder contains **technical calculations and measurements** that validate A
 |----------|-------|-------------|
 | [rod-sag-analysis.md](rod-sag-analysis.md) | Smooth rod deflection | M8 vs M10 deflection at various spans; why 8mm + MDF works |
 | [max-safe-acceleration.md](max-safe-acceleration.md) | Motion limits | Toolhead mass vs acceleration; tuning Klipper for stability |
+| [z-height-analysis.md](z-height-analysis.md) | Tall Z tradeoffs | Leadscrew whip, frame resonance, and why 280mm is the Tier 1 limit |
+| [single-vs-dual-rod.md](single-vs-dual-rod.md) | Single rod problems | Why single rods have 4× deflection and can't resist rotation |
+| [motion-system-comparison.md](motion-system-comparison.md) | Rods vs V-slots | Precision, wear, maintenance differences between motion systems |
 
 ## What These Validate
 

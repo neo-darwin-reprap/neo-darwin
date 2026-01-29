@@ -75,8 +75,11 @@ This section now uses **fitness tiers** based on bed size and Z-height (see ADR-
 
 Limited usefulness due to size, proprietary parts, or unsupported geometry:
 
-- **Prusa Mini / Mini+** → Limited (180×180, too small; good for SuperPINDA probe scavenge)
-- **Ender 2** → Limited (165×165, too small)
+- **Mini printers** → Not recommended (bed <180mm; see [Mini Printers](#mini-printers-not-recommended-donors) section)
+  - Prusa Mini / Mini+ (180×180)
+  - Creality Ender 2 (165×165)
+  - Cocoon Create Mini (~120×120)
+  - Monoprice Mini (~120×120)
 - **Ender 5 / Ender 5 Pro** → **Has own project** ⓘ (Mercury One and other Ender 5 conversions exist; those communities are more appropriate)
 - **Tronxy models (especially X5S, large format)** → **Has own projects** ⓘ (Tronxy community has dedicated upgrade paths; Amalgam not optimized for Tronxy geometry)
 - **Delta printers** → Unsupported (wrong geometry, can't use components)
@@ -512,6 +515,63 @@ Before dismantling, verify:
 
 ---
 
+## Mini Printers: Not Recommended Donors
+
+**Examples:** Cocoon Create Mini, Creality Ender 2, Monoprice Mini, Prusa Mini
+
+Mini printers (bed size <180mm) are **not recommended as Amalgam donors**. Here's why:
+
+### The Economics Don't Work
+
+| Scenario | Cost | Result |
+|----------|------|--------|
+| Two mini donors | $60-100 | ~120×120mm build volume |
+| Bambu A1 Mini (new) | ~$180 | 180×180×180mm, warranty, proven quality |
+
+You're paying similar money for dramatically less capability. The A1 Mini is the better answer at this scale.
+
+### The Physics Advantage Disappears
+
+Amalgam's engineering (MDF damping, dual rods, box frame) solves stiffness problems that **don't exist at mini scale**:
+
+- Rod sag analysis shows deflection scales with **L³** (length cubed)
+- At 150mm spans, deflection is negligible even on flimsy hardware
+- Mini printers are already stiff due to their compact size
+- You're solving a problem that isn't there
+
+### Just Use Them As-Is
+
+If you have a mini printer:
+
+1. **Flash Klipper** — Adds Input Shaping, Pressure Advance, web interface
+2. **Tune it** — Run resonance calibration, pressure advance test
+3. **Print** — At this scale, they work fine with minimal upgrades
+
+**Prusa Mini specifically:** Already well-engineered. Just add Klipper. Don't dismantle.
+
+### Better Small-Format Alternatives
+
+If you want a compact Klipper build, consider these purpose-built designs:
+
+| Project | Build Volume | Philosophy |
+|---------|-------------|------------|
+| [The Rook](https://github.com/Kanrog/Rook) | ~150mm³ | Compact, Klipper-first, low cost |
+| [The 100](https://github.com/MSzturc/the100) | ~100mm³ | Tiny, fast, educational |
+
+These are optimized for small format. Amalgam is optimized for 220mm bed slingers.
+
+### Could You Build a "Mini Amalgam"?
+
+Theoretically, yes — two minis could yield parts for a ~120mm box frame (probably M8 frame rods instead of M10). But:
+
+- **Why bother?** You'd spend $80-120 for inferior capability
+- **No documentation** — Amalgam doesn't support sub-200mm builds
+- **The Rook exists** — Purpose-built for exactly this use case
+
+**Bottom line:** Mini printers are fine machines. Use them as-is with Klipper, or look at The Rook / The 100. Don't try to force them into Amalgam.
+
+---
+
 ## When NOT to Scavenge: Enclosed & Proprietary Printers
 
 At a certain price point, **dismantling an old printer costs more than its parts are worth**. These machines are better off Klipperized whole or skipped entirely.
@@ -619,7 +679,7 @@ Sometimes you'll discover mid-build that a PSU is dead, a leadscrew is bent, or 
 - **ADR-022**: Linear Bearing Selection (bearing options, IGUS path)
 - **ADR-024**: Heated Bed Size Selection (bed compatibility)
 - **ADR-012**: Mainboard Architecture (dual-MCU configuration)
-- **docs/reference/ai-conversations/scavenger-guide.md**: Office equipment scavenging
+- **Parts Sourcing Guide**: [parts-sourcing-guide.md](parts-sourcing-guide.md) (replacement parts, avoiding counterfeits)
 
 ---
 

@@ -11,7 +11,7 @@ Amalgam requires **two matching donor printers**. Choose your frame path based o
 | Path | Frame | Motion | Best Donors | Reference |
 |------|-------|--------|-------------|-----------|
 | **Darwin** | M10 threaded rod + MDF | Dual 8mm smooth rods | Anet A8, Wanhao i3, Prusa clones | ADR-025, ADR-001, ADR-021 |
-| **S-Core** | Aluminum extrusion + MDF | Dual 8mm smooth rods | i3 Mega, Artillery | ADR-025, ADR-021 |
+| **S-Core** | Aluminum extrusion + MDF | Dual 8mm smooth rods | Mixed donors (rare) | ADR-025, ADR-021 |
 | **V-Core** | Aluminum extrusion + MDF | V-slot rails + POM wheels | Ender 3, CR-10, Aquila | ADR-025, ADR-025 |
 
 ## Electronics Options
@@ -20,6 +20,12 @@ Amalgam requires **two matching donor printers**. Choose your frame path based o
 |--------|-----------|------|-----------|
 | **Dual-MCU** | Two scavenged boards + Klipper | $0 (scavenged) | Medium (wiring) |
 | **SKIPR** | Single MKS SKIPR board | ~$130 | Low (cleaner setup) |
+
+## Available Guides
+
+| Guide | Description |
+|-------|-------------|
+| [maintenance-setup.md](maintenance-setup.md) | Mechanical setup procedures and ongoing maintenance for all frame paths |
 
 ## Guides (In Progress)
 
